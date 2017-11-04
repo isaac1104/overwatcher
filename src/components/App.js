@@ -4,37 +4,50 @@ import API from "./../utils/API";
 
 class App extends Component {
   state = {
-    value: "",
     battleTag: "",
-    region:""
+    region: ""
   }
 
   componentDidMount() {
-    this.setState({battleTag: ""});
+    this.setState({battleTag: "", region: "us"});
   }
 
   handleInputChange = (event) => {
     this.setState({battleTag: event.target.value});
   }
 
+  handleSelectChange = (event) => {
+    this.setState({region : event.target.value});
+  }
+
   handleFormSubmit = (event) => {
+    console.log(this.state.region);
     event.preventDefault();
-    if (this.state.battleTag !== "") {
+  }
+
+  getStatData = () => {
+    if (this.state.battleTag !== "" && this.state.region !== "") {
       API.getStatData(this.state.battleTag).then((res) => {
-        console.log(res.data);
+        if (res.data[this.state.region] === null) {
+          alert(`Please select different region for ${this.state.battleTag}`);
+        } else {
+          console.log(res.data[this.state.region]);
+        }
       }).catch((err) => {
         console.log(err);
       });
     }
   }
 
-    render() {
-      return (
-        <div className="container-fluid">
-          <Header battleTag={this.state.battleTag} handleInputChange={this.handleInputChange} handleFormSubmit={this.handleFormSubmit}/>
-        </div>
-      )
-    }
-  };
 
-  export default App;
+  render() {
+    return (
+      <div className="container-fluid">
+        <Header battleTag={this.state.battleTag}
+          handleFormSubmit={this.handleFormSubmit}  handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region}/>
+      </div>
+    )
+  }
+};
+
+export default App;

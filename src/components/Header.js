@@ -1,6 +1,5 @@
 import React from "react";
 import Search from "./Search";
-import Region from "./Region";
 
 const Header = (props) => {
 
@@ -20,8 +19,7 @@ const Header = (props) => {
     <div className="jumbotron text-center">
       <h1>Overwatch Stats with React</h1>
       {greet()}
-      <Region/>
-      <Search handleFormSubmit={props.handleFormSubmit} handleInputChange={props.handleInputChange} battleTag={props.battleTag}/>
+      <Search getStatData={props.getStatData} handleFormSubmit={props.handleFormSubmit} handleInputChange={props.handleInputChange} handleSelectChange={props.handleSelectChange} battleTag={props.battleTag} region={props.region}/>
     </div>
   )
 };
