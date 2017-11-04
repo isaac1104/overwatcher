@@ -3,7 +3,6 @@ import React from "react";
 const Search = (props) => {
   return(
     <form onSubmit={props.handleFormSubmit}>
-      <p>Select the region</p>
       <div>
         <select value={props.region} onChange={props.handleSelectChange}>
           <option value="us">US</option>

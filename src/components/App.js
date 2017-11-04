@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   handleSelectChange = (event) => {
-    this.setState({region : event.target.value});
+    this.setState({region: event.target.value});
   }
 
   handleFormSubmit = (event) => {
@@ -31,20 +31,20 @@ class App extends Component {
         if (res.data[this.state.region] === null) {
           alert(`Please select different region for ${this.state.battleTag}`);
         } else {
+          console.log(res.status);
           console.log(res.data[this.state.region]);
         }
       }).catch((err) => {
         console.log(err);
+        alert(`Invalid BattleTag. Please try again.`);
       });
     }
   }
 
-
   render() {
     return (
       <div className="container-fluid">
-        <Header battleTag={this.state.battleTag}
-          handleFormSubmit={this.handleFormSubmit}  handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region}/>
+        <Header battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region}/>
       </div>
     )
   }

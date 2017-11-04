@@ -6,7 +6,7 @@ const Header = (props) => {
   const greet = () => {
     if (props.battleTag.length <= 0) {
       return (
-        <h3>Please enter your BattleTag below</h3>
+        <h3>Please enter your BattleTag and select the region below</h3>
       )
     } else {
       return(
