@@ -25,6 +25,18 @@ class App extends Component {
     event.preventDefault();
   }
 
+  greet = () => {
+    if (this.state.battleTag.length <= 0) {
+      return (
+        <h3>Please enter your BattleTag and select the region below</h3>
+      )
+    } else {
+      return(
+        <h3>Welcome, {this.state.battleTag}</h3>
+      )
+    }
+  }
+
   getStatData = () => {
     if (this.state.battleTag !== "" && this.state.region !== "") {
       API.getStatData(this.state.battleTag).then((res) => {
@@ -44,7 +56,7 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <Header battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region}/>
+        <Header battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet}/>
       </div>
     )
   }
