@@ -6,6 +6,7 @@ const Header = () => {
     <div className="container">
       <div className="jumbotron text-center header">
         <h1>Overwatch Stats with React</h1>
+        <hr/>
         <h3>Please enter your BattleTag and select the region</h3>
       </div>
     </div>

@@ -1,7 +1,6 @@
 import React from "react";
 
 const DetailedData = (props) => {
-  console.log(props.detailedResult);
   return (
   <div className="container">
     <div className="row">
