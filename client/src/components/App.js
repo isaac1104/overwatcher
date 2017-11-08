@@ -1,11 +1,16 @@
 import React, {Component} from "react";
-import Header from "./Header";
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import Navbar from "./Navbar/Navbar";
+import Header from "./Header/Header";
+import DataView from "./Data/DataView";
 import API from "./../utils/API";
 
 class App extends Component {
   state = {
     battleTag: "",
-    region: ""
+    region: "",
+    result: [],
+    heroesResult: []
   }
 
   componentDidMount() {
@@ -25,18 +30,6 @@ class App extends Component {
     event.preventDefault();
   }
 
-  greet = () => {
-    if (this.state.battleTag.length <= 0) {
-      return (
-        <h3>Please enter your BattleTag and select the region below</h3>
-      )
-    } else {
-      return(
-        <h3>Welcome, {this.state.battleTag}</h3>
-      )
-    }
-  }
-
   getStatData = () => {
     if (this.state.battleTag !== "" && this.state.region !== "") {
       API.getStatData(this.state.battleTag).then((res) => {
@@ -44,20 +37,31 @@ class App extends Component {
           alert(`Please select different region for ${this.state.battleTag}`);
         } else {
           console.log(res.status);
-          console.log(res.data[this.state.region]);
+          this.setState({
+            result: res.data[this.state.region].stats.competitive.overall_stats
+          });
         }
       }).catch((err) => {
         console.log(err);
         alert(`Invalid BattleTag. Please try again.`);
       });
     }
+    API.getHeroData(this.state.battleTag).then((res) => {
+      console.log(res.data[this.state.region]);
+    });
   }
 
   render() {
     return (
-      <div className="container-fluid">
-        <Header battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet}/>
-      </div>
+      <Router>
+        <div>
+          <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet}/>
+          <Route exact path="/home" component={Header}/>
+          <Route exact path="/" component={Header}/>
+          <Route exact path="/search" component={DataView}/>
+          <DataView result={this.state.result} battleTag={this.state.battleTag}/>
+        </div>
+      </Router>
     )
   }
 };
