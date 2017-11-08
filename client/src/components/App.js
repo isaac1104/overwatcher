@@ -9,6 +9,7 @@ class App extends Component {
   state = {
     battleTag: "",
     region: "",
+    renderView: false,
     result: [],
     detailedResult: [],
     heroesResult: []
@@ -30,6 +31,16 @@ class App extends Component {
     event.preventDefault();
   }
 
+  renderDataView = () => {
+    if (this.state.renderView === false) {
+      return (
+        <div></div>
+      )
+    } else {
+      return (<DataView result={this.state.result} detailedResult={this.state.detailedResult} heroesResult={this.state.heroesResult} battleTag={this.state.battleTag}/>)
+    }
+  }
+
   getStatData = () => {
     if (this.state.battleTag !== "" && this.state.region !== "") {
       API.getStatData(this.state.battleTag).then((res) => {
@@ -39,7 +50,8 @@ class App extends Component {
           console.log(res.status);
           this.setState({
             result: res.data[this.state.region].stats.competitive.overall_stats,
-            detailedResult: res.data[this.state.region].stats.competitive.game_stats
+            detailedResult: res.data[this.state.region].stats.competitive.game_stats,
+            renderView: true
           });
         }
       }).catch((err) => {
@@ -61,8 +73,8 @@ class App extends Component {
           <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet}/>
           <Route exact path="/home" component={Header}/>
           <Route exact path="/" component={Header}/>
-          <Route exact path="/search" component={DataView}/>
-          <DataView result={this.state.result} detailedResult={this.state.detailedResult} heroesResult={this.state.heroesResult} battleTag={this.state.battleTag}/>
+          <Route exact path="/search" component={DataView}/> {this.renderDataView()}
+          {/* <DataView result={this.state.result} detailedResult={this.state.detailedResult} heroesResult={this.state.heroesResult} battleTag={this.state.battleTag}/> */}
         </div>
       </Router>
     )
