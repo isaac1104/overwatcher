@@ -2,9 +2,10 @@ import React from "react";
 import "./Data.css";
 
 const DataHeader = (props) => {
-  console.log(props.result);
+  console.log(props.detailedResult);
+  console.log(props.heroesResult);
   return(
-    <div className="card mb-3 container">
+    <div className="card mb-3 container player-stats">
       <div className="card-header">
         <h1>{props.battleTag}</h1>
       </div>
@@ -33,14 +34,13 @@ const DataHeader = (props) => {
               <div className="col-md-4">
                 <h3>K/D</h3>
                 <hr/>
-                <h5>{props.result.win_rate}%</h5>
-                <h5>{props.result.wins} / {props.result.losses}</h5>
+                <h5>{props.detailedResult.kpd}</h5>
               </div>
               <div className="col-md-4">
-                <h3>Win Rate</h3>
+                <h3>Time Played</h3>
                 <hr/>
-                <h5>{props.result.win_rate}%</h5>
-                <h5>{props.result.wins} / {props.result.losses}</h5>
+                <h5>{props.detailedResult.time_played} hour(s)</h5>
+                <h5>{props.detailedResult.games_played} game(s)</h5>
               </div>
             </div>
           </div>

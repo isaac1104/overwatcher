@@ -10,6 +10,7 @@ class App extends Component {
     battleTag: "",
     region: "",
     result: [],
+    detailedResult: [],
     heroesResult: []
   }
 
@@ -26,7 +27,6 @@ class App extends Component {
   }
 
   handleFormSubmit = (event) => {
-    console.log(this.state.region);
     event.preventDefault();
   }
 
@@ -38,7 +38,8 @@ class App extends Component {
         } else {
           console.log(res.status);
           this.setState({
-            result: res.data[this.state.region].stats.competitive.overall_stats
+            result: res.data[this.state.region].stats.competitive.overall_stats,
+            detailedResult: res.data[this.state.region].stats.competitive.game_stats
           });
         }
       }).catch((err) => {
@@ -47,7 +48,9 @@ class App extends Component {
       });
     }
     API.getHeroData(this.state.battleTag).then((res) => {
-      console.log(res.data[this.state.region]);
+      this.setState({
+        heroesResult: res.data[this.state.region]
+      });
     });
   }
 
@@ -59,7 +62,7 @@ class App extends Component {
           <Route exact path="/home" component={Header}/>
           <Route exact path="/" component={Header}/>
           <Route exact path="/search" component={DataView}/>
-          <DataView result={this.state.result} battleTag={this.state.battleTag}/>
+          <DataView result={this.state.result} detailedResult={this.state.detailedResult} heroesResult={this.state.heroesResult} battleTag={this.state.battleTag}/>
         </div>
       </Router>
     )
