@@ -32,7 +32,7 @@ _.map(props.heroesResult, (value, key) => {
               {_.map(props.heroesResult, (value, key) => {
                 if (value.general_stats.eliminations) {
                   return (
-                    <h5>{value.general_stats.eliminations}</h5>
+                    <h6>{value.general_stats.eliminations}</h6>
                   )
                 } else {
                   return (
@@ -49,7 +49,7 @@ _.map(props.heroesResult, (value, key) => {
               {_.map(props.heroesResult, (value, key) => {
                 if (value.general_stats.deaths) {
                   return (
-                    <h5>{value.general_stats.deaths}</h5>
+                    <h6>{value.general_stats.deaths}</h6>
                   )
                 } else {
                   return (
@@ -66,7 +66,7 @@ _.map(props.heroesResult, (value, key) => {
               {_.map(props.heroesResult, (value, key) => {
                 if (value.general_stats.win_percentage) {
                   return (
-                    <h5>{value.general_stats.win_percentage}</h5>
+                    <h6>{value.general_stats.win_percentage}</h6>
                   )
                 } else {
                   return(

@@ -18,7 +18,9 @@ const DataHeader = (props) => {
                 </div>
                 <div className="col-md=6">
                   <h5>{props.result.tier}</h5>
+                  <hr/>
                   <h5>{props.result.comprank} Points</h5>
+                  <hr/>
                   <h5>LV.{props.result.level}</h5>
                 </div>
               </div>
@@ -29,6 +31,7 @@ const DataHeader = (props) => {
                   <h5>Win Rate</h5>
                   <hr/>
                   <h6>{props.result.win_rate}%</h6>
+                  <hr/>
                   <h6>{props.result.wins} / {props.result.losses}</h6>
                 </div>
                 <div className="col-md-4">
@@ -40,6 +43,7 @@ const DataHeader = (props) => {
                   <h5>Time Played</h5>
                   <hr/>
                   <h6>{props.detailedResult.time_played} hour(s)</h6>
+                  <hr/>
                   <h6>{props.detailedResult.games_played} game(s)</h6>
                 </div>
               </div>

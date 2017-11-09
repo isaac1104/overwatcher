@@ -1,9 +1,22 @@
 body {
-  background-color: #e5b13a;
+  background-color: #f99e1a;
 }
 
 .loading-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.card {
+  background-color: #353b40;
+  color: white;
+}
+
+.card-body {
+  background-color: #424447;
+}
+
+hr {
+  background-color: white;
 }
