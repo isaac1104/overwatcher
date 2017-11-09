@@ -16,6 +16,14 @@
   margin-bottom: 2rem;
 }
 
-.detailed-summary {
-  width: 115%;
+.heroes-portrait {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heroes-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

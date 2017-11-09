@@ -3,7 +3,7 @@ import _ from "lodash";
 
 const HeroesData = (props) => {
 
-_.map(props.heroesResult, (value, key) => {
+  _.map(props.heroesResult, (value, key) => {
     console.log(key, value, value.general_stats);
   });
 
@@ -14,10 +14,18 @@ _.map(props.heroesResult, (value, key) => {
       </div>
       <div className="card-body">
         <div className="row">
-          <div className="col-md-2">
-            <div className="card-title">
-              <h5></h5>
-            </div>
+          <div className="col-md-1">
+            {_.map(props.heroesResult, (value, key) => {
+              if (value.general_stats.time_played) {
+                return (
+                  <h6>{value.general_stats.time_played.toFixed(2)}</h6>
+                )
+              } else {
+                return (
+                  <h6>n/a</h6>
+                )
+              }
+            })}
           </div>
           <div className="col-md-3">
             <div className="card-title">
@@ -30,7 +38,7 @@ _.map(props.heroesResult, (value, key) => {
               })}
             </div>
           </div>
-          <div className="col-md-1">
+          <div className="col-md-2">
             <div className="card-title">
               <h5>K</h5>
               <hr/>
@@ -41,13 +49,13 @@ _.map(props.heroesResult, (value, key) => {
                   )
                 } else {
                   return (
-                    <h6>N/A</h6>
+                    <h6>n/a</h6>
                   )
                 }
               })}
             </div>
           </div>
-          <div className="col-md-1">
+          <div className="col-md-2">
             <div className="card-title">
               <h5>D</h5>
               <hr/>
@@ -58,13 +66,13 @@ _.map(props.heroesResult, (value, key) => {
                   )
                 } else {
                   return (
-                    <h6>N/A</h6>
+                    <h6>n/a</h6>
                   )
                 }
               })}
             </div>
           </div>
-          <div className="col-md-2">
+          <div className="col-md-3">
             <div className="card-title">
               <h5>Win %</h5>
               <hr/>
@@ -74,28 +82,33 @@ _.map(props.heroesResult, (value, key) => {
                     <h6>{value.general_stats.win_percentage}</h6>
                   )
                 } else {
-                  return(
-                    <h6>N/A</h6>
+                  return (
+                    <h6>n/a</h6>
                   )
                 }
               })}
             </div>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-1">
             <div className="card-title">
               <h5>Time Played</h5>
               <hr/>
               {_.map(props.heroesResult, (value, key) => {
-                return (
-                  <h6>{value.general_stats.time_played.toFixed(2)}</h6>
-                )
+                if (value.general_stats.time_played) {
+                  return (
+                    <h6>{value.general_stats.time_played.toFixed(2)}</h6>
+                  )
+                } else {
+                  return (
+                    <h6>n/a</h6>
+                  )
+                }
               })}
             </div>
           </div>
         </div>
       </div>
     </div>
-
   )
 };
 
