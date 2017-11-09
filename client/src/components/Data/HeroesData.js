@@ -14,26 +14,16 @@ const HeroesData = (props) => {
       </div>
       <div className="card-body">
         <div className="row">
-          <div className="col-md-1">
-            {_.map(props.heroesResult, (value, key) => {
-              if (value.general_stats.time_played) {
-                return (
-                  <h6>{value.general_stats.time_played.toFixed(2)}</h6>
-                )
-              } else {
-                return (
-                  <h6>n/a</h6>
-                )
-              }
-            })}
-          </div>
           <div className="col-md-3">
             <div className="card-title">
               <h5>Heroes</h5>
               <hr/>
               {_.map(props.heroesResult, (value, key) => {
                 return (
-                  <h6>{key}</h6>
+                  <div className="heroes-portrait">
+                    <img src="http://via.placeholder.com/25x25"/>
+                    <h6>{key}</h6>
+                  </div>
                 )
               })}
             </div>
@@ -72,7 +62,7 @@ const HeroesData = (props) => {
               })}
             </div>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-2">
             <div className="card-title">
               <h5>Win %</h5>
               <hr/>
@@ -89,7 +79,7 @@ const HeroesData = (props) => {
               })}
             </div>
           </div>
-          <div className="col-md-1">
+          <div className="col-md-3">
             <div className="card-title">
               <h5>Time Played</h5>
               <hr/>
