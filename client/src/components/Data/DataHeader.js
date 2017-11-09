@@ -1,5 +1,4 @@
 import React from "react";
-import "./Data.css";
 
 const DataHeader = (props) => {
   return(

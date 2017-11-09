@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   renderDataView = () => {
-    if (this.state.renderView === true) {
+    if (this.state.renderView === false) {
       return (
         <div></div>
       )
@@ -78,8 +78,10 @@ class App extends Component {
     }
     API.getHeroData(this.state.battleTag).then((res) => {
       this.setState({
-        heroesResult: res.data[this.state.region]
+        heroesResult: res.data[this.state.region].heroes.stats.competitive
       });
+    }).catch((err) => {
+      alert(`Too many requests. Please refresh the page and try again.`)
     });
   }
 
