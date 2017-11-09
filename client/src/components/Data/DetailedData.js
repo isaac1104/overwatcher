@@ -7,14 +7,14 @@ const DetailedData = (props) => {
           <h5>Detailed Summary</h5>
         </div>
         <div className="card-body">
-          <h6>{props.detailedResult.all_damage_done} damage dealt</h6>
-          <h6>{props.detailedResult.healing_done} healing done</h6>
-          <h6>{props.detailedResult.eliminations} elminations</h6>
-          <h6>{props.detailedResult.final_blows} final blows</h6>
-          <h6>{props.detailedResult.cards} cards</h6>
-          <h6>{props.detailedResult.medals_gold} gold medals</h6>
-          <h6>{props.detailedResult.medals_silver} silver medals</h6>
-          <h6>{props.detailedResult.medals_bronze} bronze medals</h6>
+          <h6>{props.result.all_damage_done} damage dealt</h6>
+          <h6>{props.result.healing_done} healing done</h6>
+          <h6>{props.result.eliminations} elminations</h6>
+          <h6>{props.result.final_blows} final blows</h6>
+          {/* <h6>{props.result.awards.cards} cards</h6> */}
+          {/* <h6>{props.result.awards.medalsGold} gold medals</h6>
+            <h6>{props.result.awards.medalsSilver} silver medals</h6>
+          <h6>{props.result.awards.medalsBronze} bronze medals</h6> */}
         </div>
       </div>
   )

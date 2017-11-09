@@ -59,14 +59,13 @@ class App extends Component {
 
   getStatData = () => {
     if (this.state.battleTag !== "" && this.state.region !== "") {
-      API.getStatData(this.state.battleTag).then((res) => {
+      API.getStatData(this.state.region, this.state.battleTag).then((res) => {
         if (res.data[this.state.region] === null) {
           alert(`Please select different region for ${this.state.battleTag}`);
         } else {
-          console.log(res.status);
+          console.log(res.data);
           this.setState({
-            result: res.data[this.state.region].stats.competitive.overall_stats,
-            detailedResult: res.data[this.state.region].stats.competitive.game_stats,
+            result: res.data,
             renderView: true,
             renderLoading: false
           });
@@ -76,13 +75,6 @@ class App extends Component {
         alert(`Invalid BattleTag. Please try again.`);
       });
     }
-    API.getHeroData(this.state.battleTag).then((res) => {
-      this.setState({
-        heroesResult: res.data[this.state.region].heroes.stats.competitive
-      });
-    }).catch((err) => {
-      alert(`Too many requests. Please refresh the page and try again.`)
-    });
   }
 
   render() {
