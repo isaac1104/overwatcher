@@ -1,12 +1,8 @@
 import React from "react";
-import Heroes from "./../../utils/Heroes";
-import tracer from "./../../images/heroes/tracer.png";
 import _ from "lodash";
 
 const HeroesData = (props) => {
-  console.log(Heroes);
-
-  return (
+    return (
     <div className="card">
       <div className="card-header">
         <h5>Heroes Summary</h5>
@@ -20,7 +16,7 @@ const HeroesData = (props) => {
               {_.map(props.heroesResult, (value, key) => {
                 return (
                   <div className="heroes">
-                    <img src={key} className="portrait"/>
+                    <img src={`./../../images/heroes/${key}.png`} className="portrait" alt="portrait"/>
                     <h6>{key}</h6>
                   </div>
                 )

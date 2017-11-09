@@ -5,7 +5,7 @@ const DataHeader = (props) => {
     <div className="container player-stats">
       <div className="card">
         <div className="card-header player-avatar">
-          <img src={props.result.avatar} className="img-responsive avatar"/>
+          <img src={props.result.avatar} className="img-responsive avatar" alt="avatar"/>
           <h4>{props.battleTag}</h4>
         </div>
         <div className="card-body">
