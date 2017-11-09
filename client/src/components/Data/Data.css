@@ -5,3 +5,12 @@
 .player-stats {
   margin-bottom: 2rem;
 }
+
+.player-avatar {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  margin-right: 20px;
+}

@@ -10,10 +10,10 @@ const DataView = (props) => {
       <DataHeader result={props.result} detailedResult={props.detailedResult} battleTag={props.battleTag}/>
       <div className="container">
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-3">
             <DetailedData result={props.result} detailedResult={props.detailedResult}/>
           </div>
-          <div className="col-md-8">
+          <div className="col-md-9">
             <HeroesData heroesResult={props.heroesResult}/>
           </div>
         </div>

@@ -5,9 +5,9 @@ const Header = () => {
   return (
     <div className="container">
       <div className="jumbotron text-center header">
-        <h1>Overwatch Stats with React</h1>
+        <h3>Overwatch Stats with React</h3>
         <hr/>
-        <h3>Please enter your BattleTag and select the region</h3>
+        <h5>Please enter your BattleTag and select the region</h5>
       </div>
     </div>
   )
