@@ -4,6 +4,8 @@
   background-size: cover;
   color: white;
   margin-top: 2rem;
+  height: 50vh;
+  padding: 16%;
 }
 
 hr {

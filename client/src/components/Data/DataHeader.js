@@ -1,7 +1,6 @@
 import React from "react";
 
 const DataHeader = (props) => {
-  console.log(props.result);
   return(
     <div className="container player-stats">
       <div className="card">

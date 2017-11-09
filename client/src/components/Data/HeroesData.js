@@ -1,11 +1,10 @@
 import React from "react";
+import Heroes from "./../../utils/Heroes";
+import tracer from "./../../images/heroes/tracer.png";
 import _ from "lodash";
 
 const HeroesData = (props) => {
-
-  _.map(props.heroesResult, (value, key) => {
-    console.log(key, value, value.general_stats);
-  });
+  console.log(Heroes);
 
   return (
     <div className="card">
@@ -20,8 +19,8 @@ const HeroesData = (props) => {
               <hr/>
               {_.map(props.heroesResult, (value, key) => {
                 return (
-                  <div className="heroes-portrait">
-                    <img src="http://via.placeholder.com/25x25"/>
+                  <div className="heroes">
+                    <img src={key} className="portrait"/>
                     <h6>{key}</h6>
                   </div>
                 )
