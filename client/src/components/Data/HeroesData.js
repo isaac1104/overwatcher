@@ -28,35 +28,35 @@ const HeroesData = (props) => {
               })}
             </div>
           </div>
-          <div className="col-md-2">
+          <div className="col-md-1">
             <div className="card-title">
-              <h5>K</h5>
+              <h5>W</h5>
               <hr/>
               {_.map(props.heroesResult, (value, key) => {
-                if (value.general_stats.eliminations) {
+                if (value.general_stats.games_won) {
                   return (
-                    <h6>{value.general_stats.eliminations}</h6>
+                    <h6>{value.general_stats.games_won}</h6>
                   )
                 } else {
                   return (
-                    <h6>n/a</h6>
+                    <h6>0</h6>
                   )
                 }
               })}
             </div>
           </div>
-          <div className="col-md-2">
+          <div className="col-md-1">
             <div className="card-title">
-              <h5>D</h5>
+              <h5>L</h5>
               <hr/>
               {_.map(props.heroesResult, (value, key) => {
-                if (value.general_stats.deaths) {
+                if (value.general_stats.games_lost) {
                   return (
-                    <h6>{value.general_stats.deaths}</h6>
+                    <h6>{value.general_stats.games_lost}</h6>
                   )
                 } else {
                   return (
-                    <h6>n/a</h6>
+                    <h6>0</h6>
                   )
                 }
               })}
@@ -69,11 +69,28 @@ const HeroesData = (props) => {
               {_.map(props.heroesResult, (value, key) => {
                 if (value.general_stats.win_percentage) {
                   return (
-                    <h6>{value.general_stats.win_percentage}</h6>
+                    <h6>{(value.general_stats.win_percentage * 100).toFixed(0)}</h6>
                   )
                 } else {
                   return (
-                    <h6>n/a</h6>
+                    <h6>0</h6>
+                  )
+                }
+              })}
+            </div>
+          </div>
+          <div className="col-md-2">
+            <div className="card-title">
+              <h5>K/D</h5>
+              <hr/>
+              {_.map(props.heroesResult, (value, key) => {
+                if (value.general_stats.eliminations && value.general_stats.deaths) {
+                  return (
+                    <h6>{(value.general_stats.eliminations / value.general_stats.deaths).toFixed(2)}</h6>
+                  )
+                } else {
+                  return (
+                    <h6>0</h6>
                   )
                 }
               })}
@@ -90,7 +107,7 @@ const HeroesData = (props) => {
                   )
                 } else {
                   return (
-                    <h6>n/a</h6>
+                    <h6>0</h6>
                   )
                 }
               })}
