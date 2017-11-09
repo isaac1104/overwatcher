@@ -2,7 +2,7 @@ import React from "react";
 
 const DetailedData = (props) => {
   return (
-      <div className="card">
+      <div className="card detailed-summary">
         <div className="card-header">
           <h5>Detailed Summary</h5>
         </div>

@@ -2,10 +2,6 @@
   width: 150px;
 }
 
-.player-stats {
-  margin-bottom: 2rem;
-}
-
 .player-avatar {
   display: flex;
   align-items: center;
@@ -13,4 +9,13 @@
 
 .avatar {
   margin-right: 20px;
+}
+
+.player-stats {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.detailed-summary {
+  width: 115%;
 }

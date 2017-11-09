@@ -36,7 +36,7 @@ class App extends Component {
   renderDataView = () => {
     if (this.state.renderView === false) {
       return (
-        <div></div>
+        <Header/>
       )
     } else {
       return (<DataView result={this.state.result} detailedResult={this.state.detailedResult} heroesResult={this.state.heroesResult} battleTag={this.state.battleTag}/>)
@@ -89,9 +89,8 @@ class App extends Component {
     return (
       <div>
         <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet}/>
-        <Header/>
-        {this.renderLoadingGif()}
         {this.renderDataView()}
+        {this.renderLoadingGif()}
       </div>
     )
   }

@@ -10,10 +10,15 @@ _.map(props.heroesResult, (value, key) => {
   return (
     <div className="card">
       <div className="card-header">
-        <h4>Heroes Summary</h4>
+        <h5>Heroes Summary</h5>
       </div>
       <div className="card-body">
         <div className="row">
+          <div className="col-md-2">
+            <div className="card-title">
+              <h5></h5>
+            </div>
+          </div>
           <div className="col-md-3">
             <div className="card-title">
               <h5>Heroes</h5>
@@ -25,7 +30,7 @@ _.map(props.heroesResult, (value, key) => {
               })}
             </div>
           </div>
-          <div className="col-md-2">
+          <div className="col-md-1">
             <div className="card-title">
               <h5>K</h5>
               <hr/>
@@ -42,7 +47,7 @@ _.map(props.heroesResult, (value, key) => {
               })}
             </div>
           </div>
-          <div className="col-md-2">
+          <div className="col-md-1">
             <div className="card-title">
               <h5>D</h5>
               <hr/>
@@ -61,7 +66,7 @@ _.map(props.heroesResult, (value, key) => {
           </div>
           <div className="col-md-2">
             <div className="card-title">
-              <h5>Win Rate</h5>
+              <h5>Win %</h5>
               <hr/>
               {_.map(props.heroesResult, (value, key) => {
                 if (value.general_stats.win_percentage) {
