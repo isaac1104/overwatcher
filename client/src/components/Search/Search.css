@@ -1,16 +1,15 @@
-#search-box {
-  width: 250%;
-  text-align: center;
-  margin-right: 20px;
-  padding: 10px;
-}
-
 form {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   margin-left: 25%;
+}
+
+#search-box {
+  text-align: center;
+  margin-right: 20px;
+  /*width: 30rem;*/
 }
 
 select {
