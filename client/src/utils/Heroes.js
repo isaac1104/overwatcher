@@ -11,7 +11,7 @@ const Heroes = [{
     image: "images/heroes/doomfist.png"
   },
   {
-    name: "dva",
+    name: "dVa",
     image: "images/heroes/dva.png"
   },
   {

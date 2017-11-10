@@ -27,7 +27,13 @@ const HeroesData = (props) => {
               return(
                 <tr>
                   <td className="heroes">
-                    <img src={img} className="portrait" alt="portrait"/>
+                    {Heroes.filter((hero) => {
+                      return hero.name === key;
+                    }).map((hero) => {
+                      return (
+                        <img src={hero.image} className="portrait" alt="portrait"/>
+                      )
+                    })}
                     <h6>{key}</h6>
                   </td>
                   <td>
