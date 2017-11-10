@@ -69,7 +69,7 @@ class App extends Component {
         }
       }).catch((err) => {
         console.log(err);
-        alert(`Invalid BattleTag. Please try again.`);
+        return alert(`Invalid BattleTag. Please try again.`);
       });
     }
   }

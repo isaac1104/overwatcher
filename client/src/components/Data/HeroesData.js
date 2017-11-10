@@ -5,9 +5,9 @@ import Heroes from "./../../utils/Heroes";
 
 const HeroesData = (props) => {
 
-  const sorted = _.orderBy(props.result.competitiveStats.topHeroes, ["gamesWon"], ["desc"]);
-
-  console.log(sorted);
+  // const sorted = _.orderBy(props.result.competitiveStats.topHeroes, ["gamesWon"], ["desc"]);
+  //
+  // console.log(sorted);
 
     return (
       <div>
@@ -30,6 +30,7 @@ const HeroesData = (props) => {
                     {Heroes.filter((hero) => {
                       return hero.name === key;
                     }).map((hero) => {
+                      console.log(hero.image)
                       return (
                         <img src={hero.image} className="portrait" alt="portrait"/>
                       )
@@ -40,7 +41,7 @@ const HeroesData = (props) => {
                     <h6>{value.gamesWon}</h6>
                   </td>
                   <td>
-                    <h6></h6>
+                    <h6>-</h6>
                   </td>
                   <td>
                     <h6>{value.winPercentage}</h6>
