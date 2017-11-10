@@ -13,11 +13,11 @@ const DataView = (props) => {
       </div>
       <div className="container">
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-5">
             <PlayerStats result={props.result}/>
             <DetailedData result={props.result}/>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-7">
             <HeroesData result={props.result}/>
           </div>
         </div>

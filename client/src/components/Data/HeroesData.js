@@ -1,10 +1,12 @@
 import React from "react";
 import _ from "lodash";
+import img from "./../../images/heroes/tracer.png"
 
 const HeroesData = (props) => {
-  _.map(props.result, (value, key) => {
-    console.log(value.competitiveStats.topHeroes);
-  });
+
+  const sorted = _.orderBy(props.result.competitiveStats.topHeroes, ["gamesWon"], ["desc"]);
+
+  console.log(sorted);
 
     return (
     <div className="card">
@@ -14,10 +16,10 @@ const HeroesData = (props) => {
             <div className="card-title">
               <h5>Heroes</h5>
               <hr/>
-              {_.map(props.heroesResult, (value, key) => {
+              {_.map(props.result.competitiveStats.topHeroes, (value, key) => {
                 return (
                   <div className="heroes">
-                    <img src={`./../../images/heroes/${key}.png`} className="portrait" alt="portrait"/>
+                    <img src={img} className="portrait" alt="portrait"/>
                     <h6>{key}</h6>
                   </div>
                 )
@@ -28,16 +30,10 @@ const HeroesData = (props) => {
             <div className="card-title">
               <h5>W</h5>
               <hr/>
-              {_.map(props.heroesResult, (value, key) => {
-                if (value.general_stats.games_won) {
-                  return (
-                    <h6>{value.general_stats.games_won}</h6>
-                  )
-                } else {
-                  return (
-                    <h6>0</h6>
-                  )
-                }
+              {_.map(props.result.competitiveStats.topHeroes, (value, key) => {
+                return (
+                  <h6>{value.gamesWon}</h6>
+                )
               })}
             </div>
           </div>
@@ -45,16 +41,10 @@ const HeroesData = (props) => {
             <div className="card-title">
               <h5>L</h5>
               <hr/>
-              {_.map(props.heroesResult, (value, key) => {
-                if (value.general_stats.games_lost) {
-                  return (
-                    <h6>{value.general_stats.games_lost}</h6>
-                  )
-                } else {
-                  return (
-                    <h6>0</h6>
-                  )
-                }
+              {_.map(props.result.competitiveStats.topHeroes, (value, key) => {
+                return (
+                  <h6>{value.gamesPlayed}</h6>
+                )
               })}
             </div>
           </div>
@@ -62,16 +52,10 @@ const HeroesData = (props) => {
             <div className="card-title">
               <h5>Win %</h5>
               <hr/>
-              {_.map(props.heroesResult, (value, key) => {
-                if (value.general_stats.win_percentage) {
-                  return (
-                    <h6>{(value.general_stats.win_percentage * 100).toFixed(0)}</h6>
-                  )
-                } else {
-                  return (
-                    <h6>0</h6>
-                  )
-                }
+              {_.map(props.result.competitiveStats.topHeroes, (value, key) => {
+                return (
+                  <h6>{value.winPercentage}%</h6>
+                )
               })}
             </div>
           </div>
@@ -79,16 +63,10 @@ const HeroesData = (props) => {
             <div className="card-title">
               <h5>K/D</h5>
               <hr/>
-              {_.map(props.heroesResult, (value, key) => {
-                if (value.general_stats.eliminations && value.general_stats.deaths) {
-                  return (
-                    <h6>{(value.general_stats.eliminations / value.general_stats.deaths).toFixed(2)}</h6>
-                  )
-                } else {
-                  return (
-                    <h6>0</h6>
-                  )
-                }
+              {_.map(props.result.competitiveStats.topHeroes, (value, key) => {
+                return (
+                  <h6>{value.eliminationsPerLife}</h6>
+                )
               })}
             </div>
           </div>
@@ -96,16 +74,10 @@ const HeroesData = (props) => {
             <div className="card-title">
               <h5>Time Played</h5>
               <hr/>
-              {_.map(props.heroesResult, (value, key) => {
-                if (value.general_stats.time_played) {
-                  return (
-                    <h6>{value.general_stats.time_played.toFixed(2)}</h6>
-                  )
-                } else {
-                  return (
-                    <h6>0</h6>
-                  )
-                }
+              {_.map(props.result.competitiveStats.topHeroes, (value, key) => {
+                return (
+                  <h6>{value.timePlayed}</h6>
+                )
               })}
             </div>
           </div>
