@@ -1,6 +1,7 @@
 import React from "react";
 import _ from "lodash";
 import img from "./../../images/heroes/tracer.png"
+import Heroes from "./../../utils/Heroes";
 
 const HeroesData = (props) => {
 
@@ -8,9 +9,7 @@ const HeroesData = (props) => {
 
   console.log(sorted);
 
-  _.map(props.result.competitiveStats.topHeroes, (value, key) => {
-    console.log(key, value);
-  });
+  console.log(Heroes[0].image);
 
     return (
       <div>
