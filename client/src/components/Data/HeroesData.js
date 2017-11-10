@@ -3,11 +3,6 @@ import React from "react";
 import Heroes from "./../../utils/Heroes";
 
 const HeroesData = (props) => {
-
-  // const sorted = _.orderBy(props.result.competitiveStats.topHeroes, ["gamesWon"], ["desc"]);
-  //
-  // console.log(sorted);
-
     return (
       <div>
         <table className="table table-hover">
