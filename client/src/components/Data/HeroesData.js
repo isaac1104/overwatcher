@@ -9,8 +9,6 @@ const HeroesData = (props) => {
 
   console.log(sorted);
 
-  console.log(Heroes[0].image);
-
     return (
       <div>
         <table className="table">
