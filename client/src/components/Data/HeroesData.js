@@ -2,6 +2,10 @@ import React from "react";
 import _ from "lodash";
 
 const HeroesData = (props) => {
+  _.map(props.result, (value, key) => {
+    console.log(value.competitiveStats.topHeroes);
+  });
+
     return (
     <div className="card">
       <div className="card-body">

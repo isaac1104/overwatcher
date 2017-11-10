@@ -18,7 +18,7 @@ const DataView = (props) => {
             <DetailedData result={props.result}/>
           </div>
           <div className="col-md-6">
-            <HeroesData heroesResult={props.heroesResult}/>
+            <HeroesData result={props.result}/>
           </div>
         </div>
       </div>

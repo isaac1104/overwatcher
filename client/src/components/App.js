@@ -37,7 +37,7 @@ class App extends Component {
         <Header/>
       )
     } else {
-      return (<DataView result={this.state.result} detailedResult={this.state.detailedResult} heroesResult={this.state.heroesResult} battleTag={this.state.battleTag}/>)
+      return (<DataView result={this.state.result} battleTag={this.state.battleTag}/>)
     }
   }
 

@@ -11,16 +11,24 @@ const PlayerStats = (props) => {
         </div>
       </div>
       <div className="card-body">
-        <h5>Win Rate</h5>
-        <hr/>
-        <h6>{((props.result.competitiveStats.games.won / props.result.competitiveStats.games.played) * 100).toFixed(0)}%</h6>
-        <h6>{props.result.competitiveStats.games.won} W {props.result.competitiveStats.careerStats.allHeroes.average.gamesTied} D {props.result.competitiveStats.careerStats.allHeroes.average.gamesLost} L</h6>
-        <h5>K / D</h5>
-        <hr/>
-        <h5>Time Played</h5>
-        <hr/>
-        <h6>{props.result.competitiveStats.careerStats.allHeroes.game.timePlayed}</h6>
-        <h6>{props.result.competitiveStats.careerStats.allHeroes.game.gamesPlayed} game(s)</h6>
+        <div className="row">
+          <div className="col-md-4">
+            <h5>Win Rate</h5>
+            <hr/>
+            <h6>{((props.result.competitiveStats.games.won / props.result.competitiveStats.games.played) * 100).toFixed(0)}%</h6>
+            <h6>{props.result.competitiveStats.games.won} W {props.result.competitiveStats.careerStats.allHeroes.average.gamesTied} D {props.result.competitiveStats.careerStats.allHeroes.average.gamesLost} L</h6>
+          </div>
+          <div className="col-md-4">
+            <h5>K / D</h5>
+            <hr/>
+          </div>
+          <div className="col-md-4">
+            <h5>Time Played</h5>
+            <hr/>
+            <h6>{props.result.competitiveStats.careerStats.allHeroes.game.timePlayed}</h6>
+            <h6>{props.result.competitiveStats.careerStats.allHeroes.game.gamesPlayed} game(s)</h6>
+          </div>
+        </div>
       </div>
     </div>
   )

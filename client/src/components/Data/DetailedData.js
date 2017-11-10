@@ -1,7 +1,6 @@
 import React from "react";
 
 const DetailedData = (props) => {
-  console.log(props.result);
   return (
       <div className="card detailed-summary">
         <div className="card-header">
