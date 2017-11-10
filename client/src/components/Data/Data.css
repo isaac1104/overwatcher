@@ -10,7 +10,7 @@
 
 /*PlayerStats Section*/
 .rank-img {
-  width: 150px;
+  width: 100px;
   margin-right: 20px;
 }
 
@@ -41,8 +41,14 @@
 }
 
 .portrait {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   margin-right: 20px;
   border-radius: 50%;
+}
+
+.table {
+  color: white;
+  background-color: #424447;
+  text-align: center;
 }
