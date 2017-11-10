@@ -1,6 +1,6 @@
 import React from "react";
 import _ from "lodash";
-import img from "./../../images/heroes/tracer.png"
+import img from "./../../images/heroes/tracer.png";
 import Heroes from "./../../utils/Heroes";
 
 const HeroesData = (props) => {
@@ -44,7 +44,7 @@ const HeroesData = (props) => {
                     <h6>-</h6>
                   </td>
                   <td>
-                    <h6>{value.winPercentage}</h6>
+                    <h6>{value.winPercentage}%</h6>
                   </td>
                   <td>
                     <h6>{value.eliminationsPerLife}</h6>

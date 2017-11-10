@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   handleFormSubmit = (event) => {
-    this.setState({renderLoading: true});
+    this.setState({renderLoading: true, battleTag: ""});
     event.preventDefault();
   }
 
