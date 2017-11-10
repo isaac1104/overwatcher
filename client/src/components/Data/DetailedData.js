@@ -1,6 +1,7 @@
 import React from "react";
 
 const DetailedData = (props) => {
+  console.log(props.result);
   return (
       <div className="card detailed-summary">
         <div className="card-header">
@@ -11,10 +12,10 @@ const DetailedData = (props) => {
           <h6>{props.result.healing_done} healing done</h6>
           <h6>{props.result.eliminations} elminations</h6>
           <h6>{props.result.final_blows} final blows</h6>
-          {/* <h6>{props.result.awards.cards} cards</h6> */}
-          {/* <h6>{props.result.awards.medalsGold} gold medals</h6>
-            <h6>{props.result.awards.medalsSilver} silver medals</h6>
-          <h6>{props.result.awards.medalsBronze} bronze medals</h6> */}
+          <h6>{props.result.competitiveStats.awards.cards} cards</h6>
+          <h6>{props.result.competitiveStats.awards.medalsGold} gold medals</h6>
+          <h6>{props.result.competitiveStats.awards.medalsSilver} silver medals</h6>
+          <h6>{props.result.competitiveStats.awards.medalsBronze} bronze medals</h6>
         </div>
       </div>
   )

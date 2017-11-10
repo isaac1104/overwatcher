@@ -1,5 +1,6 @@
 import React from "react";
-import DataHeader from "./DataHeader";
+import AvatarData from "./AvatarData";
+import PlayerStats from "./PlayerStats";
 import DetailedData from "./DetailedData";
 import HeroesData from "./HeroesData";
 import "./Data.css";
@@ -7,13 +8,16 @@ import "./Data.css";
 const DataView = (props) => {
   return (
     <div>
-      <DataHeader result={props.result} detailedResult={props.detailedResult} battleTag={props.battleTag}/>
+      <div>
+        <AvatarData result={props.result} battleTag={props.battleTag}/>
+      </div>
       <div className="container">
         <div className="row">
-          <div className="col-md-3">
-            <DetailedData result={props.result} detailedResult={props.detailedResult}/>
+          <div className="col-md-6">
+            <PlayerStats result={props.result}/>
+            <DetailedData result={props.result}/>
           </div>
-          <div className="col-md-9">
+          <div className="col-md-6">
             <HeroesData heroesResult={props.heroesResult}/>
           </div>
         </div>

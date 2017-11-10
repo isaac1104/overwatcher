@@ -1,5 +1,9 @@
+* {
+  font-size: 12px;
+}
+
 body {
-  background-color: #f99e1a;
+  background-color: #cfd1d6;
 }
 
 .loading-container {

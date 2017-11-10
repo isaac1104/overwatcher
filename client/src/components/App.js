@@ -11,9 +11,7 @@ class App extends Component {
     region: "",
     renderView: false,
     renderLoading: false,
-    result: [],
-    detailedResult: [],
-    heroesResult: []
+    result: []
   }
 
   componentDidMount() {
@@ -63,7 +61,6 @@ class App extends Component {
         if (res.data[this.state.region] === null) {
           alert(`Please select different region for ${this.state.battleTag}`);
         } else {
-          console.log(res.data);
           this.setState({
             result: res.data,
             renderView: true,

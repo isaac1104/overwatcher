@@ -1,7 +1,4 @@
-.rank-img {
-  width: 150px;
-}
-
+/*Avatar Section*/
 .player-avatar {
   display: flex;
   align-items: center;
@@ -11,11 +8,27 @@
   margin-right: 20px;
 }
 
+/*PlayerStats Section*/
+.rank-img {
+  width: 150px;
+  margin-right: 20px;
+}
+
 .player-stats {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
+.player-stats-data {
+  margin-bottom: 2rem;
+}
+
+.player-stats-header {
+  display: flex;
+  align-items: center;
+}
+
+/*Heroes Data Section*/
 .heroes {
   display: flex;
   align-items: center;

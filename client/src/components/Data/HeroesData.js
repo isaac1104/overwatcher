@@ -4,9 +4,6 @@ import _ from "lodash";
 const HeroesData = (props) => {
     return (
     <div className="card">
-      <div className="card-header">
-        <h5>Heroes Summary</h5>
-      </div>
       <div className="card-body">
         <div className="row">
           <div className="col-md-3">
