@@ -3,7 +3,6 @@ import Navbar from "./Navbar/Navbar";
 import Header from "./Header/Header";
 import DataView from "./Data/DataView";
 import API from "./../utils/API";
-import LoadingGif from "./../images/loading.gif";
 
 class App extends Component {
   state = {
@@ -49,7 +48,7 @@ class App extends Component {
     } else {
       return (
         <div className="loading-container">
-          <img src={LoadingGif} className="img-responsive loading" alt="loading"/>
+          <img src="images/loading.gif" className="img-responsive loading" alt="loading"/>
         </div>
       )
     }

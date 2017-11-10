@@ -1,6 +1,5 @@
-import React from "react";
 import _ from "lodash";
-import img from "./../../images/heroes/tracer.png";
+import React from "react";
 import Heroes from "./../../utils/Heroes";
 
 const HeroesData = (props) => {
@@ -32,7 +31,7 @@ const HeroesData = (props) => {
                     }).map((hero) => {
                       console.log(hero.image)
                       return (
-                        <img src={hero.image} className="portrait" alt="portrait"/>
+                        <img key={hero.name} src={hero.image} className="portrait" alt={hero.name}/>
                       )
                     })}
                     <h6>{key}</h6>
