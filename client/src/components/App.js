@@ -32,12 +32,14 @@ class App extends Component {
   }
 
   renderDataView = () => {
-    if (this.state.renderView === false) {
+    if (this.state.renderView === false || this.state.playerFound === false) {
       return (
-        <Header/>
+        <Header playerFound={this.state.playerFound}/>
       )
     } else {
-      return (<DataView result={this.state.result} battleTag={this.state.battleTag}/>)
+      return (
+        <DataView result={this.state.result} battleTag={this.state.battleTag}/>
+      )
     }
   }
 
@@ -56,20 +58,18 @@ class App extends Component {
   }
 
   renderNotFoundHeader = () => {
-    if (this.state.playerFound === false) {
-      return (
-        <h1>Player not found</h1>
-      )
-    } else if (this.state.playerFound === true) {
-      console.log("player found!");
-    }
-  }
+   if (this.state.playerFound === false) {
+     console.log("player not found");
+   } else if (this.state.playerFound === true) {
+     console.log("player found!");
+   }
+ }
 
   getStatData = () => {
     if (this.state.battleTag !== "" && this.state.region !== "") {
       API.getStatData(this.state.region, this.state.battleTag).then((res) => {
-        if (res.data[this.state.region] === null) {
-          alert(`Please select different region for ${this.state.battleTag}`);
+        if (res.data.error === "The requested player was not found") {
+          this.setState({renderLoading: false, playerFound: false});
         } else {
           this.setState({
             result: res.data,
@@ -88,6 +88,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.playerFound);
     return (
       <div>
         <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet}/>
