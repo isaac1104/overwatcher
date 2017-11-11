@@ -5,7 +5,10 @@ import "./Navbar.css";
 const Navbar = (props) => {
   return(
     <nav className="navbar navbar-top navbar-dark bg-dark" id="nav">
-      <a className="navbar-brand" href="/"><h3>OVERWATCH STATS</h3></a>
+      <div id="logo-section">
+        <img src="images/owlogo.svg" className="logo"/>
+        <a className="navbar-brand" href="/"><h2>OVERWATCH STATS</h2></a>
+      </div>
       <Search getStatData={props.getStatData} handleFormSubmit={props.handleFormSubmit} handleInputChange={props.handleInputChange} handleSelectChange={props.handleSelectChange} battleTag={props.battleTag} region={props.region}/>
     </nav>
   )

@@ -3,3 +3,14 @@
   justify-content: space-evenly;
   align-items: center;
 }
+
+#logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
