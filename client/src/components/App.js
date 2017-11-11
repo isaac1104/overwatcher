@@ -10,6 +10,7 @@ class App extends Component {
     region: "",
     renderView: false,
     renderLoading: false,
+    playerFound: "",
     result: []
   }
 
@@ -54,6 +55,16 @@ class App extends Component {
     }
   }
 
+  renderNotFoundHeader = () => {
+    if (this.state.playerFound === false) {
+      return (
+        <h1>Player not found</h1>
+      )
+    } else if (this.state.playerFound === true) {
+      console.log("player found!");
+    }
+  }
+
   getStatData = () => {
     if (this.state.battleTag !== "" && this.state.region !== "") {
       API.getStatData(this.state.region, this.state.battleTag).then((res) => {
@@ -63,12 +74,15 @@ class App extends Component {
           this.setState({
             result: res.data,
             renderView: true,
-            renderLoading: false
+            renderLoading: false,
+            playerFound: true
           });
         }
       }).catch((err) => {
-        console.log(err);
-        return alert(`Invalid BattleTag. Please try again.`);
+        if (err) {
+          console.log(err);
+          this.setState({renderLoading: false, playerFound: false});
+        }
       });
     }
   }
@@ -78,6 +92,7 @@ class App extends Component {
       <div>
         <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet}/>
         {this.renderDataView()}
+        {this.renderNotFoundHeader()}
         {this.renderLoadingGif()}
       </div>
     )

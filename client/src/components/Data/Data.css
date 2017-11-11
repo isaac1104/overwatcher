@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.player-intro {
+  padding: 10px;
+}
+
 .avatar {
   margin-right: 20px;
 }
