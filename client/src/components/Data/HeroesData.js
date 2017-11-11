@@ -14,7 +14,7 @@ const HeroesData = (props) => {
             <tr>
               <th>Heroes</th>
               <th>W</th>
-              <th>L</th>
+              <th>Accuracy</th>
               <th>Win Rate</th>
               <th>K/D</th>
               <th>Time Played</th>
@@ -38,7 +38,7 @@ const HeroesData = (props) => {
                     <h6>{value.gamesWon}</h6>
                   </td>
                   <td>
-                    <h6>-</h6>
+                    <h6>{value.weaponAccuracy}%</h6>
                   </td>
                   <td>
                     <h6>{value.winPercentage}%</h6>
