@@ -23,14 +23,13 @@ app.listen(PORT, function() {
 
 //Bnet authentication
 
-const BnetStrategy = require('passport-bnet').Strategy;
-const BNET_ID = process.env.BNET_ID
-const BNET_SECRET = process.env.BNET_SECRET
+let BnetStrategy = require('passport-bnet').Strategy;
+let BNET_ID = process.env.BNET_ID
+let BNET_SECRET = process.env.BNET_SECRET
 
-// Use the BnetStrategy within Passport.
 passport.use(new BnetStrategy({
-    clientID: BNET_ID,
-    clientSecret: BNET_SECRET,
+    clientID: "isaac1104",
+    clientSecret: "HSFVJdwUFCjvtCbq6wCJBrzKTz9Kyd4n",
     callbackURL: "https://localhost:3000/auth/bnet/callback",
     region: "us"
 }, function(accessToken, refreshToken, profile, done) {

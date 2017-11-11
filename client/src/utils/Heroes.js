@@ -1,102 +1,102 @@
 const Heroes = [{
     name: "ana",
-    image: "images/heroes/ana.png"
+    image: "/images/heroes/ana.png"
   },
   {
     name: "bastion",
-    image: "images/heroes/bastion.png"
+    image: "/images/heroes/bastion.png"
   },
   {
     name: "doomfist",
-    image: "images/heroes/doomfist.png"
+    image: "/images/heroes/doomfist.png"
   },
   {
     name: "dVa",
-    image: "images/heroes/dva.png"
+    image: "/images/heroes/dva.png"
   },
   {
     name: "genji",
-    image: "images/heroes/genji.png"
+    image: "/images/heroes/genji.png"
   },
   {
     name: "hanzo",
-    image: "images/heroes/hanzo.png"
+    image: "/images/heroes/hanzo.png"
   },
   {
     name: "junkrat",
-    image: "images/heroes/junkrat.png"
+    image: "/images/heroes/junkrat.png"
   },
   {
     name: "lucio",
-    image: "images/heroes/lucio.png"
+    image: "/images/heroes/lucio.png"
   },
   {
     name: "mccree",
-    image: "images/heroes/mccree.png"
+    image: "/images/heroes/mccree.png"
   },
   {
     name: "mei",
-    image: "images/heroes/mei.png"
+    image: "/images/heroes/mei.png"
   },
   {
     name: "mercy",
-    image: "images/heroes/mercy.png"
+    image: "/images/heroes/mercy.png"
   },
   {
     name: "orisa",
-    image: "images/heroes/orisa.png"
+    image: "/images/heroes/orisa.png"
   },
   {
     name: "pharah",
-    image: "images/heroes/pharah.png"
+    image: "/images/heroes/pharah.png"
   },
   {
     name: "reaper",
-    image: "images/heroes/reaper.png"
+    image: "/images/heroes/reaper.png"
   },
   {
     name: "reinhardt",
-    image: "images/heroes/reinhardt.png"
+    image: "/images/heroes/reinhardt.png"
   },
   {
     name: "roadhog",
-    image: "images/heroes/roadhog.png"
+    image: "/images/heroes/roadhog.png"
   },
   {
     name: "soldier76",
-    image: "images/heroes/soldier76.png"
+    image: "/images/heroes/soldier76.png"
   },
   {
     name: "sombra",
-    image: "images/heroes/sombra.png"
+    image: "/images/heroes/sombra.png"
   },
   {
     name: "symmetra",
-    image: "images/heroes/symmetra.png"
+    image: "/images/heroes/symmetra.png"
   },
   {
     name: "torbjorn",
-    image: "images/heroes/torbjorn.png"
+    image: "/images/heroes/torbjorn.png"
   },
   {
     name: "tracer",
-    image: "images/heroes/tracer.png"
+    image: "/images/heroes/tracer.png"
   },
   {
     name: "widowmaker",
-    image: "images/heroes/widowmaker.png"
+    image: "/images/heroes/widowmaker.png"
   },
   {
     name: "winston",
-    image: "images/heroes/winston.png"
+    image: "/images/heroes/winston.png"
   },
   {
     name: "zarya",
-    image: "images/heroes/zarya.png"
+    image: "/images/heroes/zarya.png"
   },
   {
     name: "zenyatta",
-    image: "images/heroes/zenyatta.png"
+    image: "/images/heroes/zenyatta.png"
   }
 ];
 

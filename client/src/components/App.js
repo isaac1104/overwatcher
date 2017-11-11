@@ -51,8 +51,8 @@ class App extends Component {
       )
     } else {
       return (
-        <div className="loading-container">
-          <img src="images/loading.gif" className="img-responsive loading" alt="loading"/>
+        <div>
+          <img src="/images/loading.gif" className="img-responsive loading" alt="loading"/>
         </div>
       )
     }
@@ -81,12 +81,10 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.playerFound);
     return (
       <div>
-        <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet}/>
+        <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet} renderLoadingGif={this.renderLoadingGif()}/>
         {this.renderDataView()}
-        {this.renderLoadingGif()}
       </div>
     )
   }

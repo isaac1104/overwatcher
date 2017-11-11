@@ -7,12 +7,6 @@ body {
   background-color: #cfd1d6;
 }
 
-.loading-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .card {
   background-color: #353b40;
   color: white;

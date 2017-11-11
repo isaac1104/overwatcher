@@ -6,7 +6,7 @@ const Header = (props) => {
     return (
       <div className="container">
         <div className="jumbotron error-header text-center">
-          <h1>Error: Player Not Found!</h1>
+          <h1>Error: Stats/Player Not Found!</h1>
           <hr/>
           <h3>Please check the BattleTag again or selected region for this player</h3>
           <h4>The BattleTag must be in "battletag-number" format</h4>
@@ -20,11 +20,10 @@ const Header = (props) => {
       <div className="container">
         <div className="jumbotron text-center header">
           <h1>Overwatch Stats Logger</h1>
-          <h3>Your destination to search for Overwatch stats</h3>
+          <h2>Your ultimate destination for Overwatch stats</h2>
           <hr/>
-          <h4>Please enter your BattleTag and select the region</h4>
-          <h5>The BattleTag must be in "battletag-number" format</h5>
-          <h6>Ex)sinatraa-11809</h6>
+          <h3>Please enter your BattleTag and select the region</h3>
+          <h4>The BattleTag must be in "battletag-number" format</h4>
         </div>
       </div>
     )
