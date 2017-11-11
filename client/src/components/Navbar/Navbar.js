@@ -6,8 +6,8 @@ const Navbar = (props) => {
   return(
     <nav className="navbar navbar-top navbar-dark bg-dark" id="nav">
       <div id="logo-section">
-        <img src="/images/owlogo.svg" className="logo" alt="owlogo"/>
-        <a className="navbar-brand" href="/"><h2>OVERWATCH STATS</h2></a>
+        <a className="navbar-brand" href="/"><img src="/images/owlogo.svg" className="logo" alt="owlogo"/></a>
+        <h2>OVERWATCH STATS</h2>
       </div>
       <div>
         {props.renderLoadingGif}
