@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
+const passport = require("passport");
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -22,9 +23,9 @@ app.listen(PORT, function() {
 
 //Bnet authentication
 
-var BnetStrategy = require('passport-bnet').Strategy;
-var BNET_ID = process.env.BNET_ID
-var BNET_SECRET = process.env.BNET_SECRET
+const BnetStrategy = require('passport-bnet').Strategy;
+const BNET_ID = process.env.BNET_ID
+const BNET_SECRET = process.env.BNET_SECRET
 
 // Use the BnetStrategy within Passport.
 passport.use(new BnetStrategy({

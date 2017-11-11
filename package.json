@@ -23,6 +23,7 @@
     "express": "^4.15.4",
     "lodash": "^4.17.4",
     "overwatch-heroes-icon-font": "^1.2.1",
+    "passport": "^0.4.0",
     "passport-bnet": "^1.2.1",
     "react-router-dom": "^4.2.2"
   }
