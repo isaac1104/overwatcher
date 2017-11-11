@@ -6,6 +6,10 @@
 
 .player-intro {
   padding: 10px;
+  background-image: url("/images/tracer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.8;
 }
 
 .avatar {

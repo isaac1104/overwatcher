@@ -1,11 +1,11 @@
 .header {
-  background-image: url("/images/tracer.jpg");
+  background-image: url("/images/owlogo-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
   margin-top: 2rem;
   height: 45vh;
-  padding: 16%;
+  padding: 8%;
   opacity: 0.8;
 }
 
