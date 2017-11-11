@@ -15,7 +15,7 @@ const Navbar = (props) => {
       <div>
         <Search getStatData={props.getStatData} handleFormSubmit={props.handleFormSubmit} handleInputChange={props.handleInputChange} handleSelectChange={props.handleSelectChange} battleTag={props.battleTag} region={props.region}/>
       </div>
-    </nav>
+      </nav>
   )
 };
 
