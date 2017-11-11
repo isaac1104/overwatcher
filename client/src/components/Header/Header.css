@@ -10,7 +10,14 @@
 }
 
 .error-header {
+  background-image: url("/images/reaper.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
   margin-top: 2rem;
+  height: 45vh;
+  padding: 10%;
+  opacity: 0.8;
 }
 
 hr {
