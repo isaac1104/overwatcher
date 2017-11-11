@@ -1,6 +1,7 @@
 import _ from "lodash";
 import React from "react";
 import Heroes from "./../../utils/Heroes";
+import "./../../dist/ohi_font.css";
 
 const HeroesData = (props) => {
     return (
@@ -24,9 +25,8 @@ const HeroesData = (props) => {
                     {Heroes.filter((hero) => {
                       return hero.name === key;
                     }).map((hero) => {
-                      console.log(hero.image)
                       return (
-                        <img key={hero.name} src={hero.image} className="portrait" alt={hero.name}/>
+                        <img key={hero.name} className="portrait ohi-tracer" alt={hero.name}/>
                       )
                     })}
                     <h6>{key}</h6>
