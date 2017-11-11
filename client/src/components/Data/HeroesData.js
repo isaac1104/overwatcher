@@ -25,7 +25,6 @@ const HeroesData = (props) => {
                     {Heroes.filter((hero) => {
                       return hero.name === key;
                     }).map((hero) => {
-                      // document.getElementsByClassName("portrait").className = `ohi-${hero.name}`
                       return (
                         <img key={hero.name} className="portrait" alt={hero.name} src={hero.image}/>
                       )

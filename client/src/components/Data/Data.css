@@ -28,6 +28,11 @@
   align-items: center;
 }
 
+/*Sub-Data Section*/
+.sub-data {
+  margin-bottom: 2rem;
+}
+
 /*Heroes Data Section*/
 .heroes {
   display: flex;

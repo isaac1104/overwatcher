@@ -3,6 +3,7 @@ import AvatarData from "./AvatarData";
 import PlayerStats from "./PlayerStats";
 import DetailedData from "./DetailedData";
 import HeroesData from "./HeroesData";
+import SubData from "./SubData";
 import "./Data.css";
 
 const DataView = (props) => {
@@ -15,6 +16,7 @@ const DataView = (props) => {
         <div className="row">
           <div className="col-md-5">
             <PlayerStats result={props.result}/>
+            <SubData result={props.result}/>
             <DetailedData result={props.result}/>
           </div>
           <div className="col-md-7">
