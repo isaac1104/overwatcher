@@ -4,7 +4,7 @@ import "./Search.css";
 const Search = (props) => {
   return(
     <form onSubmit={props.handleFormSubmit}>
-      <input onChange={props.handleInputChange} type="text" value={props.battleTag} id="search-box" autoComplete="off"/>
+      <input onChange={props.handleInputChange} type="text" value={props.battleTag} id="search-box" autoComplete="off" placeholder="battletag-number"/>
       <select value={props.region} onChange={props.handleSelectChange} className="form-control">
         <option value="us">US</option>
         <option value="eu">EU</option>
