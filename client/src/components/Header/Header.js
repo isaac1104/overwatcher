@@ -4,7 +4,11 @@ import "./Header.css";
 const Header = (props) => {
   if (props.playerFound === false) {
     return (
-      <h1>Player not found</h1>
+      <div className="container error-header">
+        <div className="jumbotron">
+          <h1>Player not found</h1>
+        </div>
+      </div>
     )
   }
   else {

@@ -9,6 +9,10 @@
   opacity: 0.8;
 }
 
+.error-header {
+  margin-top: 2rem;
+}
+
 hr {
   background-color: white;
 }

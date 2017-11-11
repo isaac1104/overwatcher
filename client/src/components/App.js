@@ -37,6 +37,7 @@ class App extends Component {
         <Header playerFound={this.state.playerFound}/>
       )
     } else {
+      console.log("player found!");
       return (
         <DataView result={this.state.result} battleTag={this.state.battleTag}/>
       )
@@ -57,18 +58,10 @@ class App extends Component {
     }
   }
 
-  renderNotFoundHeader = () => {
-   if (this.state.playerFound === false) {
-     console.log("player not found");
-   } else if (this.state.playerFound === true) {
-     console.log("player found!");
-   }
- }
-
   getStatData = () => {
     if (this.state.battleTag !== "" && this.state.region !== "") {
       API.getStatData(this.state.region, this.state.battleTag).then((res) => {
-        if (res.data.error === "The requested player was not found") {
+        if (res.data.error) {
           this.setState({renderLoading: false, playerFound: false});
         } else {
           this.setState({
@@ -93,7 +86,6 @@ class App extends Component {
       <div>
         <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet}/>
         {this.renderDataView()}
-        {this.renderNotFoundHeader()}
         {this.renderLoadingGif()}
       </div>
     )
