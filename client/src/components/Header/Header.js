@@ -20,8 +20,8 @@ const Header = (props) => {
       <div className="container">
         <div className="jumbotron text-center header">
           <h1>Overwatch Stats Logger</h1>
-          <hr/>
           <h3>Your destination to search for Overwatch stats</h3>
+          <hr/>
           <h4>Please enter your BattleTag and select the region</h4>
           <h5>The BattleTag must be in "battletag-number" format</h5>
           <h6>Ex)sinatraa-11809</h6>
