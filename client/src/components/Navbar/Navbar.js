@@ -1,5 +1,6 @@
 import React from "react";
 import Search from "./../Search/Search";
+import LoginBtn from "./LoginBtn";
 import "./Navbar.css";
 
 const Navbar = (props) => {
@@ -12,10 +13,11 @@ const Navbar = (props) => {
       <div>
         {props.renderLoadingGif}
       </div>
-      <div>
+      <div className="right-menu">
         <Search getStatData={props.getStatData} handleFormSubmit={props.handleFormSubmit} handleInputChange={props.handleInputChange} handleSelectChange={props.handleSelectChange} battleTag={props.battleTag} region={props.region}/>
+        <LoginBtn/>
       </div>
-      </nav>
+    </nav>
   )
 };
 
