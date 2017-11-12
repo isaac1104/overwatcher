@@ -41,6 +41,11 @@
   margin-bottom: 2rem;
 }
 
+/*Detailed Summary Section*/
+.detailed-summary {
+  line-height: 3rem;
+}
+
 /*Heroes Data Section*/
 .heroes {
   display: flex;

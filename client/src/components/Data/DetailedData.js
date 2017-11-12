@@ -28,9 +28,22 @@ const DetailedData = (props) => {
               <div>
                 <b>Objective Time</b>
                 <h6>{props.result.competitiveStats.careerStats.allHeroes.game.objectiveTime}</h6>
-              </div><div>
+              </div>
+              <div>
                 <b>Time on Fire</b>
                 <h6>{props.result.competitiveStats.careerStats.allHeroes.game.timeSpentOnFire}</h6>
+              </div>
+              <div>
+                <b>Multi Kills</b>
+                <h6>{props.result.competitiveStats.careerStats.allHeroes.combat.multikills}</h6>
+              </div>
+              <div>
+                <b>Solo Kills</b>
+                <h6>{props.result.competitiveStats.careerStats.allHeroes.combat.soloKills}</h6>
+              </div>
+              <div>
+                <b>Most Time Spent On Fire</b>
+                <h6>{props.result.competitiveStats.careerStats.allHeroes.best.timeSpentOnFireMostInGame}</h6>
               </div>
             </div>
             <div className="col-md-6">
@@ -40,6 +53,10 @@ const DetailedData = (props) => {
               </div><div>
                 <b>Most Eliminations in Game</b>
                 <h6>{props.result.competitiveStats.careerStats.allHeroes.best.eliminationsMostInGame}</h6>
+              </div>
+              <div>
+                <b>Objective Kills</b>
+                <h6>{props.result.competitiveStats.careerStats.allHeroes.combat.objectiveKills}</h6>
               </div>
               <div>
                 <b>Cards</b>
@@ -56,6 +73,14 @@ const DetailedData = (props) => {
               <div>
                 <b>Bronze Medals</b>
                 <h6>{props.result.competitiveStats.awards.medalsBronze}</h6>
+              </div>
+              <div>
+                <b>Most Solo Kills In Game</b>
+                <h6>{props.result.competitiveStats.careerStats.allHeroes.best.soloKillsMostInGame}</h6>
+              </div>
+              <div>
+                <b>Most Objective Time Spent</b>
+                <h6>{props.result.competitiveStats.careerStats.allHeroes.best.objectiveTimeMostInGame}</h6>
               </div>
             </div>
           </div>
