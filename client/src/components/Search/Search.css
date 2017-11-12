@@ -8,11 +8,11 @@ form {
 
 #search-box {
   text-align: center;
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 select {
-  margin-right: 20px;
+  margin-right: 10px;
   border: 1px solid #353b40;
   background-color: #f99e1a;
   color: #353b40;
@@ -20,4 +20,9 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+input {
+  background-color: #cfd1d6;
+  color: #353b40;
 }
