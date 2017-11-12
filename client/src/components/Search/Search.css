@@ -8,11 +8,13 @@ form {
 
 #search-box {
   text-align: center;
-  margin-right: 5px;
+  margin-right: 1rem;
+  width: 20rem;
+  height: 2.5rem;
 }
 
 select {
-  margin-right: 10px;
+  margin-right: 1rem;
   border: 1px solid #353b40;
   background-color: #f99e1a;
   color: #353b40;

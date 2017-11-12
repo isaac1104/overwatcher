@@ -10,7 +10,7 @@ const Search = (props) => {
         <option value="eu">EU</option>
         <option value="kr">KR</option>
       </select>
-      <button onClick={()=> props.getStatData()} type="submit" className="btn btn-danger btn-sm">Search</button>
+      <button onClick={()=> props.getStatData()} type="submit" className="btn btn-danger btn-md">Search</button>
     </form>
   )
 };
