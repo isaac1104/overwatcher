@@ -4,9 +4,6 @@ import Heroes from "./../../utils/Heroes";
 import "./../../dist/ohi_font.css";
 
 const HeroesData = (props) => {
-
-  console.log(props.result);
-
     return (
       <div>
         <table className="table table-hover">
