@@ -15,6 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this.loadSavedUsers();
     this.setState({battleTag: "", region: "us", renderView: false, renderLoading: false});
   }
 
@@ -78,6 +79,12 @@ class App extends Component {
         }
       });
     }
+  }
+
+  loadSavedUsers = () => {
+    API.getSavedUsers().then((res) => {
+      console.log(res.data);
+    });
   }
 
   render() {

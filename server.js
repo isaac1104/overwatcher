@@ -5,7 +5,13 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const util = require("util");
+const mongoose = require("mongoose");
 require("./services/passport");
+
+
+// Configure body parser for AJAX requests
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use(cookieParser());
 app.use(session({secret: 'blizzard', saveUninitialized: true, resave: true}));
@@ -24,6 +30,16 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(express.static("client/public"));
+
+// Set up promises with mongoose
+mongoose.Promise = global.Promise;
+// Connect to the Mongo DB
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/overwatch",
+  {
+    useMongoClient: true
+  }
+);
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
