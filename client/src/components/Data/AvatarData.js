@@ -31,7 +31,6 @@ const mainHero =  _.map(props.result.competitiveStats.topHeroes, (value, key) =>
           <div>
             <h5>LV.{props.result.level}</h5>
             <h4>{props.result.name}</h4>
-            <h6>Main Hero: {mainHero.name}</h6>
           </div>
         </div>
       </div>

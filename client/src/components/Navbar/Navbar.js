@@ -14,7 +14,7 @@ const Navbar = (props) => {
         {props.renderLoadingGif}
       </div>
       <div className="right-menu">
-        <Search getStatData={props.getStatData} handleFormSubmit={props.handleFormSubmit} handleInputChange={props.handleInputChange} handleSelectChange={props.handleSelectChange} battleTag={props.battleTag} region={props.region}/>
+        <Search {...props}/>
         <LoginBtn/>
       </div>
     </nav>

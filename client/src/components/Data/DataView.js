@@ -10,17 +10,17 @@ const DataView = (props) => {
   return (
     <div>
       <div>
-        <AvatarData result={props.result} battleTag={props.battleTag}/>
+        <AvatarData {...props}/>
       </div>
       <div className="container">
         <div className="row">
           <div className="col-md-5">
-            <PlayerStats result={props.result}/>
-            <SubData result={props.result}/>
-            <DetailedData result={props.result}/>
+            <PlayerStats {...props}/>
+            <SubData {...props}/>
+            <DetailedData {...props}/>
           </div>
           <div className="col-md-7">
-            <HeroesData result={props.result}/>
+            <HeroesData {...props}/>
           </div>
         </div>
       </div>
