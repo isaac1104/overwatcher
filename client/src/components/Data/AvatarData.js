@@ -1,6 +1,5 @@
 import _ from "lodash";
 import React from "react";
-import Heroes from "./../../utils/Heroes";
 
 const AvatarData = (props) => {
 

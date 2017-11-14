@@ -84,6 +84,8 @@ class App extends Component {
   loadSavedUsers = () => {
     API.getSavedUsers().then((res) => {
       console.log(res.data);
+    }).catch((err) => {
+      console.log(err);
     });
   }
 
