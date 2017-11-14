@@ -1,13 +1,14 @@
 const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 5000;
 const app = express();
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const util = require("util");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const routes = require("./routes");
 const passport = require("passport");
+const PORT = process.env.PORT || 5000;
 require("./services/passport");
 
 // Configure body parser for AJAX requests
@@ -23,11 +24,13 @@ require("./routes/authRoutes")(app);
 
 app.get("*", function(req, res) {
   if (process.env.NODE_ENV === "production") {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+    res.sendFile(path.join(__dirname, "./client/build"));
   } else {
-    res.sendFile(path.join(__dirname, "./client/public/index.html"));
+    res.sendFile(path.join(__dirname, "./client/public"));
   }
 });
+
+app.use(routes);
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
