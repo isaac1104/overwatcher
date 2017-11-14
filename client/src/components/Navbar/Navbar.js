@@ -5,19 +5,19 @@ import "./Navbar.css";
 
 const Navbar = (props) => {
   return(
-    <nav className="navbar navbar-top navbar-dark bg-dark" id="nav">
-      <div id="logo-section">
-        <a className="navbar-brand" href="/"><img src="/images/owlogo.svg" className="logo" alt="owlogo"/></a>
-        <h2>OVERWATCH STATS</h2>
-      </div>
-      <div>
-        {props.renderLoadingGif}
-      </div>
-      <div className="right-menu">
-        <Search {...props}/>
-        <LoginBtn/>
-      </div>
-    </nav>
+      <nav className="navbar navbar-top navbar-dark bg-dark" id="nav">
+        <div id="logo-section">
+          <a className="navbar-brand" href="/"><img src="/images/owlogo.svg" className="logo" alt="owlogo"/></a>
+          <h2>OVERWATCH STATS</h2>
+        </div>
+        <div>
+          {props.renderLoadingGif}
+        </div>
+        <div className="right-menu">
+          <Search {...props}/>
+          <LoginBtn/>
+        </div>
+      </nav>
   )
 };
 

@@ -52,9 +52,7 @@ class App extends Component {
       )
     } else {
       return (
-        <div>
           <img src="/images/loading.gif" className="img-responsive loading" alt="loading"/>
-        </div>
       )
     }
   }
