@@ -59,7 +59,7 @@ class App extends Component {
     }
   }
 
-  getStatData = () => {
+  getStatData = (username) => {
     if (this.state.battleTag !== "" && this.state.region !== "") {
       API.getStatData(this.state.region, this.state.battleTag).then((res) => {
         if (res.data.error) {
@@ -77,6 +77,11 @@ class App extends Component {
           console.log(err);
           this.setState({renderLoading: false, playerFound: false});
         }
+      });
+      API.saveUsers({username: this.state.battleTag}).then((res) => {
+        this.loadSavedUsers()
+      }).catch((err) => {
+        console.log(err);
       });
     }
   }
