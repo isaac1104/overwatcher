@@ -38,7 +38,7 @@ class App extends Component {
         <Header playerFound={this.state.playerFound}/>
       )
     } else {
-      console.log("player found!");
+      console.log("player found");
       return (
         <DataView result={this.state.result} battleTag={this.state.battleTag}/>
       )
