@@ -3,7 +3,7 @@ const cookieSession = require("cookie-session");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
-const cookieKey = process.env.COOKIE_KEY;
+const cookieKey = process.env.COOKIE_KEY || "abcedfg";
 const routes = require("./routes");
 
 // Connect to the Mongo DB
@@ -41,6 +41,8 @@ if (process.env.NODE_ENV === "production") {
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
+} else {
+  app.use(express.static("client/public"));
 }
 
 app.listen(PORT, function() {

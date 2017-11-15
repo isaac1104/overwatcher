@@ -8,7 +8,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 class App extends Component {
   state = {
     battleTag: "",
-    region: "",
+    region: "us",
     renderView: false,
     renderLoading: false,
     playerFound: "",
@@ -97,8 +97,7 @@ class App extends Component {
       <Router>
         <div>
           <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet} renderLoadingGif={this.renderLoadingGif()}/>
-          <Route exact path="/" component={Header}/>
-          <Route exact path="dataview" component={DataView}/>
+          {this.renderDataView()}
         </div>
       </Router>
     )
