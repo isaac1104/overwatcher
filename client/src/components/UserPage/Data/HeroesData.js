@@ -1,6 +1,6 @@
 import _ from "lodash";
 import React from "react";
-import Heroes from "./../../utils/Heroes";
+import Heroes from "./../../../utils/Heroes";
 
 const HeroesData = (props) => {
     return (
