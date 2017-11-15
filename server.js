@@ -32,7 +32,7 @@ app.get('/auth/bnet/callback', passport.authenticate('bnet', {failureRedirect: '
 
 
 app.get("/log", (req, res) => {
-  res.jseon(req.user);
+  res.json(req.user);
 });
 
 if (process.env.NODE_ENV === "production") {
