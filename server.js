@@ -24,12 +24,13 @@ app.use(cookieSession({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(routes);
 app.get('/auth/bnet', passport.authenticate('bnet'));
 app.get('/auth/bnet/callback', passport.authenticate('bnet', {failureRedirect: '/'}), function(req, res) {
   res.redirect('/log');
 });
 
-app.use(routes);
+
 app.get("/log", (req, res) => {
   res.jseon(req.user);
 });
