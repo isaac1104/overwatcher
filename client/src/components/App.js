@@ -60,7 +60,7 @@ class App extends Component {
   getStatData = (username) => {
     if (this.state.battleTag !== "" && this.state.region !== "") {
       API.getStatData(this.state.region, this.state.battleTag).then((res) => {
-        if (res.data.error) {
+        if (res.data.error|| !res.data.competitiveStats.careerStats) {
           this.setState({renderLoading: false, playerFound: false});
         } else {
           this.setState({
