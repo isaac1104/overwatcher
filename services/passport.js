@@ -15,7 +15,7 @@ passport.use(
   new BnetStrategy(
     { clientID: BNET_ID,
       clientSecret: BNET_SECRET,
-      callbackURL: "https://powerful-wildwood-93073.herokuapp.com/auth/bnet/callback" },
+      callbackURL: "https://powerful-wildwood-93073.herokuapp.com/auth/bnet/callback"},
     function(accessToken, refreshToken, profile, done) {
       process.nextTick(function () {
         return done(null, profile);
