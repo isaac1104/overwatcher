@@ -97,7 +97,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route exact path="/" component={Home}/>
+          <Route path="/user" component={Navbar}/>
           <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet} renderLoadingGif={this.renderLoadingGif()}/>
           {this.renderDataView()}
         </div>
