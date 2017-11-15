@@ -1,9 +1,15 @@
 import React from "react";
+import LoginBtn from "./../Navbar/LoginBtn";
+import "./Home.css";
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
+    <div className="home-screen container-fluid">
+      <div className="text-center home-screen-content">
+        <h1>Welcome to <img src="/images/owlogo.svg" alt="ow-logo"/>Stats</h1>
+        <h3>Sign in with your Battlenet account to continue</h3>
+        <LoginBtn/>
+      </div>
     </div>
   )
 };
