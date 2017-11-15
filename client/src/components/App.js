@@ -3,6 +3,7 @@ import Navbar from "./Navbar/Navbar";
 import Header from "./Header/Header";
 import DataView from "./Data/DataView";
 import API from "./../utils/API";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 
 class App extends Component {
   state = {
@@ -16,7 +17,6 @@ class App extends Component {
 
   componentDidMount() {
     this.loadSavedUsers();
-    this.setState({battleTag: "", region: "us", renderView: false, renderLoading: false});
   }
 
   handleInputChange = (event) => {
@@ -94,10 +94,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet} renderLoadingGif={this.renderLoadingGif()}/>
-        {this.renderDataView()}
-      </div>
+      <Router>
+        <div>
+          <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet} renderLoadingGif={this.renderLoadingGif()}/>
+          <Route exact path="/" component={Header}/>
+          <Route exact path="dataview" component={DataView}/>
+        </div>
+      </Router>
     )
   }
 };
