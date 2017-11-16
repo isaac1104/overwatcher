@@ -12,8 +12,8 @@ const Search = (props) => {
           <option value="eu">EU</option>
           <option value="kr">KR</option>
         </select>
-        <button onClick={()=> props.getStatData()} type="submit" className="btn btn-danger btn-md">Search</button>
-        <LoginBtn/>
+        <button onClick={()=> props.getStatData()} type="submit" className="btn btn-success btn-md">search</button>
+        <button className="btn btn-danger btn-md"><a href="/logout">logout</a></button>
       </form>
     </div>
   )

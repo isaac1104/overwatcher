@@ -28,3 +28,7 @@ input {
   background-color: #cfd1d6;
   color: #353b40;
 }
+
+.btn-success {
+  margin-right: 1rem;
+}
