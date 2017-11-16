@@ -1,5 +1,5 @@
 import React from "react";
-import LoginBtn from "./../UserPage/LoginBtn/LoginBtn";
+import LoginBtn from "./LoginBtn/LoginBtn";
 import "./Home.css";
 
 const Home = () => {
