@@ -9,5 +9,8 @@ export default {
   },
   getSavedUsers() {
     return axios.get("api/users");
+  },
+  getSignedInUser() {
+    return axios.get("https://powerful-wildwood-93073.herokuapp.com/log");
   }
 };

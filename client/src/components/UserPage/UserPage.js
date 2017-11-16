@@ -18,6 +18,7 @@ class App extends Component {
 
   componentDidMount() {
     this.loadSavedUsers();
+    this.loadSignedInUser();
   }
 
   handleInputChange = (event) => {
@@ -88,6 +89,14 @@ class App extends Component {
   loadSavedUsers = () => {
     API.getSavedUsers().then((res) => {
       console.log(res.data);
+    }).catch((err) => {
+      console.log(err);
+    });
+  }
+
+  loadSignedInUser = () => {
+    API.getSignedInUser().then((res) => {
+      console.log(res);
     }).catch((err) => {
       console.log(err);
     });
