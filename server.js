@@ -35,6 +35,11 @@ app.get("/log", (req, res) => {
   res.json(req.user);
 });
 
+app.get("/logout", (req, res) => {
+  req.logout();
+  res.redirect('/');
+});
+
 if (process.env.NODE_ENV === "production") {
   const path = require("path");
   app.use(express.static("client/build"));
