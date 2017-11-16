@@ -97,7 +97,7 @@ class App extends Component {
 
   loadSignedInUser = () => {
     API.getSignedInUser().then((res) => {
-      console.log(res.data.battleTag);
+      console.log(res.data);
       this.setState({user: res.data.battleTag});
     }).catch((err) => {
       console.log(err);
