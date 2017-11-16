@@ -36,9 +36,7 @@ app.get("/log", (req, res) => {
 });
 
 app.get("/logout", (req, res) => {
-  console.log(req, res);
-  req.logout();
-  res.redirect('/');
+  res.json(req.user);
 });
 
 if (process.env.NODE_ENV === "production") {
