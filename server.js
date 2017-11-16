@@ -3,7 +3,6 @@ const cookieSession = require("cookie-session");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
-const seesion = require("express-session");
 const cookieKey = process.env.COOKIE_KEY || "abcedfg";
 const routes = require("./routes");
 
@@ -32,9 +31,8 @@ app.get('/auth/bnet/callback', passport.authenticate('bnet', {failureRedirect: '
 });
 
 app.get("/logout", (req, res) => {
-  req.session.destroy(() => {
-    res.redirect("/home");
-  });
+  req.session = null;
+  res.redirect("/home");
 });
 
 if (process.env.NODE_ENV === "production") {
