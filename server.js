@@ -27,7 +27,6 @@ app.use(passport.session());
 app.use(routes);
 app.get('/auth/bnet', passport.authenticate('bnet'));
 app.get('/auth/bnet/callback', passport.authenticate('bnet', {failureRedirect: '/'}), function(req, res) {
-  console.log(req.user.battletag);
   res.redirect("/user");
 });
 
@@ -36,7 +35,8 @@ app.get("/log", (req, res) => {
 });
 
 app.get("/logout", (req, res) => {
-  res.json(req.user);
+  req.logout();
+  res.redirect("/home");
 });
 
 if (process.env.NODE_ENV === "production") {

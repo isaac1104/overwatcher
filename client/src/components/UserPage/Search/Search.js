@@ -1,5 +1,4 @@
 import React from "react";
-import LoginBtn from "./../Navbar/LoginBtn";
 import "./Search.css";
 
 const Search = (props) => {
