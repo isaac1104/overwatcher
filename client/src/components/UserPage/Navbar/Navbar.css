@@ -1,7 +1,4 @@
 #nav {
-  /*display: flex;
-  justify-content: space-evenly;
-  align-items: center;*/
   color: white;
 }
 
@@ -18,15 +15,12 @@
 
 .loading {
   width: 80px;
-  margin-left: 2rem;
-}
-
-.right-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .bnet-logo {
   width: 70px;
+}
+
+.nav-pills {
+  margin-left: 2rem;
 }

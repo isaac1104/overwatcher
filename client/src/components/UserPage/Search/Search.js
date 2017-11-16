@@ -1,4 +1,5 @@
 import React from "react";
+import LoginBtn from "./../Navbar/LoginBtn";
 import "./Search.css";
 
 const Search = (props) => {
@@ -12,6 +13,7 @@ const Search = (props) => {
           <option value="kr">KR</option>
         </select>
         <button onClick={()=> props.getStatData()} type="submit" className="btn btn-danger btn-md">Search</button>
+        <LoginBtn/>
       </form>
     </div>
   )
