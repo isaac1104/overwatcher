@@ -11,7 +11,7 @@ class App extends Component {
     battleTag: "",
     region: "us",
     renderView: false,
-    renderLoading: false,
+    renderLoading: true,
     playerFound: "",
     user: "",
     result: []
