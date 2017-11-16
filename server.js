@@ -3,6 +3,7 @@ const cookieSession = require("cookie-session");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
+const seesion = require("express-session");
 const cookieKey = process.env.COOKIE_KEY || "abcedfg";
 const routes = require("./routes");
 
