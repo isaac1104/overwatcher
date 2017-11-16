@@ -9,15 +9,15 @@ const Navbar = (props) => {
           <a className="navbar-brand"><img src="/images/owlogo.svg" className="logo" alt="owlogo"/></a>
           <h2>OVERWATCH STATS</h2>
           <div className="navbar">
-            <ul class="nav nav-pills">
-              <li class="nav-item">
-                <a class="nav-link active" href="/">HOME</a>
+            <ul className="nav nav-pills">
+              <li className="nav-item">
+                <a className="nav-link active" href="/">HOME</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/stream">STREAM</a>
+              <li className="nav-item">
+                <a className="nav-link" href="/stream">STREAM</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/compare">COMPARE</a>
+              <li className="nav-item">
+                <a className="nav-link" href="/compare">COMPARE</a>
               </li>
             </ul>
           </div>
