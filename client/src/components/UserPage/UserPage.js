@@ -79,7 +79,7 @@ class App extends Component {
         }
       });
       API.saveUsers({username: this.state.battleTag}).then((res) => {
-        this.loadSavedUsers()
+        this.loadSavedUsers();
       }).catch((err) => {
         console.log(err);
       });
@@ -97,6 +97,11 @@ class App extends Component {
   loadSignedInUser = () => {
     API.getSignedInUser().then((res) => {
       this.setState({signedInUser: res.data.battletag});
+      API.saveUsers({username: this.state.signedInUsers}).then((res) => {
+        this.loadSavedUsers();
+      }).catch((err) => {
+        console.log(err);
+      });
     }).catch((err) => {
       console.log(err);
     });
