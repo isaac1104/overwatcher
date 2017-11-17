@@ -12,7 +12,7 @@ class App extends Component {
     renderView: false,
     renderLoading: false,
     playerFound: "",
-    signedInuser: "",
+    signedInUser: "",
     result: []
   }
 
