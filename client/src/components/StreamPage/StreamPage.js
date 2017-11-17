@@ -1,8 +1,12 @@
 import React from "react";
+import Navbar from "./../UserPage/Navbar/Navbar";
 
 const StreamPage = () => {
   return (
-    <h1>STREAM PAGE COMING SOON...</h1>
+    <div>
+      <Navbar/>
+      <h1>STREAM PAGE COMING SOON...</h1>
+    </div>
   )
 };
 
