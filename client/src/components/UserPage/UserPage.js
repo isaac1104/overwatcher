@@ -1,8 +1,10 @@
 import React, {Component} from "react";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import Home from "./../Home/Home";
 import Navbar from "./Navbar/Navbar";
 import Header from "./Header/Header";
 import DataView from "./Data/DataView";
+import StreamPage from "./../StreamPage/StreamPage";
 import API from "./../../utils/API";
 
 class App extends Component {
@@ -104,10 +106,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet} renderLoadingGif={this.renderLoadingGif()}/>
-        {this.renderDataView()}
-      </div>
+      <Router>
+        <div>
+          <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet} renderLoadingGif={this.renderLoadingGif()}/>
+          {this.renderDataView()}
+          <Route exact path="/stream" component={StreamPage}/>
+        </div>
+      </Router>
     )
   }
 };
