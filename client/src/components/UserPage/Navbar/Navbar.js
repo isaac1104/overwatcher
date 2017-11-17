@@ -15,10 +15,10 @@ const Navbar = (props) => {
             <a className="nav-link" href="/user">HOME</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/stream">STREAM</a>
+            <a className="nav-link" href="/user/stream">STREAM</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/compare">COMPARE</a>
+            <a className="nav-link" href="/user/compare">COMPARE</a>
           </li>
           <li className="nav-item">
             {props.renderLoadingGif}

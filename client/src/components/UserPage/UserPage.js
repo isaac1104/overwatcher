@@ -110,7 +110,7 @@ class App extends Component {
         <div>
           <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet} renderLoadingGif={this.renderLoadingGif()}/>
           {this.renderDataView()}
-          <Route exact path="/stream" component={StreamPage}/>
+          <Route exact path="/user/stream" component={StreamPage}/>
         </div>
       </Router>
     )
