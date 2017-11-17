@@ -35,6 +35,7 @@ app.get("/log", (req, res) => {
 });
 
 app.get("/logout", (req, res) => {
+  req.session = null;
   req.logout();
   res.redirect("/home");
 });
