@@ -79,7 +79,7 @@ class App extends Component {
         }
       });
       API.saveUsers({username: this.state.battleTag}).then((res) => {
-        this.loadSavedUsers();
+        this.loadSavedUsers()
       }).catch((err) => {
         console.log(err);
       });
