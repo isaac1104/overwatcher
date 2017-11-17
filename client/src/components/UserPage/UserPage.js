@@ -21,7 +21,6 @@ class App extends Component {
     this.loadSignedInUser();
     API.saveUsers({username: this.state.signedInUser}).then((res) => {
       console.log(res.data);
-      this.loadSignedInUser();
     }).catch((err) => {
       console.log(err);
     });
