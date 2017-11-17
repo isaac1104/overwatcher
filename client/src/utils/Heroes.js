@@ -43,6 +43,10 @@ const Heroes = [{
     image: "/images/heroes/mercy.png"
   },
   {
+    name: "moira",
+    image: "/images/heroes/moira.png"
+  },
+  {
     name: "orisa",
     image: "/images/heroes/orisa.png"
   },
