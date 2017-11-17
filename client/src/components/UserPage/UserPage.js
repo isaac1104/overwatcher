@@ -19,6 +19,12 @@ class App extends Component {
   componentDidMount() {
     this.loadSavedUsers();
     this.loadSignedInUser();
+    API.saveUsers({username: this.state.signedInUser}).then((res) => {
+      console.log(res.data);
+      this.loadSignedInUser();
+    }).catch((err) => {
+      console.log(err);
+    });
   }
 
   handleInputChange = (event) => {
@@ -78,11 +84,11 @@ class App extends Component {
           this.setState({renderLoading: false, playerFound: false});
         }
       });
-      API.saveUsers({username: this.state.battleTag}).then((res) => {
-        this.loadSavedUsers()
-      }).catch((err) => {
-        console.log(err);
-      });
+      // API.saveUsers({username: this.state.battleTag}).then((res) => {
+      //   this.loadSavedUsers();
+      // }).catch((err) => {
+      //   console.log(err);
+      // });
     }
   }
 
