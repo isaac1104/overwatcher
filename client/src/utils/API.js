@@ -12,5 +12,8 @@ export default {
   },
   getSignedInUser() {
     return axios.get("https://powerful-wildwood-93073.herokuapp.com/log");
+  },
+  saveSignedInUser(user) {
+    return axios.post("api/battletag");
   }
 };

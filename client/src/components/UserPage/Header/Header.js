@@ -19,7 +19,7 @@ const Header = (props) => {
     return (
       <div className="container">
         <div className="jumbotron text-center header">
-          <h1>Welcome {props.user}</h1>
+          <h1>Welcome {props.signedInUser}</h1>
           <hr/>
           <h4>Please enter the BattleTag and select the region to complete the search</h4>
           <h5>The BattleTag must be in "battletag-number" format</h5>

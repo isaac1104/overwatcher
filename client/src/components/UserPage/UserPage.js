@@ -12,7 +12,7 @@ class App extends Component {
     renderView: false,
     renderLoading: false,
     playerFound: "",
-    user: "",
+    signedInuser: "",
     result: []
   }
 
@@ -37,7 +37,7 @@ class App extends Component {
   renderDataView = () => {
     if (this.state.renderView === false || this.state.playerFound === false) {
       return (
-        <Header playerFound={this.state.playerFound} user={this.state.user}/>
+        <Header playerFound={this.state.playerFound} signedInUser={this.state.signedInUser}/>
       )
     } else {
       console.log("player found");
@@ -96,7 +96,7 @@ class App extends Component {
 
   loadSignedInUser = () => {
     API.getSignedInUser().then((res) => {
-      this.setState({user: res.data.battletag});
+      this.setState({signedInUser: res.data.battletag});
     }).catch((err) => {
       console.log(err);
     });
