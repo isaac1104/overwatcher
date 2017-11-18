@@ -105,7 +105,7 @@ class App extends Component {
   render() {
     return (
         <div>
-          <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} greet={this.greet} renderLoadingGif={this.renderLoadingGif()}/>
+          <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} renderLoadingGif={this.renderLoadingGif()}/>
           {this.renderDataView()}
         </div>
     )
