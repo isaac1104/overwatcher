@@ -7,7 +7,7 @@ const StreamPage = () => {
       <Navbar/>
       <h1>STREAM PAGE COMING SOON...</h1>
     </div>
-  )
+  )  
 };
 
 export default StreamPage;
