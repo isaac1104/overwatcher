@@ -39,6 +39,11 @@
   margin-bottom: 2rem;
 }
 
+.top-3-heroes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /*Detailed Summary Section*/
 .detailed-summary {
   line-height: 3rem;
