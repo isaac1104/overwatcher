@@ -13,7 +13,7 @@ class ComparePage extends  Component {
     player2Found: "",
     result1: [],
     result2: [],
-    renderData: false
+    renderData: ""
   }
 
   handleInputOne = (event) => {
