@@ -5,7 +5,7 @@ const Button = (props) => {
     <form onSubmit={props.handleFormSubmit}>
       Player 1 <input onChange={props.handleInputOne} value={props.battleTag1} type="text"/>
       Player 2 <input onChange={props.handleInputTwo} value={props.battleTag2} type="text"/>
-      <button onClick={() => props.handleButtonClick()} className="btn btn-primary btn-md">compare</button>
+      <button onClick={() => props.getStatData()} className="btn btn-primary btn-md">compare</button>
     </form>
   )
 };
