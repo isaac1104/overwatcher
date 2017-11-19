@@ -1,5 +1,12 @@
 .compare-page-header {
   margin-top: 2rem;
-  background-color: #353b40;
+  background-image: url("/images/owlogo-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
+  margin-top: 2rem;
+  height: 45vh;
+  padding: 8%;
+  opacity: 0.8;
+  line-height: 0.5rem;
 }

@@ -29,6 +29,7 @@ const Player1Data = (props) => {
         <img src={props.result1.ratingIcon} alt="rank" className="rank-img"/>
         <div>
           <h5>{props.result1.name}</h5>
+          <h5>LV.{props.result1.level}</h5>
           <h5>Most Played Hero: {mainHero.name}</h5>
           <h5>{props.result1.ratingName}</h5>
           <h5>{props.result1.rating} Points</h5>
