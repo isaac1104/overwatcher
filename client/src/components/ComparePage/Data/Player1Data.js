@@ -47,6 +47,9 @@ const Player1Data = (props) => {
           <h5>{props.result1.rating} Points</h5>
         </div>
       </div>
+      <div className="card-header">
+        <h5>Top 3 Heroes</h5>
+      </div>
       <div className="card-body">
         <div className="row">
           {sortedTop3Heroes.map((hero) => {
@@ -64,6 +67,9 @@ const Player1Data = (props) => {
             )
           })}
         </div>
+      </div>
+      <div className="card-header">
+        <h5>Summary</h5>
       </div>
       <div className="card-body">
         <div className="row">
