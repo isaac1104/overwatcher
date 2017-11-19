@@ -13,7 +13,8 @@ class ComparePage extends  Component {
     player2Found: "",
     result1: [],
     result2: [],
-    renderData: ""
+    renderData: false,
+    renderLoading: false
   }
 
   handleInputOne = (event) => {
@@ -25,7 +26,7 @@ class ComparePage extends  Component {
   }
 
   handleFormSubmit = (event) => {
-    this.setState({battleTag1: "", battleTag2: ""});
+    this.setState({battleTag1: "", battleTag2: "", renderLoading: true});
     event.preventDefault();
   }
 
@@ -38,6 +39,7 @@ class ComparePage extends  Component {
           this.setState({
             result1: res.data,
             player1Found: true,
+            renderLoading:false
           });
         }
       }).catch((err) => {
@@ -52,7 +54,8 @@ class ComparePage extends  Component {
         } else {
           this.setState({
             result2: res.data,
-            player2Found: true
+            player2Found: true,
+            renderLoading:false
           });
         }
       }).catch((err) => {
@@ -72,8 +75,19 @@ class ComparePage extends  Component {
       )
     } else {
       return (
-        <div className="container">
-        </div>
+        <div></div>
+      )
+    }
+  }
+
+  loadingGif = () => {
+    if (this.state.renderLoading) {
+      return (
+        <img src="/images/loading.gif" alt="loading-gif" className="img-responsive loading"/>
+      )
+    } else {
+      return (
+        <div></div>
       )
     }
   }
@@ -82,7 +96,7 @@ class ComparePage extends  Component {
     return (
       <div>
         <Navbar/>
-        <Header handleInputOne={this.handleInputOne} handleInputTwo={this.handleInputTwo} handleFormSubmit={this.handleFormSubmit} battleTag1={this.state.battleTag1} battleTag2={this.state.battleTag2} getStatData={this.getStatData}/>
+        <Header handleInputOne={this.handleInputOne} handleInputTwo={this.handleInputTwo} handleFormSubmit={this.handleFormSubmit} battleTag1={this.state.battleTag1} battleTag2={this.state.battleTag2} getStatData={this.getStatData} loadingGif={this.loadingGif}/>
         {this.showComparedStats()}
       </div>
     )
