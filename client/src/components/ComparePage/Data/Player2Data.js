@@ -1,11 +1,33 @@
+import _ from "lodash";
 import React from "react";
 
 const Player2Data = (props) => {
+
+  const mainHero =  _.map(props.result2.competitiveStats.topHeroes, (value, key) => {
+      return {"name": key, "win": value.gamesWon};
+    }).reduce((acc,curr) => {
+      if (acc.win > curr.win) {
+        return acc;
+      } else {
+        return curr;
+      }
+    });
+
+    const style = {
+        padding: "10px",
+        backgroundImage: `url(/images/heroes-bg/${mainHero.name}.png)`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        opacity: "0.8"
+    }
+
   return (
     <div className="card player-stats-data">
-      <div className="card-header player-stats-header">
+      <div className="card-header player-stats-header" style={style}>
         <img src={props.result2.ratingIcon} alt="rank" className="rank-img"/>
         <div>
+          <h5>{props.result2.name}</h5>
+          <h5>Most Played Hero: {mainHero.name}</h5>
           <h5>{props.result2.ratingName}</h5>
           <h5>{props.result2.rating} Points</h5>
         </div>
