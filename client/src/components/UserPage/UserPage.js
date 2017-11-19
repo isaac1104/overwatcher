@@ -54,7 +54,7 @@ class App extends Component {
       )
     } else {
       return (
-          <img src="/images/loading.gif" className="img-responsive loading" alt="loading"/>
+        <img src="/images/loading.gif" className="img-responsive loading" alt="loading"/>
       )
     }
   }
@@ -104,10 +104,10 @@ class App extends Component {
 
   render() {
     return (
-        <div>
-          <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} renderLoadingGif={this.renderLoadingGif()}/>
-          {this.renderDataView()}
-        </div>
+      <div>
+        <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} renderLoadingGif={this.renderLoadingGif()}/>
+        {this.renderDataView()}
+      </div>
     )
   }
 };
