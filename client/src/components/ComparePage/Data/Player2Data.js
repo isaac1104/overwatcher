@@ -21,6 +21,8 @@ const Player2Data = (props) => {
         opacity: "0.8"
     }
 
+  const {competitiveStats} = props.result2;
+
   return (
     <div className="card player-stats-data">
       <div className="card-header player-stats-header" style={style}>
@@ -37,8 +39,8 @@ const Player2Data = (props) => {
           <div className="col-md-4">
             <h5><strong>Win Rate</strong></h5>
             <hr/>
-            <h6>{((props.result2.competitiveStats.games.won / props.result2.competitiveStats.games.played) * 100).toFixed(0)}%</h6>
-            <h6>{props.result2.competitiveStats.games.won} W {props.result2.competitiveStats.careerStats.allHeroes.average.gamesTied} D {props.result2.competitiveStats.careerStats.allHeroes.average.gamesLost} L</h6>
+            <h6>{((competitiveStats.games.won / competitiveStats.games.played) * 100).toFixed(0)}%</h6>
+            <h6>{competitiveStats.games.won} W {competitiveStats.careerStats.allHeroes.average.gamesTied} D {competitiveStats.careerStats.allHeroes.average.gamesLost} L</h6>
           </div>
           <div className="col-md-4">
             <h5><strong>Total Games Won</strong></h5>
@@ -48,8 +50,27 @@ const Player2Data = (props) => {
           <div className="col-md-4">
             <h5><strong>Time Played</strong></h5>
             <hr/>
-            <h6>{props.result2.competitiveStats.careerStats.allHeroes.game.timePlayed}</h6>
-            <h6>{props.result2.competitiveStats.careerStats.allHeroes.game.gamesPlayed} game(s)</h6>
+            <h6>{competitiveStats.careerStats.allHeroes.game.timePlayed}</h6>
+            <h6>{competitiveStats.careerStats.allHeroes.game.gamesPlayed} game(s)</h6>
+          </div>
+        </div>
+      </div>
+      <div className="card-body">
+        <div className="row">
+          <div className="col-md-4">
+            <h5><strong>All Damages Done</strong></h5>
+            <hr/>
+            <h6>{competitiveStats.careerStats.allHeroes.best.allDamageDoneMostInGame}</h6>
+          </div>
+          <div className="col-md-4">
+            <h5><strong>Most Time Spent On Fire</strong></h5>
+            <hr/>
+            <h6>{competitiveStats.careerStats.allHeroes.best.timeSpentOnFireMostInGame}</h6>
+          </div>
+          <div className="col-md-4">
+            <h5><strong>Most Time Spent On Object</strong></h5>
+            <hr/>
+            <h6>{competitiveStats.careerStats.allHeroes.best.objectiveTimeMostInGame}</h6>
           </div>
         </div>
       </div>
