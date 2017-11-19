@@ -1,13 +1,17 @@
-import React from "react";
+import React, {Component} from "react";
 import Navbar from "./../UserPage/Navbar/Navbar";
+import Header from "./Header/Header";
+import API from "./../../utils/API";
 
-const ComparePage = () => {
-  return (
-    <div>
-      <Navbar/>
-      <h1>COMPARE PAGE COMING SOON...</h1>
-    </div>
-  )
-};
+class ComparePage extends  Component {
+  render() {
+    return (
+      <div>
+        <Navbar/>
+        <Header/>
+      </div>
+    )
+  }
+}
 
 export default ComparePage;

@@ -24,7 +24,7 @@ const Navbar = (props) => {
             {props.renderLoadingGif}
           </li>
         </ul>
-          <form onSubmit={props.handleFormSubmit} className="form-inline my-2 my-lg-0">
+        <form onSubmit={props.handleFormSubmit} className="form-inline my-2 my-lg-0">
           <Search {...props}/>
         </form>
       </div>
