@@ -21,8 +21,8 @@ const Player1Data = (props) => {
         opacity: "0.8"
     }
 
-  console.log(props.result1);
   const {competitiveStats} = props.result1;
+  
   return (
     <div className="card player-stats-data">
       <div className="card-header player-stats-header" style={style}>
