@@ -1,17 +1,13 @@
 import React from "react";
-import Button from "./../Button/Button";
+import Search from "./../Search/Search";
 import "./Header.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className="container">
       <div className="jumbotron text-center compare-page-header">
         <h1>Enter two different players for comparison</h1>
-        <h3>Player 1</h3>
-        <input type="text"></input>
-        <h3>Player 2</h3>
-        <input type="text"></input>
-        <Button/>
+        <Search {...props}/>
       </div>
     </div>
   )

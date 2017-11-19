@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Home from "./../Home/Home";
 import Navbar from "./Navbar/Navbar";
 import Header from "./Header/Header";
 import DataView from "./Data/DataView";
