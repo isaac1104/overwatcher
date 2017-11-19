@@ -1,5 +1,6 @@
 import _ from "lodash";
 import React from "react";
+import Heroes from "./../../../utils/Heroes";
 
 const Player1Data = (props) => {
 
@@ -21,8 +22,19 @@ const Player1Data = (props) => {
         opacity: "0.8"
     }
 
+    const heroes = _.map(props.result1.competitiveStats.topHeroes, (value, key) => {
+      return {"name": key, "win": value.gamesWon};
+    });
+
+    const top3Heroes = _.sortBy(heroes, [function(hero) {
+        return hero.win;
+      }
+    ]);
+
+  const sortedTop3Heroes = top3Heroes.splice(top3Heroes.length-3, top3Heroes.length).reverse();
+
   const {competitiveStats} = props.result1;
-  
+
   return (
     <div className="card player-stats-data">
       <div className="card-header player-stats-header" style={style}>
@@ -33,6 +45,24 @@ const Player1Data = (props) => {
           <h5>Most Played Hero: {mainHero.name}</h5>
           <h5>{props.result1.ratingName}</h5>
           <h5>{props.result1.rating} Points</h5>
+        </div>
+      </div>
+      <div className="card-body">
+        <div className="row">
+          {sortedTop3Heroes.map((hero) => {
+            return (
+              <div class="col-md-4">
+                {Heroes.filter((heroes) => {
+                  return heroes.name === hero.name;
+                }).map((hero) => {
+                  return (
+                    <img src={hero.image} alt={heroes.name} className="img-responsive portrait"/>
+                  )
+                })}
+                <h6>{hero.name}</h6>
+              </div>
+            )
+          })}
         </div>
       </div>
       <div className="card-body">
