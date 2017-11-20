@@ -71,7 +71,7 @@ class ComparePage extends  Component {
   showComparedStats = () => {
     if (this.state.renderData && this.state.player1Found && this.state.player2Found) {
       return (
-          <DataView result1={this.state.result1} result2={this.state.result2}/>
+          <DataView result1={this.state.result1} result2={this.state.result2} player1Found={this.state.player1Found} player2Found={this.state.player2Found}/>
       )
     } else {
       return (
@@ -96,7 +96,7 @@ class ComparePage extends  Component {
     return (
       <div>
         <Navbar/>
-        <Header handleInputOne={this.handleInputOne} handleInputTwo={this.handleInputTwo} handleFormSubmit={this.handleFormSubmit} battleTag1={this.state.battleTag1} battleTag2={this.state.battleTag2} getStatData={this.getStatData} loadingGif={this.loadingGif}/>
+        <Header handleInputOne={this.handleInputOne} handleInputTwo={this.handleInputTwo} handleFormSubmit={this.handleFormSubmit} battleTag1={this.state.battleTag1} battleTag2={this.state.battleTag2} getStatData={this.getStatData} loadingGif={this.loadingGif} player1Found={this.state.player1Found} player2Found={this.state.player2Found}/>
         {this.showComparedStats()}
       </div>
     )
