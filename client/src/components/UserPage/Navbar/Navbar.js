@@ -3,6 +3,19 @@ import Search from "./../Search/Search";
 import "./Navbar.css";
 
 const Navbar = (props) => {
+
+  const renderSearchBar = () => {
+    if (props.page === "search") {
+      return (
+        <Search {...props}/>
+      )
+    } else {
+      return (
+        <div></div>
+      )
+    }
+  }
+  
   return(
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <a className="navbar-brand" href="/user/search"><img src="/images/owlogo.svg" className="logo" alt="logo"/>OVERWATCH STATS</a>
@@ -25,7 +38,7 @@ const Navbar = (props) => {
           </li>
         </ul>
         <form onSubmit={props.handleFormSubmit} className="form-inline my-2 my-lg-0">
-          <Search {...props}/>
+          {renderSearchBar()}
         </form>
       </div>
       </nav>

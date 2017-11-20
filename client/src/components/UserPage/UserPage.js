@@ -4,7 +4,7 @@ import Header from "./Header/Header";
 import DataView from "./Data/DataView";
 import API from "./../../utils/API";
 
-class App extends Component {
+class UserPage extends Component {
   state = {
     battleTag: "",
     region: "us",
@@ -12,7 +12,8 @@ class App extends Component {
     renderLoading: false,
     playerFound: "",
     signedInUser: "",
-    result: []
+    result: [],
+    page: "search"
   }
 
   componentDidMount() {
@@ -104,11 +105,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} renderLoadingGif={this.renderLoadingGif()}/>
+        <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} page={this.state.page} renderLoadingGif={this.renderLoadingGif()}/>
         {this.renderDataView()}
       </div>
     )
   }
 };
 
-export default App;
+export default UserPage;
