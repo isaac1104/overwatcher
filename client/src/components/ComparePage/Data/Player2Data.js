@@ -54,7 +54,7 @@ const Player2Data = (props) => {
         <div className="row">
           {sortedTop3Heroes.map((hero) => {
             return (
-              <div class="col-md-4">
+              <div className="col-md-4">
                 {Heroes.filter((heroes) => {
                   return heroes.name === hero.name;
                 }).map((hero) => {
