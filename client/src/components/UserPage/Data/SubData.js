@@ -17,7 +17,7 @@ const SubData = (props) => {
 
   return (<div className="card sub-data">
     <div className="card-header">
-      <h5><strong>Top 3 Heroes</strong></h5>
+      <h5><strong>Most Played Heroes</strong></h5>
     </div>
     <div className="card-body top-3-heroes">
       {sortedTop3Heroes.map((heroes) => {

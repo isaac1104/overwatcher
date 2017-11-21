@@ -43,13 +43,13 @@ const Player2Data = (props) => {
         <div>
           <h5>{props.result2.name}</h5>
           <h5>LV.{props.result2.level}</h5>
-          <h5>Most Played Hero: {mainHero.name}</h5>
+          <h5>Main Hero: {mainHero.name}</h5>
           <h5>{props.result2.ratingName}</h5>
           <h5>{props.result2.rating} Points</h5>
         </div>
       </div>
       <div className="card-header">
-        <h5>Top 3 Heroes</h5>
+        <h5>Most Played Heroes</h5>
       </div>
       <div className="card-body">
         <div className="row">
