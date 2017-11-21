@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Navbar from "./../UserPage/Navbar/Navbar";
 import Header from "./Header/Header";
 import DataView from "./Data/DataView";
+import NotFound from "./NotFound/NotFound";
 import API from "./../../utils/API";
 
 class ComparePage extends  Component {
@@ -13,7 +14,6 @@ class ComparePage extends  Component {
     player2Found: "",
     result1: [],
     result2: [],
-    renderData: false,
     renderLoading: false
   }
 
@@ -64,18 +64,17 @@ class ComparePage extends  Component {
           this.setState({player2Found: false});
         }
       });
-      this.setState({renderData: true});
     }
   }
 
   showComparedStats = () => {
-    if (this.state.renderData && this.state.player1Found && this.state.player2Found) {
+    if (this.state.player1Found && this.state.player2Found) {
       return (
-          <DataView result1={this.state.result1} result2={this.state.result2} player1Found={this.state.player1Found} player2Found={this.state.player2Found}/>
+        <DataView result1={this.state.result1} result2={this.state.result2} player1Found={this.state.player1Found} player2Found={this.state.player2Found}/>
       )
-    } else {
+    } else if (this.state.player1Found !== "" && this.state.player2Found !== "") {
       return (
-        <div></div>
+        <NotFound/>
       )
     }
   }

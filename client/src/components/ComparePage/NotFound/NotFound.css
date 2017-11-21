@@ -1,9 +1,8 @@
-.compare-page-header {
-  background-image: url("/images/owlogo-background.jpg");
+.not-found-header {
+  background-image: url("/images/reaper.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  margin-top: 2rem;
   height: 45vh;
   padding: 8%;
   opacity: 0.8;
