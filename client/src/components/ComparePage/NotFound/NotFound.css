@@ -1,10 +1,9 @@
 .not-found-header {
-  background-image: url("/images/reaper.png");
+  background-image: url("/images/misc/reaper.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
   height: 45vh;
-  padding: 8%;
-  opacity: 0.8;
-  line-height: 0.5rem;
+  padding: 10%;
+  opacity: 0.9;
 }

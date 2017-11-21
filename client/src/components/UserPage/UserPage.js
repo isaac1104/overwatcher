@@ -54,7 +54,7 @@ class UserPage extends Component {
       )
     } else {
       return (
-        <img src="/images/loading.gif" className="img-responsive loading" alt="loading"/>
+        <img src="/images/misc/loading.gif" className="img-responsive loading" alt="loading"/>
       )
     }
   }

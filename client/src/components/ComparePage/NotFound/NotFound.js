@@ -7,6 +7,7 @@ const NotFound = () => {
       <div className="jumbotron text-center not-found-header">
         <h1>Error: One of more players not found!</h1>
         <h3>Please be sure to input two valid Battletags</h3>
+        <h5>Two compared players must have played at least one competitive game</h5>
       </div>
     </div>
   )

@@ -3,7 +3,7 @@ import "./LoginBtn.css";
 
 const LoginBtn = () => {
   return (
-    <a href="/auth/bnet"><img src="/images/bnet-logo.png" alt="bnet-logo" className="img-responsive bnet-logo"/></a>
+    <a href="/auth/bnet"><img src="/images/misc/bnet-logo.png" alt="bnet-logo" className="img-responsive bnet-logo"/></a>
   )
 };
 

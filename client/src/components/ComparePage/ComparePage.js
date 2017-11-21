@@ -82,7 +82,7 @@ class ComparePage extends  Component {
   loadingGif = () => {
     if (this.state.renderLoading) {
       return (
-        <img src="/images/loading.gif" alt="loading-gif" className="img-responsive loading"/>
+        <img src="/images/misc/loading.gif" alt="loading-gif" className="img-responsive loading"/>
       )
     } else {
       return (

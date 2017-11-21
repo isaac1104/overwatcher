@@ -6,8 +6,10 @@ const Header = (props) => {
   return (
     <div className="container">
       <div className="jumbotron text-center compare-page-header">
-        <h1>Enter two different players for comparison</h1>
-        <h3>Please make sure that the Battletags are valid</h3>
+        <h1>Compare Stats</h1>
+        <hr/>
+        <h4>Please input valid Battletags below</h4>
+        <h5>Both players must have played at least one competitve game</h5>
         <Search {...props}/>
       </div>
     </div>
