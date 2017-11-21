@@ -112,6 +112,44 @@ const Player2Data = (props) => {
           </div>
         </div>
       </div>
+      <div className="card-body">
+        <div className="row">
+          <div className="col-md-4">
+            <h5><strong>Eliminations</strong></h5>
+            <hr/>
+            <h6>{allHeroes.combat.eliminations}</h6>
+          </div>
+          <div className="col-md-4">
+            <h5><strong>Deaths</strong></h5>
+            <hr/>
+            <h6>{allHeroes.deaths.deaths}</h6>
+          </div>
+          <div className="col-md-4">
+            <h5><strong>Objective Kills</strong></h5>
+            <hr/>
+            <h6>{allHeroes.combat.objectiveKills}</h6>
+          </div>
+        </div>
+      </div>
+      <div className="card-body">
+        <div className="row">
+          <div className="col-md-4">
+            <h5><strong>Gold Medals</strong></h5>
+            <hr/>
+            <h6>{competitiveStats.awards.medalsGold}</h6>
+          </div>
+          <div className="col-md-4">
+            <h5><strong>Silver Medals</strong></h5>
+            <hr/>
+            <h6>{competitiveStats.awards.medalsSilver}</h6>
+          </div>
+          <div className="col-md-4">
+            <h5><strong>Bronze Medals</strong></h5>
+            <hr/>
+            <h6>{competitiveStats.awards.medalsBronze}</h6>
+          </div>
+        </div>
+      </div>
     </div>
   )
 };
