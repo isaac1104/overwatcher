@@ -11,14 +11,14 @@ const Navbar = (props) => {
       )
     } else {
       return (
-        <div></div>
+        <button className="btn btn-outline-danger btn-lg"><a href="/logout">logout</a></button>
       )
     }
   }
-  
+
   return(
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a className="navbar-brand" href="/user/search"><img src="/images/owlogo.svg" className="logo" alt="logo"/>OVERWATCH STATS</a>
+      <a className="navbar-brand" href="/user/search"><img src="/images/misc/owlogo.svg" className="logo" alt="logo"/>OVERWATCH STATS</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
