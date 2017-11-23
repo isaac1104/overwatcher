@@ -1,8 +1,9 @@
 import React from "react";
 
 const StreamList = (props) => {
+  console.log(props.thumbnail_url);
   return (
-    <div className="container"> 
+    <div className="container">
       <div className="jumbotron">
         <img src={props.thumbnail_url} alt="thumbnail"/>
         <h1>{props.title}</h1>

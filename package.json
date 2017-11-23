@@ -25,6 +25,7 @@
     "lodash": "^4.17.4",
     "mongoose": "^4.13.2",
     "passport": "^0.4.0",
-    "passport-bnet": "^1.2.1"
+    "passport-bnet": "^1.2.1",
+    "query-string": "^5.0.1"
   }
 }
