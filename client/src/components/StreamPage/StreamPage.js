@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import Navbar from "./../UserPage/Navbar/Navbar";
+import StreamContainer from "./StreamContainer/StreamContainer";
 import axios from "axios";
 
 class StreamPage extends Component {
+  state = {
+    result: []
+  }
 
   componentDidMount() {
     this.getTwitchData();
@@ -13,8 +17,8 @@ class StreamPage extends Component {
       headers: {
         "Client-ID": "jagnjey4vbrrxhw18toyzzfooz7qc5"
       }
-    }).then((response) => {
-      console.log(response.data.data);
+    }).then(({data: { data }}) => {
+      this.setState({result: data});
     }).catch((error) => {
       console.log(error);
     });
@@ -24,7 +28,7 @@ class StreamPage extends Component {
     return (
       <div>
         <Navbar/>
-        <h1>STREAM PAGE COMING SOON...</h1>
+        <StreamContainer result={this.state.result}/>
       </div>
     )
   }
