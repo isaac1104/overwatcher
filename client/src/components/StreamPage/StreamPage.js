@@ -6,11 +6,13 @@ import axios from "axios";
 class StreamPage extends Component {
   state = {
     result: [],
+    metaResult: [],
     search: ""
   }
 
   componentDidMount() {
     this.getTwitchData();
+    this.getTwitchMetaData();
   }
 
   handleInputChange = (event) => {
@@ -29,11 +31,23 @@ class StreamPage extends Component {
     });
   }
 
+  getTwitchMetaData = () => {
+    axios.get("https://api.twitch.tv/helix/streams/metadata?first=20&game_id=488552", {
+      headers: {
+        "Client-ID": "jagnjey4vbrrxhw18toyzzfooz7qc5"
+      }
+    }).then(({data: { data }}) => {
+      this.setState({metaResult: data});
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
+
   render() {
     return (
       <div>
         <Navbar/>
-        <StreamContainer result={this.state.result} search={this.state.search} handleInputChange={this.handleInputChange}/>
+        <StreamContainer result={this.state.result} metaResult={this.state.metaResult} search={this.state.search} handleInputChange={this.handleInputChange}/>
       </div>
     )
   }

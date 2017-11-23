@@ -8,7 +8,7 @@ const StreamContainer = (props) => {
       <Search search={props.search} handleInputChange={props.handleInputChange}/>
       {props.result.map((stream) => {
         return (
-          <StreamList title={stream.title} thumbnail_url={stream.thumbnail_url} started_at={stream.started_at} viewer_count={stream.viewer_count} id={stream.id} width={320} height={180}/>
+          <StreamList title={stream.title} thumbnail_url={stream.thumbnail_url} started_at={stream.started_at} viewer_count={stream.viewer_count} id={stream.id} metaResult={props.metaResult}/> || <h2>Loading...</h2>
         )
       })}
     </div>
