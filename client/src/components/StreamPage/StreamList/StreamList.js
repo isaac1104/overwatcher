@@ -1,34 +1,30 @@
 import React from "react";
-import StreamData from "./StreamData";
-import MetaData from "./MetaData";
 import template from "url-template";
-import _ from "lodash";
 
 const StreamList = (props) => {
-  const mergedData = _.merge(props.result, props.metaResult)
-  console.log(mergedData);
+  let parsedImg = template.parse(props.thumbnail_url).expand({ width: 320, height: 180 });
+
+  const currentlyStreaming = () => {
+    if (props.mergedData.overwatch && props.mergedData.overwatch.broadcaster.hero) {
+      return (
+        <h6>currently playing game as: {props.mergedData.overwatch.broadcaster.hero.name}</h6>
+      )
+    } else {
+      return (
+        <h6>Streamer is currently not in game</h6>
+      )
+    }
+  };
 
   return (
-    <div className="container stream-list-container">
-      {props.result.map((stream) => {
-        let parsedImg = template.parse(stream.thumbnail_url).expand({ width: 320, height: 180});
-        return (
-          <StreamData title={stream.title} thumbnail_url={parsedImg} started_at={stream.started_at} viewer_count={stream.viewer_count} id={stream.id}/>
-        )
-      })}
-      {props.metaResult.map((result) => {
-        if (result.overwatch !== null && result.overwatch.broadcaster.hero !== null) {
-          return (
-            <MetaData hero={result.overwatch.broadcaster.hero.name} role={result.overwatch.broadcaster.hero.role}/>
-          )
-        } else {
-          return (
-            <div className="card-body">
-              <p className="card-text">Streamer currently not in game</p>
-            </div>
-          )
-        }
-      })}
+    <div className="card">
+      <div className="card-header">
+        <img src={parsedImg} alt="thumbnail" className="img-responsive"/>
+        <h3>{props.title}</h3>
+        <h5>Stream Started: {props.started_at}</h5>
+        <h6>Viewer Count: {props.viewer_count}</h6>
+        {currentlyStreaming()}
+      </div>
     </div>
   )
 };
