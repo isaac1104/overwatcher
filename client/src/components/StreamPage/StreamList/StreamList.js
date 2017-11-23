@@ -7,11 +7,16 @@ const StreamList = (props) => {
 
   return (
     <div className="container">
-      <div className="jumbotron">
-        <img src={parsedImg} alt="thumbnail"/>
-        <h1>{props.title}</h1>
-        <h3>Stream Started: {props.started_at}</h3>
-        <h5>Viewer Count: {props.viewer_count}</h5>
+      <div className="card">
+        <div className="card-header">
+          <img src={parsedImg} alt="thumbnail" className="img-responsive"/>
+          <h3>{props.title}</h3>
+          <h5>Stream Started: {props.started_at}</h5>
+          <h6>Viewer Count: {props.viewer_count}</h6>
+        </div>
+      </div>
+      <div className="card-body">
+        <h1>METADATAMETA</h1>
       </div>
     </div>
   )
