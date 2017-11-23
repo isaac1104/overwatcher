@@ -16,8 +16,7 @@ select {
 }
 
 input {
-  background-color: #cfd1d6;
-  color: #353b40;
+  text-align: center;
 }
 
 .btn-outline-success {
