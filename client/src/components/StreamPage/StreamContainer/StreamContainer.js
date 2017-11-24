@@ -12,7 +12,7 @@ const StreamContainer = (props) => {
       <div className="container">
         {mergedData.map((data) => {
           return (
-            <StreamList thumbnail_url={data.thumbnail_url} title={data.title} started_at={data.started_at} viewer_count={data.viewer_count} mergedData={data}/>
+            <StreamList thumbnail_url={data.thumbnail_url} title={data.title} started_at={data.started_at} viewer_count={data.viewer_count} mergedData={data}/> || <img src="/images/misc/loading.gif" alt="loading"/>
           )
         })}
       </div>
