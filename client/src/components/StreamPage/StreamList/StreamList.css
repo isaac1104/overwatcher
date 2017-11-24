@@ -1,0 +1,8 @@
+.stream-data-container {
+  display: flex;
+  align-items: center;
+}
+
+.stream-thumbnail {
+  margin-right: 2rem;
+}

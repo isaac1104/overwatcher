@@ -1,5 +1,6 @@
 import React from "react";
 import template from "url-template";
+import "./StreamList.css";
 
 const StreamList = (props) => {
   let parsedImg = template.parse(props.thumbnail_url).expand({ width: 320, height: 180 });
@@ -18,12 +19,16 @@ const StreamList = (props) => {
 
   return (
     <div className="card">
-      <div className="card-header">
-        <img src={parsedImg} alt="thumbnail" className="img-responsive"/>
-        <h3>{props.title}</h3>
-        <h5>Stream Started: {props.started_at}</h5>
-        <h6>Viewer Count: {props.viewer_count}</h6>
-        {currentlyStreaming()}
+      <div className="card-header stream-data-container">
+        <div>
+          <img src={parsedImg} alt="thumbnail" className="img-responsive stream-thumbnail"/>
+        </div>
+        <div>
+          <h3>{props.title}</h3>
+          <h5>Stream Started: {props.started_at}</h5>
+          <h6>Viewer Count: {props.viewer_count}</h6>
+          {currentlyStreaming()}
+        </div>
       </div>
     </div>
   )
