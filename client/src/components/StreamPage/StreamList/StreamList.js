@@ -8,7 +8,10 @@ const StreamList = (props) => {
   const currentlyStreaming = () => {
     if (props.mergedData.overwatch && props.mergedData.overwatch.broadcaster.hero) {
       return (
-        <h6>currently playing game as: {props.mergedData.overwatch.broadcaster.hero.name}</h6>
+        <div>
+          <h6>Currently playing as: {props.mergedData.overwatch.broadcaster.hero.name}</h6>
+          <h6>Role: {props.mergedData.overwatch.broadcaster.hero.role}</h6>
+        </div>
       )
     } else {
       return (
