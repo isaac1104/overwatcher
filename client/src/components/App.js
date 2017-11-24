@@ -4,6 +4,7 @@ import Home from "./Home/Home";
 import UserPage from "./UserPage/UserPage";
 import StreamPage from "./StreamPage/StreamPage";
 import ComparePage from "./ComparePage/ComparePage";
+import TournamentPage from "./TournamentPage/TournamentPage";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route exact path="/user/search" component={UserPage}/>
         <Route exact path="/user/stream" component={StreamPage}/>
         <Route exact path="/user/compare" component={ComparePage}/>
+        <Route exact path="/user/tournament" component={TournamentPage}/>
       </div>
     </Router>
   )

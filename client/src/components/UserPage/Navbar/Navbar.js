@@ -34,6 +34,9 @@ const Navbar = (props) => {
             <a className="nav-link" href="/user/compare">COMPARE</a>
           </li>
           <li className="nav-item">
+            <a className="nav-link" href="/user/tournament">TOURNAMENT</a>
+          </li>
+          <li className="nav-item">
             {props.renderLoadingGif}
           </li>
         </ul>

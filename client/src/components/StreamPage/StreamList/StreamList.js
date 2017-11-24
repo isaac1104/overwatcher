@@ -8,7 +8,7 @@ const StreamList = (props) => {
   const currentlyStreaming = () => {
     if (props.mergedData.overwatch && props.mergedData.overwatch.broadcaster.hero) {
       return (
-        <div>
+        <div key={props.mergedData.user_id}>
           <h6>Currently playing as: {props.mergedData.overwatch.broadcaster.hero.name}</h6>
           <h6>Role: {props.mergedData.overwatch.broadcaster.hero.role}</h6>
         </div>
@@ -21,7 +21,7 @@ const StreamList = (props) => {
   };
 
   return (
-    <div className="card">
+    <div className="card" key={props.mergedData.user_id}>
       <div className="card-header stream-data-container">
         <div>
           <img src={parsedImg} alt="thumbnail" className="img-responsive stream-thumbnail"/>
