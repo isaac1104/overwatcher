@@ -5,7 +5,7 @@ const Search = (props) => {
   return(
       <div>
         <input onChange={props.handleInputChange} type="text" value={props.battleTag} id="search-box" autoComplete="off" placeholder="battletag-number" className="form-control mr-sm-2"/>
-        <select value={props.region} onChange={props.handleSelectChange}>
+        <select value={props.region} onChange={props.handleSelectChange} className="region-select">
           <option value="us">US</option>
           <option value="eu">EU</option>
           <option value="kr">KR</option>

@@ -6,12 +6,12 @@ const Button = (props) => {
     <div>
       <form onSubmit={props.handleFormSubmit}>
         <div>
-          Player 1 <input onChange={props.handleInputOne} value={props.battleTag1} type="text" placeholder="battletag-number"/>
+          Player 1 <input onChange={props.handleInputOne} value={props.battleTag1} type="text" placeholder="battletag-number" className="compare-search"/>
         </div>
         <div>
-          Player 2 <input onChange={props.handleInputTwo} value={props.battleTag2} type="text" placeholder="battletag-number"/>
+          Player 2 <input onChange={props.handleInputTwo} value={props.battleTag2} type="text" placeholder="battletag-number" className="compare-search"/>
         </div>
-        <button onClick={() => props.getStatData()} className="btn btn-primary btn-md">compare</button>
+        <button onClick={() => props.getStatData()} className="btn btn-primary btn-md compare-btn">compare</button>
       </form>
       {props.loadingGif()}
     </div>
