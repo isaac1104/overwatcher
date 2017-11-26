@@ -150,6 +150,25 @@ const Player2Data = (props) => {
           </div>
         </div>
       </div>
+      <div className="card-body">
+        <div className="row">
+          <div className="col-md-4">
+            <h5><strong>Final Blows</strong></h5>
+            <hr/>
+            <h6>{allHeroes.combat.finalBlows}</h6>
+          </div>
+          <div className="col-md-4">
+            <h5><strong>Multi Kills</strong></h5>
+            <hr/>
+            <h6>{allHeroes.combat.multikills}</h6>
+          </div>
+          <div className="col-md-4">
+            <h5><strong>Solo Kills</strong></h5>
+            <hr/>
+            <h6>{allHeroes.combat.soloKills}</h6>
+          </div>
+        </div>
+      </div>
     </div>
   )
 };
