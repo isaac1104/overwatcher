@@ -5,8 +5,8 @@ import "./Search.css";
 
 const Search = (props) => {
   return (
-    <div className="container streamer-search-container">
-      <div className="jumbotron text-center">
+    <div className="container">
+      <div className="jumbotron text-center streamer-search-container">
         <h1>Stream</h1>
         <hr/>
         <h3>Check out all the streamers who are playing Overwatch</h3>

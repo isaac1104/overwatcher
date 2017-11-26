@@ -12,3 +12,8 @@
 .streamer-search-bar {
   margin-bottom: 2rem;
 }
+
+.streamer-search-container {
+  background-image: url("/images/misc/ow-background.jpg");
+  background-repeat: no-repeat;
+}
