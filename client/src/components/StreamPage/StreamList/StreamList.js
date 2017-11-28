@@ -20,13 +20,17 @@ const StreamList = (props) => {
     }
   };
 
+  const channelName = props.mergedData.thumbnail_url.split("/")[4].split("user_")[1].split("-")[0];
+  const channelURL = `https://www.twitch.tv/${channelName}`;
+
   return (
     <div className="card" key={props.mergedData.user_id}>
       <div className="card-header stream-data-container">
         <div>
-          <img src={parsedImg} alt="thumbnail" className="img-responsive stream-thumbnail"/>
+          <a href={channelURL}><img src={parsedImg} alt="thumbnail" className="img-responsive stream-thumbnail"/></a>
         </div>
         <div>
+          <h1>{channelName}</h1>
           <h3>{props.title}</h3>
           <h5>Stream Started: {props.started_at}</h5>
           <h6>Viewer Count: {props.viewer_count}</h6>
