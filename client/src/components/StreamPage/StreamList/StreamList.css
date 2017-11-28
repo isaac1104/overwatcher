@@ -10,3 +10,7 @@
 #currentHero, #channelName {
   color: orange;
 }
+
+#notInGame {
+  color: red;
+}

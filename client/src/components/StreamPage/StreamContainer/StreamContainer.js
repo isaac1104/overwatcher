@@ -8,7 +8,7 @@ const StreamContainer = (props) => {
 
   return (
     <div>
-      <Search search={props.search} handleInputChange={props.handleInputChange}/>
+      <Search search={props.search} handleInputChange={props.handleInputChange} mergedData={mergedData}/>
       <div className="container">
         {mergedData.map((data) => {
           return (

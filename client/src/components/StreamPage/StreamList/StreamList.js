@@ -8,14 +8,34 @@ const StreamList = (props) => {
   const currentlyStreaming = () => {
     if (props.mergedData.overwatch && props.mergedData.overwatch.broadcaster.hero) {
       return (
-        <div key={props.mergedData.user_id}>
-          <h6 id="currentHero">Currently playing as: {props.mergedData.overwatch.broadcaster.hero.name.toLowerCase()}</h6>
-          <h6>Role: {props.mergedData.overwatch.broadcaster.hero.role.toLowerCase()}</h6>
+        <div className="card-header stream-data-container">
+          <div>
+            <a href={channelURL}><img src={parsedImg} alt="thumbnail" className="img-responsive stream-thumbnail"/></a>
+          </div>
+          <div>
+            <h1 id="channelName">{channelName}</h1>
+            <h3>{props.title}</h3>
+            <h5>Stream Started: {props.started_at}</h5>
+            <h6>Viewer Count: {props.viewer_count}</h6>
+            <h6 id="currentHero">Currently playing as: {props.mergedData.overwatch.broadcaster.hero.name.toLowerCase()}</h6>
+            <h6>Role: {props.mergedData.overwatch.broadcaster.hero.role.toLowerCase()}</h6>
+          </div>
         </div>
       )
     } else {
       return (
-        <h6>Streamer is currently not in game</h6>
+        <div className="card-header stream-data-container">
+          <div>
+            <a href={channelURL}><img src={parsedImg} alt="thumbnail" className="img-responsive stream-thumbnail"/></a>
+          </div>
+          <div>
+            <h1 id="channelName">{channelName}</h1>
+            <h3>{props.title}</h3>
+            <h5>Stream Started: {props.started_at}</h5>
+            <h6>Viewer Count: {props.viewer_count}</h6>
+            <h6 id="notInGame">Streamer is currently not in game</h6>
+          </div>
+        </div>
       )
     }
   };
@@ -24,19 +44,8 @@ const StreamList = (props) => {
   const channelURL = `https://www.twitch.tv/${channelName}`;
 
   return (
-    <div className="card" key={props.mergedData.user_id}>
-      <div className="card-header stream-data-container">
-        <div>
-          <a href={channelURL}><img src={parsedImg} alt="thumbnail" className="img-responsive stream-thumbnail"/></a>
-        </div>
-        <div>
-          <h1 id="channelName">{channelName}</h1>
-          <h3>{props.title}</h3>
-          <h5>Stream Started: {props.started_at}</h5>
-          <h6>Viewer Count: {props.viewer_count}</h6>
-          {currentlyStreaming()}
-        </div>
-      </div>
+    <div className="card">
+      {currentlyStreaming()}
     </div>
   )
 };
