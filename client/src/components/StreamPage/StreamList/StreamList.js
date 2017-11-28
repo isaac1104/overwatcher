@@ -9,8 +9,8 @@ const StreamList = (props) => {
     if (props.mergedData.overwatch && props.mergedData.overwatch.broadcaster.hero) {
       return (
         <div key={props.mergedData.user_id}>
-          <h6>Currently playing as: {props.mergedData.overwatch.broadcaster.hero.name}</h6>
-          <h6>Role: {props.mergedData.overwatch.broadcaster.hero.role}</h6>
+          <h6 id="currentHero">Currently playing as: {props.mergedData.overwatch.broadcaster.hero.name.toLowerCase()}</h6>
+          <h6>Role: {props.mergedData.overwatch.broadcaster.hero.role.toLowerCase()}</h6>
         </div>
       )
     } else {
@@ -30,7 +30,7 @@ const StreamList = (props) => {
           <a href={channelURL}><img src={parsedImg} alt="thumbnail" className="img-responsive stream-thumbnail"/></a>
         </div>
         <div>
-          <h1>{channelName}</h1>
+          <h1 id="channelName">{channelName}</h1>
           <h3>{props.title}</h3>
           <h5>Stream Started: {props.started_at}</h5>
           <h6>Viewer Count: {props.viewer_count}</h6>

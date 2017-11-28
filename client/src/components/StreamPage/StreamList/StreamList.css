@@ -6,3 +6,7 @@
 .stream-thumbnail {
   margin-right: 2rem;
 }
+
+#currentHero, #channelName {
+  color: orange;
+}
