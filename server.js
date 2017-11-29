@@ -35,7 +35,7 @@ app.get("/log", (req, res) => {
 });
 
 app.get("/logout", (req, res) => {
-  req.user.logout();
+  req.logout();
   res.redirect("/home");
 });
 
