@@ -1,6 +1,6 @@
 import React from "react";
 import StreamList from "./../StreamList/StreamList";
-import Search from "./../Search/Search";
+import Header from "./../Header/Header";
 import _ from "lodash";
 
 const StreamContainer = (props) => {
@@ -8,7 +8,7 @@ const StreamContainer = (props) => {
 
   return (
     <div>
-      <Search search={props.search} handleInputChange={props.handleInputChange} mergedData={mergedData}/>
+      <Header mergedData={mergedData}/>
       <div className="container">
         {mergedData.map((data) => {
           return (

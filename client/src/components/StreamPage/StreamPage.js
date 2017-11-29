@@ -6,17 +6,12 @@ import axios from "axios";
 class StreamPage extends Component {
   state = {
     result: [],
-    metaResult: [],
-    search: ""
+    metaResult: []
   }
 
   componentDidMount() {
     this.getTwitchData();
     this.getTwitchMetaData();
-  }
-
-  handleInputChange = (event) => {
-    this.setState({ search: event.target.value });
   }
 
   getTwitchData = () => {
@@ -47,7 +42,7 @@ class StreamPage extends Component {
     return (
       <div>
         <Navbar/>
-        <StreamContainer result={this.state.result} metaResult={this.state.metaResult} search={this.state.search} handleInputChange={this.handleInputChange}/>
+        <StreamContainer result={this.state.result} metaResult={this.state.metaResult} search={this.state.search}/>
       </div>
     )
   }
