@@ -35,8 +35,9 @@ app.get("/log", (req, res) => {
 });
 
 app.get("/logout", (req, res) => {
-  req.logout();
-  res.redirect("/home");
+  // req.logout();
+  // res.redirect("/home");
+  res.json(req.user);
 });
 
 if (process.env.NODE_ENV === "production") {
