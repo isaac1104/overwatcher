@@ -78,7 +78,7 @@ const Player1Data = (props) => {
             <h5><strong>Win Rate</strong></h5>
             <hr/>
             <h6>{((competitiveStats.games.won / competitiveStats.games.played) * 100).toFixed(0)}%</h6>
-            <h6>{competitiveStats.games.won}W {allHeroes.average.gamesTied}D {allHeroes.average.gamesLost}L</h6>
+            <h6>{allHeroes.game.gamesWon}W {allHeroes.game.gamesTied}D {allHeroes.game.gamesLost}L</h6>
           </div>
           <div className="col-md-4">
             <h5><strong>Total Games Won</strong></h5>
@@ -122,7 +122,7 @@ const Player1Data = (props) => {
           <div className="col-md-4">
             <h5><strong>Deaths</strong></h5>
             <hr/>
-            <h6>{allHeroes.deaths.deaths}</h6>
+            <h6>{allHeroes.combat.deaths}</h6>
           </div>
           <div className="col-md-4">
             <h5><strong>Objective Kills</strong></h5>

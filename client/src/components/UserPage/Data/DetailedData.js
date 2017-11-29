@@ -3,7 +3,7 @@ import React from "react";
 const DetailedData = (props) => {
   const {allHeroes} = props.result.competitiveStats.careerStats;
   const {awards} = props.result.competitiveStats;
-
+  console.log(props.result);
   return (
       <div className="card detailed-summary">
         <div className="card-header">
@@ -30,11 +30,11 @@ const DetailedData = (props) => {
               </div>
               <div>
                 <b>Objective Time</b>
-                <h6>{allHeroes.game.objectiveTime}</h6>
+                <h6>{allHeroes.combat.objectiveTime}</h6>
               </div>
               <div>
                 <b>Time on Fire</b>
-                <h6>{allHeroes.game.timeSpentOnFire}</h6>
+                <h6>{allHeroes.combat.timeSpentOnFire}</h6>
               </div>
               <div>
                 <b>Multi Kills</b>
@@ -52,7 +52,7 @@ const DetailedData = (props) => {
             <div className="col-md-6">
               <div>
                 <b>Deaths</b>
-                <h6>{allHeroes.deaths.deaths}</h6>
+                <h6>{allHeroes.combat.deaths}</h6>
               </div><div>
                 <b>Most Eliminations in Game</b>
                 <h6>{allHeroes.best.eliminationsMostInGame}</h6>
