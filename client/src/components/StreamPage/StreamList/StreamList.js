@@ -40,7 +40,6 @@ class StreamList extends Component {
         )
       }
     };
-
     const channelName = this.props.mergedData.thumbnail_url.split("/")[4].split("user_")[1].split("-")[0];
     const channelURL = `https://www.twitch.tv/${channelName}`;
     return (

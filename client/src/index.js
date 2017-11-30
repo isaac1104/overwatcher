@@ -8,9 +8,9 @@ import rootReducer from "./reducers";
 import "./index.css";
 
 const store = createStore(rootReducer, {}, applyMiddleware(reduxThunk));
-console.log(store.getState());
+
 ReactDOM.render(
 <Provider store={store}>
-  <App/>
+  <App />
 </Provider>
   , document.getElementById("root"));

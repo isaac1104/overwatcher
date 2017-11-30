@@ -1,11 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
 import StreamList from "./../StreamList/StreamList";
 import Header from "./../Header/Header";
 import _ from "lodash";
+import { connect } from "react-redux";
+import * as actions from '../../../actions';
 
 const StreamContainer = (props) => {
   const mergedData = _.merge(props.result, props.metaResult);
-
   return (
     <div>
       <Header mergedData={mergedData}/>
