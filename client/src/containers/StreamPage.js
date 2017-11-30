@@ -14,7 +14,7 @@ class StreamPage extends Component {
  }
 
   render() {
-    const mergedData = _.merge(this.props.data, this.props.metaData);
+    const mergedData = _.merge(this.props.twitchData, this.props.twitchMetaData);
     return (
       <div>
         <Navbar/>
@@ -26,8 +26,8 @@ class StreamPage extends Component {
 
 function mapStateToProps(state) {
   return {
-    data: state.data,
-    metaData: state.metaData
+    twitchData: state.twitchData,
+    twitchMetaData: state.twitchMetaData
   }
 }
 
