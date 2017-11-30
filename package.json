@@ -26,6 +26,9 @@
     "mongoose": "^4.13.2",
     "passport": "^0.4.0",
     "passport-bnet": "^1.2.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "url-template": "^2.0.8"
   }
 }

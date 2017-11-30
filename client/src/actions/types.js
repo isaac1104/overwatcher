@@ -1,0 +1,1 @@
+export const FETCH_TWITCH_DATA = "FETCH_TWITCH_DATA";
