@@ -1,6 +1,6 @@
 import { FETCH_TWITCH_DATA } from "../actions/types";
 
-const initialState = {};
+const initialState = [];
 
 function twitchDataReducer(state = initialState, action) {
   switch (action.type) {

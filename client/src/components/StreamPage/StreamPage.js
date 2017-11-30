@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import _ from "lodash";
 import Navbar from "./../UserPage/Navbar/Navbar";
-// import StreamContainer from "./StreamContainer/StreamContainer";
+import StreamContainer from "./StreamContainer/StreamContainer";
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
@@ -9,14 +10,15 @@ class StreamPage extends Component {
 
  componentDidMount() {
    this.props.getTwitchData();
+   this.props.getTwitchMetaData();
  }
 
   render() {
-    console.log(this.props.data);
+    const mergedData = _.merge(this.props.data, this.props.metaData);
     return (
       <div>
         <Navbar/>
-        {/* <StreamContainer result={this.state.result} metaResult={this.state.metaResult} search={this.state.search}/> */}
+        <StreamContainer mergedData={mergedData} data={this.props.data}/>
       </div>
     )
   }
@@ -24,7 +26,8 @@ class StreamPage extends Component {
 
 function mapStateToProps(state) {
   return {
-    data: state.data
+    data: state.data,
+    metaData: state.metaData
   }
 }
 

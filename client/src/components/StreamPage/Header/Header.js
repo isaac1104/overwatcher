@@ -10,7 +10,7 @@ const Header = (props) => {
         <hr/>
         <h3>Check out all the streamers who are playing Overwatch</h3>
         <h5>Filter by currently playing role</h5>
-        <SearchRole mergedData={props.mergedData}/>
+        <SearchRole/>
       </div>
     </div>
   )

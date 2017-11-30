@@ -1,17 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import StreamList from "./../StreamList/StreamList";
 import Header from "./../Header/Header";
-import _ from "lodash";
-import { connect } from "react-redux";
-import * as actions from '../../../actions';
 
 const StreamContainer = (props) => {
-  const mergedData = _.merge(props.result, props.metaResult);
   return (
     <div>
-      <Header mergedData={mergedData}/>
+      <Header/>
       <div className="container">
-        {mergedData.map((data) => {
+        {props.mergedData.map((data) => {
           return (
             <StreamList thumbnail_url={data.thumbnail_url} title={data.title} started_at={data.started_at} viewer_count={data.viewer_count} mergedData={data}/> || <img src="/images/misc/loading.gif" alt="loading"/>
           )
