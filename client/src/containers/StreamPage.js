@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import _ from "lodash";
-import Navbar from "./../UserPage/Navbar/Navbar";
-import StreamContainer from "./StreamContainer/StreamContainer";
-import { connect } from 'react-redux';
-import * as actions from '../../actions';
+import Navbar from "./../components/UserPage/Navbar/Navbar";
+import StreamContainer from "./../components/StreamPage/StreamContainer/StreamContainer";
+import { connect } from "react-redux";
+import * as actions from "./../actions";
 
 
 class StreamPage extends Component {
@@ -18,7 +18,7 @@ class StreamPage extends Component {
     return (
       <div>
         <Navbar/>
-        <StreamContainer mergedData={mergedData} data={this.props.data}/>
+        <StreamContainer mergedData={mergedData}/>
       </div>
     )
   }
@@ -30,6 +30,5 @@ function mapStateToProps(state) {
     metaData: state.metaData
   }
 }
-
 
 export default connect(mapStateToProps, actions)(StreamPage);
