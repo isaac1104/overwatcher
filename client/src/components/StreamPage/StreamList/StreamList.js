@@ -17,8 +17,8 @@ const StreamList = (props) => {
             <h3>{props.title}</h3>
             <h5>Stream Started: {props.started_at}</h5>
             <h6>Viewer Count: {props.viewer_count}</h6>
-            <h6 id="currentHero">Currently playing as: {props.mergedData.overwatch.broadcaster.hero.name.toLowerCase()}</h6>
-            <h6>Role: {props.mergedData.overwatch.broadcaster.hero.role.toLowerCase()}</h6>
+            <h6 id="currentHero">Currently playing as: {props.mergedData.overwatch.broadcaster.hero.name}</h6>
+            <h6>Role: {props.mergedData.overwatch.broadcaster.hero.role}</h6>
           </div>
         </div>
       )

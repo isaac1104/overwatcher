@@ -1,14 +1,13 @@
-import React, { Component } from "react";
-import _ from "lodash";
+import React from "react";
 import Navbar from "./../UserPage/Navbar/Navbar";
+import Header from "./Header/Header";
 import StreamContainer from "./../../containers/StreamContainer";
-import { connect } from "react-redux";
-import * as actions from "./../../actions";
 
 const StreamPage = () => {
   return (
     <div>
       <Navbar/>
+      <Header/>
       <StreamContainer/>
     </div>
   )
