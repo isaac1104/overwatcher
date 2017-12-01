@@ -25,9 +25,9 @@ export const getTwitchMetaData = () => async (dispatch) => {
 }
 
 export const getStatsData = () => async (dispatch) => {
-  const request = await axios.get("https://ow-api.com/v1/stats/pc/us/sinatraa-11809/complete");
+  const request = await axios.get(`https://ow-api.com/v1/stats/pc/us/sinatraa-11809/complete`);
   const { data } = request;
-  dispatch({ type: FETCH_STATS_DATA, payload: data });
+  dispatch({ type: FETCH_STATS_DATA, payload: data, battleTag: "hi" });
 }
 
 export const filterStream = (role) => {

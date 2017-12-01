@@ -16,7 +16,8 @@ function statsDataReducer(state = initialState, action) {
       return {
         ...state,
         result: action.payload,
-        renderLoading: true
+        renderLoading: true,
+        battleTag: action.battleTag
       }
     default:
       return state;
