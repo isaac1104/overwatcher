@@ -30,6 +30,9 @@ export const getStatsData = () => async (dispatch) => {
   dispatch({ type: FETCH_STATS_DATA, payload: data });
 }
 
-export const filterStream = () => async (dispatch) => {
-  
+export const filterStream = (role) => {
+  return {
+    type: FILTER_STREAM,
+    payload: role
+  }
 }

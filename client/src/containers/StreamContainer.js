@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import _ from "lodash";
 import StreamList from "./../components/StreamPage/StreamList/StreamList";
+import Header from "./../components/StreamPage/Header/Header";
 import SearchRole from "./../components/StreamPage/Search/SearchRole";
 import { connect } from "react-redux";
 import * as actions from "./../actions";
@@ -10,7 +11,6 @@ class StreamContainer extends Component {
   componentDidMount() {
     this.props.getTwitchData();
     this.props.getTwitchMetaData();
-    console.log(this.props.filter);
   }
 
   // filterByRole = () => {
@@ -35,11 +35,11 @@ class StreamContainer extends Component {
     //     return data.overwatch.broadcaster.hero.role === "Support";
     //   }
     // }));
+    console.log(this.props.filter);
     return (
       <div className="container">
-        {/* <SearchRole filterByRole={this.filterByRole}/> */}
-        <img onClick={this.filterByRole} src="/images/role-icons/support-icon.png" alt="support-icon" value="Support" className="img-responsive role-icons"/>
         <div>
+          <Header filterStream={this.props.filterStream}/>
           {/* {mergedData.map((data) => {
             return (
               <StreamList thumbnail_url={data.thumbnail_url} title={data.title} started_at={data.started_at} viewer_count={data.viewer_count} mergedData={data}/>

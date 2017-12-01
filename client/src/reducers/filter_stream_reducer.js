@@ -1,11 +1,11 @@
 import { FILTER_STREAM } from "./../actions/types";
 
-const initialState = "";
+const initialState = { filter: "All" };
 
 function filterStreamReducer(state = initialState, action) {
   switch (action.type) {
     case FILTER_STREAM:
-      return state;
+      return action.payload;
     default:
       return state;
   }
