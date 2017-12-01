@@ -4,7 +4,7 @@ import "./Header.css";
 
 const Header = (props) => {
   return (
-    <div className="container">
+    <div>
       <div className="jumbotron text-center streamer-search-container">
         <h1>Stream</h1>
         <hr/>
