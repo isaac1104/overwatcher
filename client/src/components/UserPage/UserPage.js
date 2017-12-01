@@ -3,6 +3,8 @@ import Navbar from "./Navbar/Navbar";
 import Header from "./Header/Header";
 import DataView from "./Data/DataView";
 import API from "./../../utils/API";
+import { connect } from "react-redux";
+import * as actions from "./../../actions";
 
 class UserPage extends Component {
   state = {
@@ -19,6 +21,7 @@ class UserPage extends Component {
   componentDidMount() {
     this.loadSavedUsers();
     this.loadSignedInUser();
+    this.props.getStatsData();
   }
 
   handleInputChange = (event) => {
@@ -103,6 +106,7 @@ class UserPage extends Component {
   }
 
   render() {
+    console.log(this.props.statsData);
     return (
       <div>
         <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} page={this.state.page} renderLoadingGif={this.renderLoadingGif()}/>
@@ -112,4 +116,11 @@ class UserPage extends Component {
   }
 };
 
-export default UserPage;
+function mapStateToProps(state) {
+  return {
+    statsData: state.statsData
+  }
+}
+
+export default connect(mapStateToProps, actions)(UserPage);
+// export default UserPage;

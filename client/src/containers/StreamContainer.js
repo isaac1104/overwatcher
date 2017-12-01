@@ -34,7 +34,6 @@ class StreamContainer extends Component {
   }
 
   render() {
-    const mergedData = _.merge(this.props.twitchData, this.props.twitchMetaData);
     return (
       <div className="container">
         <Header filterStream={this.props.filterStream}/>
@@ -45,7 +44,11 @@ class StreamContainer extends Component {
 }
 
 function mapStateToProps(state) {
-  return {twitchData: state.twitchData, twitchMetaData: state.twitchMetaData, filter: state.filter}
+  return {
+    twitchData: state.twitchData,
+    twitchMetaData: state.twitchMetaData,
+    filter: state.filter
+  }
 }
 
 export default connect(mapStateToProps, actions)(StreamContainer);
