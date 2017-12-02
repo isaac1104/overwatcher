@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import Navbar from "./Navbar/Navbar";
-import Header from "./Header/Header";
-import DataView from "./Data/DataView";
+import Navbar from "./../components/UserPage/Navbar/Navbar";
+import Header from "./../components/UserPage/Header/Header";
+import DataView from "./../components/UserPage/Data/DataView";
 import { connect } from "react-redux";
-import * as actions from "./../../actions";
+import * as actions from "./../actions";
 
 class UserPage extends Component {
 
