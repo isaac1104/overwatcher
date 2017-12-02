@@ -17,7 +17,7 @@ const HeroesData = (props) => {
             </tr>
           </thead>
           <tbody>
-            {_.map(props.result.competitiveStats.topHeroes, (value, key) => {
+            {_.map(props.statsData.result.competitiveStats.topHeroes, (value, key) => {
               return(
                 <tr>
                   <td className="heroes">

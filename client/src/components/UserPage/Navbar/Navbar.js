@@ -4,7 +4,7 @@ import "./Navbar.css";
 
 const Navbar = (props) => {
 
-  const renderSearchBar = () => {
+  const renderSearch = () => {
     if (props.page === "search") {
       return (
         <Search {...props}/>
@@ -12,6 +12,18 @@ const Navbar = (props) => {
     } else {
       return (
         <button className="btn btn-outline-danger btn-lg"><a href="/logout">logout</a></button>
+      )
+    }
+  }
+
+  const renderLoadingGif = () => {
+    if (props.renderLoading) {
+      return (
+        <img src="/images/misc/loading.gif" className="img-responsive loading" alt="loading"/>
+      )
+    } else {
+      return (
+        <div></div>
       )
     }
   }
@@ -37,12 +49,10 @@ const Navbar = (props) => {
             <a className="nav-link" href="/user/tournament">TOURNAMENT</a>
           </li>
           <li className="nav-item">
-            {props.renderLoadingGif}
+            {renderLoadingGif()}
           </li>
         </ul>
-        <form onSubmit={props.handleFormSubmit} className="form-inline my-2 my-lg-0">
-          {renderSearchBar()}
-        </form>
+        {renderSearch()}
       </div>
       </nav>
   )

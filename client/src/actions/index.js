@@ -1,7 +1,7 @@
 import axios from "axios";
 import { FETCH_TWITCH_DATA } from "./types";
 import { FETCH_TWITCH_METADATA } from "./types";
-import { FETCH_STATS_DATA } from "./types";
+import { FETCH_STATS_DATA, FETCH_STATS_ERROR, FETCH_STATS_INIT } from "./types";
 import { FILTER_STREAM } from "./types";
 
 export const getTwitchData = () => async (dispatch) => {
@@ -27,7 +27,17 @@ export const getTwitchMetaData = () => async (dispatch) => {
 export const getStatsData = (battletag) => async (dispatch) => {
   const request = await axios.get(`https://ow-api.com/v1/stats/pc/us/${battletag}/complete`);
   const { data } = request;
-  dispatch({ type: FETCH_STATS_DATA, payload: data });
+  if (data.error || !data.competitiveStats.careerStats) {
+    dispatch({ type: FETCH_STATS_ERROR });
+  } else {
+    dispatch({ type: FETCH_STATS_DATA, payload: data });
+  }
+}
+
+export const initStatsFetch = () => {
+  return {
+    type: FETCH_STATS_INIT
+  }
 }
 
 export const filterStream = (role) => {

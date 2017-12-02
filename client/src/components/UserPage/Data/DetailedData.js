@@ -1,9 +1,9 @@
 import React from "react";
 
 const DetailedData = (props) => {
-  const {allHeroes} = props.result.competitiveStats.careerStats;
-  const {awards} = props.result.competitiveStats;
-  
+  const {allHeroes} = props.statsData.result.competitiveStats.careerStats;
+  const {awards} = props.statsData.result.competitiveStats;
+
   return (
       <div className="card detailed-summary">
         <div className="card-header">
