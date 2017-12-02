@@ -4,7 +4,7 @@ import Heroes from "./../../../utils/Heroes";
 
 const SubData = (props) => {
 
-  const heroes = _.map(props.result.competitiveStats.topHeroes, (value, key) => {
+  const heroes = _.map(props.statsData.result.competitiveStats.topHeroes, (value, key) => {
     return {"name": key, "win": value.gamesWon};
   });
 

@@ -14,17 +14,16 @@ const Header = (props) => {
         </div>
       </div>
     )
-  }
-  else {
-    return (
-      <div className="container">
-        <div className="jumbotron text-center header">
-          <h1>Welcome {props.signedInUser}</h1>
-          <hr/>
-          <h4>Please enter the BattleTag and select the region to complete the search</h4>
-          <h5>The BattleTag must be in "battletag-number" format</h5>
+  } else {
+      return (
+        <div className="container">
+          <div className="jumbotron text-center header">
+            <h1>Welcome {props.signedInUser}</h1>
+            <hr/>
+            <h4>Please enter the BattleTag and select the region to complete the search</h4>
+            <h5>The BattleTag must be in "battletag-number" format</h5>
+          </div>
         </div>
-      </div>
     )
   }
 };
