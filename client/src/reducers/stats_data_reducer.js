@@ -1,13 +1,7 @@
 import { FETCH_STATS_DATA } from "./../actions/types";
 
 const initialState = {
-  result: [],
-  battleTag: "",
-  region: "us",
-  renderView: false,
-  renderLoading: false,
-  playerFound: "",
-  page: "search"
+  result: []
 };
 
 function statsDataReducer(state = initialState, action) {
@@ -16,8 +10,6 @@ function statsDataReducer(state = initialState, action) {
       return {
         ...state,
         result: action.payload,
-        renderLoading: true,
-        battleTag: action.battleTag
       }
     default:
       return state;

@@ -3,7 +3,7 @@ import React from "react";
 const DetailedData = (props) => {
   const {allHeroes} = props.result.competitiveStats.careerStats;
   const {awards} = props.result.competitiveStats;
-  console.log(props.result);
+  
   return (
       <div className="card detailed-summary">
         <div className="card-header">

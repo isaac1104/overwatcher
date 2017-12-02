@@ -105,7 +105,6 @@ class UserPage extends Component {
   }
 
   render() {
-    // console.log(this.props.statsData);
     return (
       <div>
         <Navbar battleTag={this.state.battleTag} handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} handleSelectChange={this.handleSelectChange} getStatData={this.getStatData} region={this.state.region} page={this.state.page} renderLoadingGif={this.renderLoadingGif()} getStatsData={this.props.getStatsData}/>
