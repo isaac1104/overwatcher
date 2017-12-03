@@ -1,6 +1,6 @@
 import { FETCH_SIGNED_IN_BATTLETAG } from "./../actions/types";
 
-const initialState = null;
+const initialState = "";
 
 function signedInBattleTag(state = initialState, action) {
   switch (action.type) {
