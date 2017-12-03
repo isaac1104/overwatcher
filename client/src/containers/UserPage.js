@@ -18,7 +18,7 @@ class UserPage extends Component {
       )
     } else {
       return (
-        <Header playerFound={this.props.statsData.playerFound} user={this.props.user}/>
+        <Header playerFound={this.props.statsData.playerFound}/>
       )
     }
   }
