@@ -7,6 +7,10 @@ import * as actions from "./../actions";
 
 class UserPage extends Component {
 
+  componentDidMount() {
+    this.props.fetchSignedInBattleTag();
+  }
+
   renderDataView = () => {
     if (this.props.statsData.renderDataView && this.props.statsData.playerFound) {
       return (
@@ -32,6 +36,7 @@ class UserPage extends Component {
 function mapStateToProps(state) {
   return {
     statsData: state.statsData,
+    user: state.user,
     form: state.form
   }
 }
