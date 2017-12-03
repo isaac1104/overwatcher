@@ -12,14 +12,14 @@ function statsDataReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_STATS_INIT:
       return {
+        ...state,
         renderLoading: true,
-        page: "search"
       };
     case FETCH_STATS_DATA:
       return {
         result: action.payload,
-        renderLoading: false,
         renderDataView: true,
+        renderLoading: false,
         playerFound: true,
         page: "search"
       };
