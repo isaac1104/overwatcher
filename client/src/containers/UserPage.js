@@ -18,12 +18,14 @@ class UserPage extends Component {
       )
     } else {
       return (
-        <Header playerFound={this.props.statsData.playerFound}/>
+        <Header playerFound={this.props.statsData.playerFound} user={this.props.user}/>
       )
     }
   }
 
   render() {
+    console.log(this.props.user);
+    console.log(this.props.user.battletag);
     return (
       <div>
         <Navbar getStatsData={this.props.getStatsData} initStatsFetch={this.props.initStatsFetch} battletag={this.props.form} page={this.props.statsData.page} renderLoading={this.props.statsData.renderLoading}/>

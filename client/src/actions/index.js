@@ -45,7 +45,6 @@ export const fetchSignedInBattleTag = () => async (dispatch) => {
   const request = await axios.get("https://powerful-wildwood-93073.herokuapp.com/log");
   const { data } = request;
   dispatch({ type: FETCH_SIGNED_IN_BATTLETAG, payload: data });
-  console.log(data);
 }
 
 export const filterStream = (role) => {
