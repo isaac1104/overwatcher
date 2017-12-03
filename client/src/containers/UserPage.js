@@ -8,13 +8,13 @@ import * as actions from "./../actions";
 class UserPage extends Component {
 
   renderDataView = () => {
-    if (!this.props.statsData.renderDataView || !this.props.statsData.playerFound) {
+    if (this.props.statsData.renderDataView && this.props.statsData.playerFound) {
       return (
-        <Header playerFound={this.props.statsData.playerFound}/>
+        <DataView statsData={this.props.statsData}/>
       )
     } else {
       return (
-        <DataView statsData={this.props.statsData}/>
+        <Header playerFound={this.props.statsData.playerFound}/>
       )
     }
   }

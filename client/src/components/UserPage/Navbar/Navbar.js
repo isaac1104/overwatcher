@@ -54,7 +54,7 @@ const Navbar = (props) => {
         </ul>
         {renderSearch()}
       </div>
-      </nav>
+    </nav>
   )
 };
 

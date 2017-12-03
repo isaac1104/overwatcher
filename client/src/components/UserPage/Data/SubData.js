@@ -22,12 +22,12 @@ const SubData = (props) => {
     <div className="card-body top-3-heroes">
       {sortedTop3Heroes.map((heroes) => {
         return (
-          <div>
+          <div key={heroes.name}>
             {Heroes.filter((hero) => {
               return hero.name === heroes.name;
             }).map((hero) => {
               return (
-                <img src={hero.image} alt={heroes.name} className="img-responsive portrait"/>
+                <img src={hero.image} alt={heroes.name} className="img-responsive portrait" key={heroes.name}/>
               )
             })}
             <h6>{heroes.name}</h6>

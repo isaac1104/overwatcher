@@ -19,7 +19,7 @@ const HeroesData = (props) => {
           <tbody>
             {_.map(props.statsData.result.competitiveStats.topHeroes, (value, key) => {
               return(
-                <tr>
+                <tr key={key}>
                   <td className="heroes">
                     {Heroes.filter((hero) => {
                       return hero.name === key;
