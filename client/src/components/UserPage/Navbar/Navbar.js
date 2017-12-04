@@ -1,4 +1,5 @@
 import React from "react";
+import { Button, Icon } from "semantic-ui-react";
 import Search from "./../Search/Search";
 import "./Navbar.css";
 
@@ -11,7 +12,14 @@ const Navbar = (props) => {
       )
     } else {
       return (
-        <button className="btn btn-outline-danger btn-lg"><a href="/logout">logout</a></button>
+        <a href="/logout">
+          <Button animated color="blue" size="small">
+            <Button.Content visible>logout</Button.Content>
+            <Button.Content hidden>
+              <Icon name="log out"/>
+            </Button.Content>
+          </Button>
+        </a>
       )
     }
   }
