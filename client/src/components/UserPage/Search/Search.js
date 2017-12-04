@@ -9,23 +9,12 @@ const Search = (props) => {
     props.initStatsFetch();
   }
 
-  const btnStyle = {
-    search : {
-      backgroundColor : "orange",
-      color : "#353b40"
-    },
-    logout: {
-      backgroundColor : "#7a0905",
-      color : "white"
-    }
-  }
-
   const { handleSubmit, pristine, submitting } = props;
   return (
-    <div>
+    <div className="search-div">
       <form onSubmit={handleSubmit(submit)} className="search-form">
-        <Field name="battletag" component="input" type="text" placeholder="battletag-number" className="form-control mr-sm-2 battletag-input" autoComplete="off"/>
-        <Button animated onClick={() => props.getStatsData(props.battletag.battletag.values.battletag)} type="submit" disabled={pristine || submitting} style={btnStyle.search}>
+        <Field name="battletag" component="input" type="text" placeholder="battletag-number" className="battletag-input" autoComplete="off"/>
+        <Button animated onClick={() => props.getStatsData(props.battletag.battletag.values.battletag)} type="submit" disabled={pristine || submitting} color="orange" size="small">
           <Button.Content visible>search</Button.Content>
           <Button.Content hidden>
             <Icon name="search"/>
@@ -33,7 +22,7 @@ const Search = (props) => {
         </Button>
       </form>
       <a href="/logout">
-        <Button animated style={btnStyle.logout}>
+        <Button animated color="blue" size="small">
           <Button.Content visible>logout</Button.Content>
           <Button.Content hidden>
             <Icon name="log out"/>
