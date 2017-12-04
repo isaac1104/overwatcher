@@ -10,7 +10,7 @@ const Search = (props) => {
 
   const { handleSubmit, pristine, submitting } = props;
   return (
-    <form onSubmit={handleSubmit(submit)}>
+    <form onSubmit={handleSubmit(submit)} className="search-form">
       <Field name="battletag" component="input" type="text" placeholder="battletag-number" className="form-control mr-sm-2" autoComplete="off"/>
       <button onClick={() => props.getStatsData(props.battletag.battletag.values.battletag)} type="submit" className="btn btn-outline-success btn-lg my-2 my-sm-0" disabled={pristine || submitting}>search</button>
       <button className="btn btn-outline-danger btn-lg">
