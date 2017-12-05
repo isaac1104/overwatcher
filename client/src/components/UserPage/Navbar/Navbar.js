@@ -45,16 +45,44 @@ const Navbar = (props) => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <a className="nav-link" href="/user/search">SEARCH</a>
+            <a href="/user/search">
+              <Button animated basic inverted color="grey" size="mini">
+                <Button.Content visible>SEARCH</Button.Content>
+                <Button.Content hidden>
+                  <Icon name="search"/>
+                </Button.Content>
+              </Button>
+            </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/user/stream">STREAM</a>
+            <a href="/user/stream">
+              <Button animated basic inverted color="grey" size="mini">
+                <Button.Content visible>STREAM</Button.Content>
+                <Button.Content hidden>
+                  <Icon name="video play"/>
+                </Button.Content>
+              </Button>
+            </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/user/compare">COMPARE</a>
+            <a href="/user/compare">
+              <Button animated basic inverted color="grey" size="mini">
+                <Button.Content visible>COMPARE</Button.Content>
+                <Button.Content hidden>
+                  <Icon name="users"/>
+                </Button.Content>
+              </Button>
+            </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/user/tournament">TOURNAMENT</a>
+            <a href="/user/tournament">
+              <Button animated basic inverted color="grey" size="mini">
+                <Button.Content visible>TOURNAMENT</Button.Content>
+                <Button.Content hidden>
+                  <Icon name="trophy"/>
+                </Button.Content>
+              </Button>
+            </a>
           </li>
           <li className="nav-item">
             {renderLoadingGif()}

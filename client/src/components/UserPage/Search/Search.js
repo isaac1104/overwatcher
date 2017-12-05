@@ -14,7 +14,7 @@ const Search = (props) => {
     <div className="search-div">
       <form onSubmit={handleSubmit(submit)} className="search-form">
         <Field name="battletag" component="input" type="text" placeholder="battletag-number" className="battletag-input" autoComplete="off"/>
-        <Button animated onClick={() => props.getStatsData(props.battletag.battletag.values.battletag)} type="submit" disabled={pristine || submitting} color="orange" size="small">
+        <Button animated basic inverted color="grey" size="mini" onClick={() => props.getStatsData(props.battletag.battletag.values.battletag)} type="submit" disabled={pristine || submitting}>
           <Button.Content visible>search</Button.Content>
           <Button.Content hidden>
             <Icon name="search"/>
@@ -22,7 +22,7 @@ const Search = (props) => {
         </Button>
       </form>
       <a href="/logout">
-        <Button animated color="blue" size="small">
+        <Button animated basic inverted color="grey" size="mini">
           <Button.Content visible>logout</Button.Content>
           <Button.Content hidden>
             <Icon name="log out"/>
