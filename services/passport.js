@@ -15,29 +15,21 @@ passport.deserializeUser(function(obj, done) {
   });
 });
 
-// passport.use(new BnetStrategy({
-//   clientID: BNET_ID,
-//   clientSecret: BNET_SECRET,
-//   callbackURL: "https://powerful-wildwood-93073.herokuapp.com/auth/bnet/callback",
-//   proxy: true
-// }, async (accessToken, refreshToken, profile, done) => {
-//   const existingUser = await User.findOne({bnetId: profile.id});
-//   if (existingUser) {
-//     return done(null, existingUser);
-//   }
-//   const user = await new User({ bnetId: profile.id }).save();
-//   done(null, user);
-// }));
-
-passport.use(new BnetStrategy({
-  clientID: BNET_ID,
-  clientSecret: BNET_SECRET,
-  callbackURL: "https://powerful-wildwood-93073.herokuapp.com/auth/bnet/callback"
-}, function(accessToken, refreshToken, profile, done) {
-  const existingUser = User.findOne({bnetId: profile.id});
-  if (existingUser) {
-    return done(null, existingUser);
-  }
-  const user = new User({ bnetId: profile.id }).save();
-  done(null, user);
-}));
+passport.use(
+  new BnetStrategy(
+    {
+      clientID: BNET_ID,
+      clientSecret: BNET_SECRET,
+      callbackURL: "/auth/bnet/callback",
+      proxy: true
+    },
+    async(accessToken, refreshToken, profile, done) => {
+      const existingUser = await User.findOne({ bnetId: profile.id });
+      if (existingUser) {
+        return done(null, existingUser);
+      }
+      const user = await new User({ bnetId: profile.id }).save();
+      done(null, user);
+    }
+  )
+);
