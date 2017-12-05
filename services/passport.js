@@ -1,14 +1,18 @@
 const passport = require("passport");
+const mongoose = require("mongoose");
 const BnetStrategy = require('passport-bnet').Strategy;
 const BNET_ID = process.env.BNET_ID || "u99r2wbupxtcvr2hp2eds54cwhxdh25k";
 const BNET_SECRET = process.env.BNET_SECRET || "HSFVJdwUFCjvtCbq6wCJBrzKTz9Kyd4n";
+const User = mongoose.model("User");
 
 passport.serializeUser(function(user, done) {
   done(null, user);
 });
 
 passport.deserializeUser(function(obj, done) {
-  done(null, obj);
+  User.findById(id).then(user => {
+    done(null, obj);
+  });
 });
 
 passport.use(new BnetStrategy({
