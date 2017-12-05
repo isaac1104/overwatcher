@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Icon } from "semantic-ui-react";
+import Logout from "./../Logout/Logout";
 import Search from "./../UserPage/Search/Search";
 import "./Navbar.css";
 
@@ -12,14 +13,7 @@ const Navbar = (props) => {
       )
     } else {
       return (
-        <a href="/logout">
-          <Button animated color="blue" size="small">
-            <Button.Content visible>logout</Button.Content>
-            <Button.Content hidden>
-              <Icon name="log out"/>
-            </Button.Content>
-          </Button>
-        </a>
+        <Logout/>
       )
     }
   }

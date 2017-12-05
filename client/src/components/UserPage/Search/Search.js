@@ -1,4 +1,5 @@
 import React from "react";
+import Logout from "./../../Logout/Logout";
 import { Button, Icon } from "semantic-ui-react";
 import { Field, reduxForm } from "redux-form";
 import "./Search.css";
@@ -21,14 +22,7 @@ const Search = (props) => {
           </Button.Content>
         </Button>
       </form>
-      <a href="/logout">
-        <Button animated basic inverted color="grey" size="mini">
-          <Button.Content visible>logout</Button.Content>
-          <Button.Content hidden>
-            <Icon name="log out"/>
-          </Button.Content>
-        </Button>
-      </a>
+      <Logout/>
     </div>
   )
 };
