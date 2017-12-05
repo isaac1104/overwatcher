@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Navbar from "./../components/UserPage/Navbar/Navbar";
+import Navbar from "./../components/Navbar/Navbar";
 import Header from "./../components/UserPage/Header/Header";
 import DataView from "./../components/UserPage/Data/DataView";
 import { connect } from "react-redux";

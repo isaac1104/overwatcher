@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./../UserPage/Navbar/Navbar";
+import Navbar from "./../Navbar/Navbar";
 import StreamContainer from "./../../containers/StreamContainer";
 
 const StreamPage = () => {

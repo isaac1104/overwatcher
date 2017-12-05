@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Navbar from "./../UserPage/Navbar/Navbar";
+import Navbar from "./../Navbar/Navbar";
 import Header from "./Header/Header";
 
 class TournamentPage extends Component {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Icon } from "semantic-ui-react";
-import Search from "./../Search/Search";
+import Search from "./../UserPage/Search/Search";
 import "./Navbar.css";
 
 const Navbar = (props) => {
@@ -55,6 +55,16 @@ const Navbar = (props) => {
             </a>
           </li>
           <li className="nav-item">
+            <a href="/user/favorite">
+              <Button animated basic inverted color="grey" size="mini">
+                <Button.Content visible>FAVORITE</Button.Content>
+                <Button.Content hidden>
+                  <Icon name="star"/>
+                </Button.Content>
+              </Button>
+            </a>
+          </li>
+          <li className="nav-item">
             <a href="/user/stream">
               <Button animated basic inverted color="grey" size="mini">
                 <Button.Content visible>STREAM</Button.Content>
@@ -70,16 +80,6 @@ const Navbar = (props) => {
                 <Button.Content visible>COMPARE</Button.Content>
                 <Button.Content hidden>
                   <Icon name="users"/>
-                </Button.Content>
-              </Button>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/user/tournament">
-              <Button animated basic inverted color="grey" size="mini">
-                <Button.Content visible>TOURNAMENT</Button.Content>
-                <Button.Content hidden>
-                  <Icon name="trophy"/>
                 </Button.Content>
               </Button>
             </a>
