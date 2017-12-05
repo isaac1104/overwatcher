@@ -1,5 +1,6 @@
 import _ from "lodash";
 import React from "react";
+import { Rating } from "semantic-ui-react";
 
 const AvatarData = (props) => {
 
@@ -24,13 +25,14 @@ const mainHero =  _.map(props.statsData.result.competitiveStats.topHeroes, (valu
   return(
     <div className="container player-stats">
       <div className="card player-intro" style={style}>
-        <div className="card-header player-avatar">
+        <div className="player-avatar">
           <div>
             <img src={props.statsData.result.icon} className="img-responsive avatar" alt="avatar"/>
           </div>
           <div>
             <h5>LV.{props.statsData.result.level}</h5>
             <h4>{props.statsData.result.name}</h4>
+            <Rating icon="star" size="huge"/>
           </div>
         </div>
       </div>
