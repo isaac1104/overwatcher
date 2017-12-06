@@ -28,13 +28,13 @@ app.use(passport.session());
 app.use(routes);
 app.get("/auth/bnet", passport.authenticate("bnet"));
 app.get("/auth/bnet/callback", passport.authenticate("bnet", {failureRedirect: "/"}), function(req, res) {
-  app.get("/log", (req, res) => {
-    res.send("LOG ROUTE");
-    res.json(req.user);
-  });
   res.redirect("/user/search");
 });
 
+app.get("/log", (req, res) => {
+  res.send("LOG ROUTE");
+  res.json(req.user);
+});
 
 app.get("/logout", (req, res) => {
   req.logout();
