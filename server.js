@@ -37,6 +37,10 @@ app.get("/auth/bnet/callback", passport.authenticate("bnet", {failureRedirect: "
 //   res.json(req.user);
 // });
 
+app.get("/log", (req, res, next) => {
+  res.json(req.user);
+});
+
 app.get("/logout", (req, res) => {
   req.logout();
   res.redirect("/");
