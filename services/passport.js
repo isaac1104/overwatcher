@@ -23,15 +23,13 @@ passport.use(
       callbackURL: "https://powerful-wildwood-93073.herokuapp.com/auth/bnet/callback",
       proxy: true
     },
-    async(accessToken, refreshToken, profile, done) => {
+    async (accessToken, refreshToken, profile, done) => {
       const existingUser = await User.findOne({ bnetId: profile.id, battletag: profile.battletag });
       if (existingUser) {
         return done(null, existingUser);
       }
       const user = await new User({ bnetId: profile.id, battletag: profile.battletag }).save();
       done(null, user);
-      console.log(profile);
-      console.log(user);
     }
   )
 );
