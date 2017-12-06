@@ -23,12 +23,12 @@ const User = mongoose.model("users");
 //   });
 // }));
 
-passport.serializeUser( (user, done) => {
+passport.serializeUser((user, done) => {
     done(null, user.id);
 });
 
 passport.deserializeUser((obj, done) => {
-  User.findById(id).then(user => {
+  User.findById().then(user => {
     done(null, user);
   });
 });
