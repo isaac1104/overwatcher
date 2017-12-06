@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const cookieKey = process.env.COOKIE_KEY || "abcedfg";
 const routes = require("./routes");
-const requireAuth = require("./middleware/requireAuth");
+// const requireAuth = require("./middleware/requireAuth");
 require("./models/user");
 
 // Connect to the Mongo DB
@@ -33,9 +33,9 @@ app.get("/auth/bnet/callback", passport.authenticate("bnet", {failureRedirect: "
   res.redirect("/user/search");
 });
 
-app.get("/log", requireAuth, (req, res) => {
-  res.json(req.user);
-});
+// app.get("/log", requireAuth, (req, res) => {
+//   res.json(req.user);
+// });
 
 app.get("/logout", (req, res) => {
   req.logout();
