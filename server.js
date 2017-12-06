@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const cookieKey = process.env.COOKIE_KEY || "abcedfg";
 const routes = require("./routes");
+const User = mongoose.model("users");
 require("./models/user");
 
 // Connect to the Mongo DB
