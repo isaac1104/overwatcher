@@ -5,6 +5,6 @@ export default {
     return axios.get(`https://ow-api.com/v1/stats/pc/${region}/${battleTag}/complete`);
   },
   getSignedInUser() {
-    return axios.get("/log");
+    return axios.get("https://powerful-wildwood-93073.herokuapp.com/log");
   }
 };
