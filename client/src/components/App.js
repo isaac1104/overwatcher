@@ -5,6 +5,7 @@ import UserPage from "./../containers/UserPage";
 import StreamPage from "./StreamPage/StreamPage";
 import ComparePage from "./ComparePage/ComparePage";
 import TournamentPage from "./TournamentPage/TournamentPage";
+import FavoritePage from "./FavoritePage/FavoritePage";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           <Route exact path="/user/search" component={UserPage}/>
           <Route exact path="/user/stream" component={StreamPage}/>
           <Route exact path="/user/compare" component={ComparePage}/>
+          <Route exact path="/user/favorite" component={FavoritePage}/>
           <Route exact path="/user/tournament" component={TournamentPage}/>
         </div>
       </Router>
