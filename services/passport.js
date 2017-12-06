@@ -38,7 +38,7 @@ passport.use(
     {
       clientID: BNET_ID,
       clientSecret: BNET_SECRET,
-      callbackURL: "/auth/bnet/callback",
+      callbackURL: "https://powerful-wildwood-93073.herokuapp.com/auth/bnet/callback",
       proxy: true
     },
     async(accessToken, refreshToken, profile, done) => {
