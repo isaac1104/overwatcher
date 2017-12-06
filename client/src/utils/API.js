@@ -8,6 +8,6 @@ export default {
     return axios.get("api/users");
   },
   getSignedInUser() {
-    return axios.get("https://powerful-wildwood-93073.herokuapp.com/log");
+    return axios.get("https://powerful-wildwood-93073.herokuapp.com/current_user");
   }
 };
