@@ -27,9 +27,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(routes);
 app.get("/auth/bnet", passport.authenticate("bnet"));
-app.get("/auth/bnet/callback", passport.authenticate("bnet", {failureRedirect: "/"}), function(req, res) {
-  res.json(req.user);
-  console.log("hi");
+app.get("/auth/bnet/callback", passport.authenticate("bnet", {failureRedirect: "/"}),
+ function(req, res) {
+  res.json(req.user.battletag);
   // res.redirect("/user/search");
 });
 
