@@ -34,10 +34,6 @@ app.get("/auth/bnet/callback", passport.authenticate("bnet", {failureRedirect: "
 
 app.get("/log", (req, res) => {
   res.send("LOG ROUTE");
-  console.log("hello");
-  console.log(req);
-  console.log(req.user);
-  console.log(res);
   // res.json(req.user);
 });
 
