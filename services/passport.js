@@ -42,11 +42,11 @@ passport.use(
       proxy: true
     },
     async(accessToken, refreshToken, profile, done) => {
-      const existingUser = await User.findOne({ user.bnetId: profile.id, user.battletag: profile.battletag });
+      const existingUser = await User.findOne({ bnetId: profile.id, battletag: profile.battletag });
       if (existingUser) {
         return done(null, existingUser);
       }
-      const user = await new User({ user.bnetId: profile.id, user.battletag: profile.battletag }).save();
+      const user = await new User({ bnetId: profile.id, battletag: profile.battletag }).save();
       done(null, user);
     }
   )
