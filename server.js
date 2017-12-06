@@ -32,7 +32,7 @@ app.get("/auth/bnet/callback", passport.authenticate("bnet", {failureRedirect: "
 });
 
 app.get("/log", (req, res) => {
-  res.send("Hello");
+  res.send(req.user);
   res.json(req.user);
 });
 
