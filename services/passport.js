@@ -5,24 +5,6 @@ const BNET_SECRET = process.env.BNET_SECRET || "HSFVJdwUFCjvtCbq6wCJBrzKTz9Kyd4n
 const mongoose = require("mongoose");
 const User = mongoose.model("users");
 
-// passport.serializeUser(function(user, done) {
-//   done(null, user);
-// });
-//
-// passport.deserializeUser(function(obj, done) {
-//   done(null, obj);
-// });
-
-// passport.use(new BnetStrategy({
-//   clientID: BNET_ID,
-//   clientSecret: BNET_SECRET,
-//   callbackURL: "https://powerful-wildwood-93073.herokuapp.com/auth/bnet/callback"
-// }, function(accessToken, refreshToken, profile, done) {
-//   process.nextTick(function() {
-//     return done(null, profile);
-//   });
-// }));
-
 passport.serializeUser((user, done) => {
     done(null, user.id);
 });
