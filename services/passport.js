@@ -29,6 +29,7 @@ passport.use(
         return done(null, existingUser);
       }
       const user = await new User({ bnetId: profile.id, battletag: profile.battletag }).save();
+      console.log(user);
       done(null, user);
     }
   )
