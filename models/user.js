@@ -4,5 +4,5 @@ const UserSchema = new Schema({
     bnetId: String
 });
 
-const User = mongoose.model("User", UserSchema);
+const User = mongoose.model("users", UserSchema);
 module.exports = User;
