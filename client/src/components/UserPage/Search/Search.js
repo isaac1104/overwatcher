@@ -16,7 +16,7 @@ const Search = (props) => {
       <form onSubmit={handleSubmit(submit)} className="search-form">
         <Field name="battletag" component="input" type="text" placeholder="battletag-number" className="battletag-input" autoComplete="off"/>
         <Button animated basic inverted color="grey" size="mini" onClick={() => props.getStatsData(props.battletag.battletag.values.battletag)} type="submit" disabled={pristine || submitting}>
-          <Button.Content visible>search</Button.Content>
+          <Button.Content visible>SEARCH</Button.Content>
           <Button.Content hidden>
             <Icon name="search"/>
           </Button.Content>

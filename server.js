@@ -31,7 +31,7 @@ app.get("/auth/bnet/callback", passport.authenticate("bnet", {failureRedirect: "
   res.redirect("/user/search");
 });
 
-app.get("https://powerful-wildwood-93073.herokuapp.com/log", (req, res) => {
+app.get("/log", (req, res) => {
   res.json(req.user);
 });
 
