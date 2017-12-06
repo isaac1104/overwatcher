@@ -24,7 +24,6 @@ class UserPage extends Component {
   }
 
   render() {
-    console.log("hello");
     return (
       <div>
         <Navbar getStatsData={this.props.getStatsData} initStatsFetch={this.props.initStatsFetch} battletag={this.props.form} page={this.props.statsData.page} renderLoading={this.props.statsData.renderLoading}/>
