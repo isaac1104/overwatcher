@@ -42,7 +42,7 @@ app.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
-app.post("/api/favorite", (req, res) => {
+app.get("/api/favorite", (req, res) => {
   User.update({
     "_id": ObjectId("5a276b1cad5fed0014bcc135")
   }, {
@@ -50,6 +50,7 @@ app.post("/api/favorite", (req, res) => {
       test: "test"
     }
   }).then((res) => {
+    res.redirect("/user/search");
     console.log(res);
   }).catch((err) => {
     console.log(err);
