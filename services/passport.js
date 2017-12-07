@@ -1,7 +1,6 @@
 const passport = require("passport");
 const BnetStrategy = require('passport-bnet').Strategy;
-const BNET_ID = process.env.BNET_ID || "u99r2wbupxtcvr2hp2eds54cwhxdh25k";
-const BNET_SECRET = process.env.BNET_SECRET || "HSFVJdwUFCjvtCbq6wCJBrzKTz9Kyd4n";
+const keys = require("./../config/keys");
 const mongoose = require("mongoose");
 const User = mongoose.model("users");
 
@@ -18,8 +17,8 @@ passport.deserializeUser((id, done) => {
 passport.use(
   new BnetStrategy(
     {
-      clientID: BNET_ID,
-      clientSecret: BNET_SECRET,
+      clientID: keys.bnetClientId,
+      clientSecret: keys.bnetClientSecret,
       callbackURL: "https://powerful-wildwood-93073.herokuapp.com/auth/bnet/callback",
       proxy: true
     },
