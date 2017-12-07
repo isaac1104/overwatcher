@@ -42,8 +42,8 @@ app.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
-app.post("/api/favorite", (req, res) => {
-  User.update({ "bnetId": req.user.bnetId }, { $push: { favPlayer: "test" }});
+app.get("/api/favorite", (req, res) => {
+  // User.update({ "bnetId": req.user.bnetId }, { $push: { favPlayer: "test" }});
   res.json(User);
 });
 
