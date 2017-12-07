@@ -8,13 +8,13 @@ module.exports = app => {
   });
 
   app.get("/api/isAuth", (req, res) => {
-    console.log("reck: ", req.user.id);
+    console.log("User ID: ", req.user.id);
     if(req.isAuthenticated()) {
-      console.log("yes");
+      console.log("User Authenticated");
       res.redirect("/user/search");
     }
   });
-  
+
   app.get("/api/current_user", (req, res) => {
     res.send(req.user);
   });
