@@ -43,17 +43,9 @@ app.get("/logout", (req, res) => {
 });
 
 app.post("/api/favorite", (req, res) => {
-  User.update({
-    "bnetId": "79838992"
-  }, {
-    $push: {
-      test: "test"
-    }
-  }).then((res) => {
-    console.log(res);
-  }).catch((err) => {
-    console.log(err);
-  });
+  User.update({ "bnetId": "79838992" }, { $push: { test: "test" }});
+  res.json(req.user);
+  console.log(req);
 });
 
 if (process.env.NODE_ENV === "production") {
