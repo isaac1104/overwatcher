@@ -13,7 +13,8 @@ module.exports = app => {
       console.log("yes");
       res.redirect("/user/search");
     }
-  } )
+  });
+  
   app.get("/api/current_user", (req, res) => {
     res.send(req.user);
   });
