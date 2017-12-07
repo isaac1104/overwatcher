@@ -42,7 +42,7 @@ app.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
-app.get("/api/favorite", (req, res) => {
+app.post("/api/favorite", (req, res) => {
   User.update({
     "_id": "5a276b1cad5fed0014bcc135"
   }, {
