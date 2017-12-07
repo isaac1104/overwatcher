@@ -1,7 +1,7 @@
 import axios from "axios";
 import { FETCH_TWITCH_DATA } from "./types";
 import { FETCH_TWITCH_METADATA } from "./types";
-import { FETCH_STATS_DATA, FETCH_STATS_ERROR, FETCH_STATS_INIT, SAVE_FAVORITE_PLAYER } from "./types";
+import { FETCH_STATS_DATA, FETCH_STATS_ERROR, FETCH_STATS_INIT } from "./types";
 import { FILTER_STREAM } from "./types";
 import { FETCH_SIGNED_IN_BATTLETAG } from "./types";
 
@@ -52,15 +52,4 @@ export const fetchSignedInBattleTag = () => async (dispatch) => {
   const request = await axios.get("https://powerful-wildwood-93073.herokuapp.com/api/current_user");
   const { data } = request;
   dispatch({ type: FETCH_SIGNED_IN_BATTLETAG, payload: data });
-}
-
-export const saveFavoritePlayer = () => async (dispatch) => {
-  await axios.post("/favorite/user", {
-    test: "testing"
-  }).then((res) => {
-    console.log(res);
-  }).catch((err) => {
-    console.log(err);
-  });
-  dispatch({ type: SAVE_FAVORITE_PLAYER });
 }

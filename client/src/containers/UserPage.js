@@ -14,7 +14,7 @@ class UserPage extends Component {
   renderDataView = () => {
     if (this.props.statsData.renderDataView && this.props.statsData.playerFound) {
       return (
-        <DataView statsData={this.props.statsData}/>
+        <DataView statsData={this.props.statsData} user={this.props.user}/>
       )
     } else {
       return (
