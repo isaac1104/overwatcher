@@ -42,7 +42,7 @@ app.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
-app.post("/api/favorite", (req, res) => {
+app.get("/api/favorite", (req, res) => {
   User.update({ "bnetId": "79838992" }, { $push: { test: "test" }});
   res.json(req.user);
   console.log(req);
