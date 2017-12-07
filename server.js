@@ -44,7 +44,7 @@ app.get("/logout", (req, res) => {
 
 app.get("/api/favorite", (req, res) => {
   User.update({
-    "_id": ObjectId("5a276b1cad5fed0014bcc135")
+    "_id": "5a276b1cad5fed0014bcc135"
   }, {
     $push: {
       test: "test"
