@@ -50,7 +50,6 @@ app.get("/api/favorite", (req, res) => {
       test: "test"
     }
   }).then((res) => {
-    res.redirect("/user/search");
     console.log(res);
   }).catch((err) => {
     console.log(err);
