@@ -42,10 +42,10 @@ app.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
-app.get("/api/favorite", (req, res) => {
-  // User.update({ "bnetId": req.user.bnetId }, { $push: { favPlayer: "test" }});
-  res.json(User);
-});
+// app.get("/api/favorite", (req, res) => {
+//   User.update({ "bnetId": req.user.bnetId }, { $push: { favPlayer: "test" }});
+//   res.json(User);
+// });
 
 if (process.env.NODE_ENV === "production") {
   const path = require("path");
