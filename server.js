@@ -44,7 +44,7 @@ app.get("/logout", (req, res) => {
 
 app.get("/api/favorite", (req, res) => {
   User.update({ "bnetId": "79838992" }, { $push: { favPlayer: "test" }});
-  console.log(res);
+  res.json(User);
 });
 
 if (process.env.NODE_ENV === "production") {
