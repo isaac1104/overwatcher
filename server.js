@@ -44,7 +44,7 @@ app.get("/logout", (req, res) => {
 
 app.post("/api/favorite", (req, res) => {
   User.update({
-    "bnetId": 79838992
+    "bnetId": "79838992"
   }, {
     $push: {
       test: "test"
