@@ -1,5 +1,6 @@
 import _ from "lodash";
 import React from "react";
+import axios from "axios";
 import { Rating } from "semantic-ui-react";
 
 const AvatarData = (props) => {
@@ -22,6 +23,16 @@ const mainHero =  _.map(props.statsData.result.competitiveStats.topHeroes, (valu
       opacity: "0.8"
   }
 
+  const saveFavPlayer = () => {
+    return axios.post("/api/favorite", {
+      player: props.statsData.result
+    }).then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err);
+    });
+  }
+
   return(
     <div className="container player-stats">
       <div className="card player-intro" style={style}>
@@ -32,7 +43,7 @@ const mainHero =  _.map(props.statsData.result.competitiveStats.topHeroes, (valu
           <div>
             <h5>LV.{props.statsData.result.level}</h5>
             <h4>{props.statsData.result.name}</h4>
-            <Rating icon="star" size="huge"/>
+            <Rating icon="star" size="huge" onClick={() => saveFavPlayer()}/>
           </div>
         </div>
       </div>
