@@ -41,6 +41,16 @@ app.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
+app.get("/api/favorite", (req, res) => {
+  users.update({
+    "_id": ObjectId("5a276b1cad5fed0014bcc135")
+  }, {
+    $push: {
+      test: "test"
+    }
+  })
+});
+
 if (process.env.NODE_ENV === "production") {
   const path = require("path");
   app.use(express.static("client/build"));
