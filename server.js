@@ -44,7 +44,7 @@ app.get("/logout", (req, res) => {
 
 app.post("/api/favorite", (req, res) => {
   User.update({
-    "_id": "5a276b1cad5fed0014bcc135"
+    "bnetId": 79838992
   }, {
     $push: {
       test: "test"
