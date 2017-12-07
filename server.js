@@ -6,6 +6,7 @@ const passport = require("passport");
 const cookieKey = process.env.COOKIE_KEY || "abcedfg";
 const routes = require("./routes");
 require("./models/user");
+const User = mongoose.model("users");
 
 // Connect to the Mongo DB
 mongoose.Promise = global.Promise;
@@ -41,14 +42,18 @@ app.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
-app.get("/api/favorite", (req, res) => {
-  users.update({
+app.post("/api/favorite", (req, res) => {
+  User.update({
     "_id": ObjectId("5a276b1cad5fed0014bcc135")
   }, {
     $push: {
       test: "test"
     }
-  })
+  }).then((res) => {
+    console.log(res);
+  }).catch((err) => {
+    console.log(err);
+  });
 });
 
 if (process.env.NODE_ENV === "production") {
