@@ -1,6 +1,6 @@
 import _ from "lodash";
 import React from "react";
-import axios from "axios";
+import API from "./../../../utils/API";
 import { Rating } from "semantic-ui-react";
 
 const AvatarData = (props) => {
@@ -24,9 +24,7 @@ const mainHero =  _.map(props.statsData.result.competitiveStats.topHeroes, (valu
   }
 
   const saveFavPlayer = (data) => {
-    return axios.post("/api/favorite", {
-      player: data.result
-    }).then((res) => {
+    API.saveFavPlayer({ player: data.result }).then((res) => {
       console.log(res);
     }).catch((err) => {
       console.log(err);

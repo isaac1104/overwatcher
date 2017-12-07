@@ -6,5 +6,8 @@ export default {
   },
   getSignedInUser() {
     return axios.get("https://powerful-wildwood-93073.herokuapp.com/api/current_user");
+  },
+  saveFavPlayer(player) {
+    return axios.post("/api/favorite", player)
   }
 };
