@@ -1,6 +1,5 @@
 import _ from "lodash";
 import React from "react";
-import API from "./../../../utils/API";
 import { Rating } from "semantic-ui-react";
 
 const AvatarData = (props) => {

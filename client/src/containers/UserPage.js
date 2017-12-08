@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import Navbar from "./../components/Navbar/Navbar";
 import Header from "./../components/UserPage/Header/Header";
-import DataView from "./../components/UserPage/Data/DataView";
 import { connect } from "react-redux";
 import * as actions from "./../actions";
+import { Redirect } from "react-router-dom";
 
 class UserPage extends Component {
 
@@ -12,9 +12,9 @@ class UserPage extends Component {
   }
 
   renderDataView = () => {
-    if (this.props.statsData.renderDataView && this.props.statsData.playerFound) {
+    if (this.props.statsData.playerFound) {
       return (
-        <DataView statsData={this.props.statsData} user={this.props.user}/>
+        <Redirect to={`/user/search/${this.props.form.battletag.values.battletag}`}/>
       )
     } else {
       return (
