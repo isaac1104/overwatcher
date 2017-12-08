@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import Navbar from "./../components/Navbar/Navbar";
 import Header from "./../components/UserPage/Header/Header";
 import { connect } from "react-redux";
@@ -26,7 +26,7 @@ class UserPage extends Component {
   render() {
     return (
       <div>
-        <Navbar getStatsData={this.props.getStatsData} initStatsFetch={this.props.initStatsFetch} battletag={this.props.form} page={this.props.statsData.page} renderLoading={this.props.statsData.renderLoading}/>
+        <Navbar getStatsData={this.props.getStatsData} initStatsFetch={this.props.initStatsFetch} battletag={this.props.form} renderLoading={this.props.statsData.renderLoading} page={this.props.statsData.page}/>
         {this.renderDataView()}
       </div>
     )

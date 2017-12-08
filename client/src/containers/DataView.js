@@ -13,7 +13,7 @@ class DataView extends Component {
   render() {
     return (
       <div>
-        <Navbar/>
+        <Navbar initStatsFetch={this.props.initStatsFetch} battletag={this.props.form} getStatsData={this.props.getStatsData} renderLoading={this.props.statsData.renderLoading} page={this.props.statsData.page}/>
         <div>
           <AvatarData statsData={this.props.statsData}/>
         </div>
@@ -37,6 +37,7 @@ class DataView extends Component {
 function mapStateToProps(state) {
   return {
     statsData: state.statsData,
+    form: state.form
   }
 }
 
