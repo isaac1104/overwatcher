@@ -13,7 +13,7 @@ class DataView extends Component {
   render() {
     return (
       <div>
-        <Navbar initStatsFetch={this.props.initStatsFetch} battletag={this.props.form} getStatsData={this.props.getStatsData} renderLoading={this.props.statsData.renderLoading} page={this.props.statsData.page}/>
+        <Navbar initStatsFetch={this.props.initStatsFetch} battletag={this.props.form} getStatsData={this.props.getStatsData} renderLoading={this.props.statsData.renderLoading} page={this.props.statsData.page} playerFound={this.props.statsData.playerFound}/>
         <div>
           <AvatarData statsData={this.props.statsData}/>
         </div>
