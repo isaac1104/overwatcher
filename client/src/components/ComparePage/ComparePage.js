@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Navbar from "./../Navbar/Navbar";
 import Header from "./Header/Header";
 import DataView from "./Data/DataView";
 import NotFound from "./NotFound/NotFound";
@@ -94,7 +93,6 @@ class ComparePage extends  Component {
   render() {
     return (
       <div>
-        <Navbar/>
         <Header handleInputOne={this.handleInputOne} handleInputTwo={this.handleInputTwo} handleFormSubmit={this.handleFormSubmit} battleTag1={this.state.battleTag1} battleTag2={this.state.battleTag2} getStatData={this.getStatData} loadingGif={this.loadingGif} player1Found={this.state.player1Found} player2Found={this.state.player2Found}/>
         {this.showComparedStats()}
       </div>
