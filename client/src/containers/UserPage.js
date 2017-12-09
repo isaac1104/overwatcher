@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import Navbar from "./../components/Navbar/Navbar";
 import Header from "./../components/UserPage/Header/Header";
 import { connect } from "react-redux";
 import * as actions from "./../actions";
-import { Redirect } from "react-router-dom";
 
 class UserPage extends Component {
 
@@ -11,33 +9,17 @@ class UserPage extends Component {
     this.props.fetchSignedInBattleTag();
   }
 
-  renderDataView = () => {
-    if (this.props.statsData.playerFound) {
-      return (
-        <Redirect to={`/user/search/${this.props.form.battletag.values.battletag}`}/>
-      )
-    } else {
-      return (
-        <Header playerFound={this.props.statsData.playerFound} user={this.props.user}/>
-      )
-    }
-  }
-
   render() {
     return (
-      <div>
-        <Navbar getStatsData={this.props.getStatsData} initStatsFetch={this.props.initStatsFetch} battletag={this.props.form} renderLoading={this.props.statsData.renderLoading} page={this.props.statsData.page} playerFound={this.props.statsData.playerFound}/>
-        {this.renderDataView()}
-      </div>
-    )
+      <Header playerFound={this.props.statsData.playerFound} user={this.props.user}/>
+    );
   }
-};
+}
 
 function mapStateToProps(state) {
   return {
     statsData: state.statsData,
-    user: state.user,
-    form: state.form
+    user: state.user
   }
 }
 

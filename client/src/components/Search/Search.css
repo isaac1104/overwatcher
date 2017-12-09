@@ -1,0 +1,15 @@
+input {
+  text-align: center;
+}
+
+.battletag-input {
+  margin-right: 0.5rem;
+}
+
+.search-div {
+  display: flex;
+}
+
+.search-form {
+  display: flex;
+}
