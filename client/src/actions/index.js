@@ -49,7 +49,7 @@ export const initStatsFetch = () => {
 }
 
 export const fetchSignedInBattleTag = () => async (dispatch) => {
-  const request = await axios.get("https://powerful-wildwood-93073.herokuapp.com/api/current_user");
+  const request = await axios.get("/api/current_user");
   const { data } = request;
   dispatch({ type: FETCH_SIGNED_IN_BATTLETAG, payload: data });
 }
