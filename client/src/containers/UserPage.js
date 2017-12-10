@@ -11,7 +11,7 @@ class UserPage extends Component {
 
   render() {
     return (
-      <Header playerFound={this.props.statsData.playerFound} user={this.props.user}/>
+      <Header user={this.props.user}/>
     );
   }
 }

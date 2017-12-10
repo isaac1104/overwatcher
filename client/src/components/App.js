@@ -12,7 +12,9 @@ import DataView from "./../containers/DataView";
 const App = () => {
 
   const renderNavbar = () => {
-    if (window.location.href === "https://powerful-wildwood-93073.herokuapp.com/login") {
+    const loginURL = "https://powerful-wildwood-93073.herokuapp.com/login";
+    const loginURL2 = "https://powerful-wildwood-93073.herokuapp.com";
+    if (window.location.href === loginURL || loginURL2) {
       return <div></div>
     } else {
       return <Navbar/>
