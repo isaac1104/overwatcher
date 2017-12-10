@@ -6,22 +6,27 @@ import UserPage from "./../containers/UserPage";
 import StreamPage from "./StreamPage/StreamPage";
 import ComparePage from "./ComparePage/ComparePage";
 import FavoritePage from "./FavoritePage/FavoritePage";
+import PlayerNotFound from "./PlayerNotFound/PlayerNotFound";
 import DataView from "./../containers/DataView";
 
 const App = () => {
-  if (window.location.href === "/login") {
-    console.log("login page");
-  } else {
-    console.log("not a login page");
+
+  const renderNavbar = () => {
+    if (window.location.href === "http://localhost:3000/login") {
+      return <div></div>
+    } else {
+      return <Navbar/>
+    }
   }
 
   return (
     <Router>
       <div>
-        <Navbar/>
+        {renderNavbar()}
         <Route exact path="/" component={Home}/>
         <Route exact path="/login" component={Home}/>
         <Route exact path="/user/search" component={UserPage}/>
+        <Route exact path="/user/search/notfound" component={PlayerNotFound}/>
         <Route exact path="/user/search/:player" component={DataView}/>
         <Route exact path="/user/stream" component={StreamPage}/>
         <Route exact path="/user/compare" component={ComparePage}/>
