@@ -3,8 +3,7 @@ import { FETCH_STATS_DATA, FETCH_STATS_ERROR, FETCH_STATS_INIT } from "./../acti
 const initialState = {
   result: [],
   renderLoading: false,
-  playerFound: "",
-  page: "search"
+  playerFound: ""
 };
 
 function statsDataReducer(state = initialState, action) {
@@ -12,20 +11,20 @@ function statsDataReducer(state = initialState, action) {
     case FETCH_STATS_INIT:
       return {
         ...state,
-        renderLoading: true,
+        renderLoading: true
       };
     case FETCH_STATS_DATA:
       return {
         result: action.payload,
         renderLoading: false,
-        playerFound: true,
-        page: "search"
+        playerFound: true
+
       };
     case FETCH_STATS_ERROR:
       return {
         renderLoading: false,
-        playerFound: false,
-        page: "search"
+        playerFound: false
+
       };
     default:
       return state;

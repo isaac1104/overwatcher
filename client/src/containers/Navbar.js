@@ -45,9 +45,9 @@ class Navbar extends Component {
               <li className="nav-item">
                 <a href="/user/search">
                   <Button animated basic inverted color="grey" size="mini">
-                    <Button.Content visible>SEARCH</Button.Content>
+                    <Button.Content visible>HOME</Button.Content>
                     <Button.Content hidden>
-                      <Icon name="search"/>
+                      <Icon name="home"/>
                     </Button.Content>
                   </Button>
                 </a>

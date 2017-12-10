@@ -9,12 +9,18 @@ import FavoritePage from "./FavoritePage/FavoritePage";
 import DataView from "./../containers/DataView";
 
 const App = () => {
+  if (window.location.href === "/login") {
+    console.log("login page");
+  } else {
+    console.log("not a login page");
+  }
+
   return (
     <Router>
       <div>
         <Navbar/>
         <Route exact path="/" component={Home}/>
-        <Route exact path="/home" component={Home}/>
+        <Route exact path="/login" component={Home}/>
         <Route exact path="/user/search" component={UserPage}/>
         <Route exact path="/user/search/:player" component={DataView}/>
         <Route exact path="/user/stream" component={StreamPage}/>
