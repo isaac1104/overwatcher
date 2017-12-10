@@ -12,7 +12,7 @@ import DataView from "./../containers/DataView";
 const App = () => {
 
   const renderNavbar = () => {
-    if (window.location.href === "http://localhost:3000/login") {
+    if (window.location.href === "https://powerful-wildwood-93073.herokuapp.com/login") {
       return <div></div>
     } else {
       return <Navbar/>
@@ -26,7 +26,7 @@ const App = () => {
         <Route exact path="/" component={Home}/>
         <Route exact path="/login" component={Home}/>
         <Route exact path="/user/search" component={UserPage}/>
-        <Route exact path="/user/search/notfound" component={PlayerNotFound}/>
+        <Route exact path="/user/notfound" component={PlayerNotFound}/>
         <Route exact path="/user/search/:player" component={DataView}/>
         <Route exact path="/user/stream" component={StreamPage}/>
         <Route exact path="/user/compare" component={ComparePage}/>

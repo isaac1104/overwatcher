@@ -7,8 +7,8 @@ const PlayerNotFound = () => {
       <div className="jumbotron error-header text-center">
         <h1>Error: Stats/Player Not Found!</h1>
         <hr/>
-        <h3>Please check the BattleTag again or selected region for this player</h3>
-        <h4>The search must be in "battletag-number" format</h4>
+        <h3>Please double check the Battletag and input in "battletag-number" format</h3>
+        <h4>The player you are searching for must have played at least one competitive game</h4>
         <h5>Ex)sinatraa-11809</h5>
       </div>
     </div>

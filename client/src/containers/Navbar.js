@@ -27,7 +27,7 @@ class Navbar extends Component {
         )
       } else if (this.props.statsData.playerFound !== "" && !this.props.statsData.playerFound) {
         return (
-          <Redirect to={`/user/search/notfound`}/>
+          <Redirect to={`/user/notfound`}/>
         )
       }
     }
