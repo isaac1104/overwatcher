@@ -8,15 +8,16 @@ import { connect } from 'react-redux';
 
 class Search extends Component {
 
-  submit = ({ battletag }) => {
-   this.props.getStatsData(battletag);
+  formSubmit = ({ battletag }) => {
+    this.props.initStatsFetch();
+    this.props.getStatsData(battletag);
   }
 
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
     return (
       <div className="search-div">
-        <form onSubmit={handleSubmit(this.submit)} className="search-form">
+        <form onSubmit={handleSubmit(this.formSubmit)} className="search-form">
           <Field
             name="battletag"
             component={SearchField}
@@ -26,7 +27,6 @@ class Search extends Component {
             basic inverted color="grey"
             size="mini"
             type="submit"
-            onClick={() => this.props.initStatsFetch()}
             disabled={pristine || submitting}>
             <Button.Content visible>SEARCH</Button.Content>
             <Button.Content hidden>
