@@ -1,35 +1,32 @@
-import React from "react";
+import React, { Component } from "react";
 import Logout from "./../Logout/Logout";
 import { Button, Icon } from "semantic-ui-react";
 import { Field, reduxForm } from "redux-form";
-import "./Search.css";
+import SearchField from './SearchField';
+import * as actions from '../../actions';
+import { connect } from 'react-redux';
 
-class Search extends React.Component {
+class Search extends Component {
 
-  submit = () => {
-    this.props.initStatsFetch();
+  submit = ({ battletag }) => {
+   this.props.getStatsData(battletag);
   }
 
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
-
     return (
       <div className="search-div">
         <form onSubmit={handleSubmit(this.submit)} className="search-form">
           <Field
             name="battletag"
-            component="input"
-            type="text"
-            placeholder="battletag-number"
-            className="battletag-input"
-            autoComplete="off"
+            component={SearchField}
           />
           <Button
             animated
             basic inverted color="grey"
             size="mini"
-            onClick={() => this.props.getStatsData(this.props.battletag.battletag.values.battletag)}
             type="submit"
+            onClick={() => this.props.initStatsFetch()}
             disabled={pristine || submitting}>
             <Button.Content visible>SEARCH</Button.Content>
             <Button.Content hidden>
@@ -43,4 +40,4 @@ class Search extends React.Component {
   }
 }
 
-export default reduxForm({ form: "battletag" })(Search);
+export default reduxForm({ form: "battletag" })(connect(null, actions)(Search));
