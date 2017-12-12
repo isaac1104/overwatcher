@@ -33,7 +33,6 @@ class Navbar extends Component {
     }
 
   render() {
-    console.log(this.props.user.battletag);
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
