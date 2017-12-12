@@ -5,8 +5,19 @@ import "./LoginBtn.css";
 const LoginBtn = () => {
   return (
     <a href="/auth/bnet">
-      <Button animated inverted color="orange" size="large">
-        <Button.Content visible><img src="/images/misc/bnet-logo.png" alt="bnet-logo" className="img-responsive bnet-logo"/></Button.Content>
+      <Button
+        animated
+        basic
+        inverted
+        color="black"
+        size="large"
+      >
+        <Button.Content visible>
+          <img
+            src="/images/misc/bnet-logo.png"
+            alt="bnet-logo"
+          className="img-responsive bnet-logo"/>
+        </Button.Content>
         <Button.Content hidden>SIGN-IN</Button.Content>
       </Button>
     </a>
