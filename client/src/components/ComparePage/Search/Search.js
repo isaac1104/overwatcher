@@ -1,5 +1,6 @@
 import React from "react";
 import { Input } from "semantic-ui-react";
+import { Button as Btn, Icon } from "semantic-ui-react";
 import "./Search.css";
 
 const Button = (props) => {
@@ -34,7 +35,18 @@ const Button = (props) => {
             placeholder="battletag-number"
           />
         </div>
-        <button onClick={() => props.getStatData()} className="btn btn-primary btn-md compare-btn">compare</button>
+        <Btn
+          onClick={() => props.getStatData()}
+          animated
+          basic inverted color="grey"
+          size="mini"
+          type="submit"
+        >
+          <Btn.Content visible>COMPARE</Btn.Content>
+          <Btn.Content hidden>
+            <Icon name="users"/>
+          </Btn.Content>
+        </Btn>
       </form>
       {props.loadingGif()}
     </div>
