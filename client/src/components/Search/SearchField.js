@@ -7,6 +7,8 @@ const SearchField = ({ input, label, meta: { error, touched } }) => {
     <div>
       <label>{label}</label>
       <Input {...input}
+        icon="search"
+        iconPosition="left"
         size="small"
         type="text"
         autoComplete="off"
