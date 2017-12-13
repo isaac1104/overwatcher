@@ -5,10 +5,7 @@ const initialState = {};
 function signedInBattleTag(state = initialState, action) {
   switch (action.type) {
     case FETCH_SIGNED_IN_BATTLETAG:
-      return {
-      ...state,
-      data: action.payload
-    };
+      return action.payload;
     default:
       return state;
   }
