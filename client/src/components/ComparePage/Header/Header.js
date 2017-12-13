@@ -1,17 +1,39 @@
 import React from "react";
 import Search from "./../Search/Search";
-import "./Header.css";
+import { Header as PageHeader, Icon } from "semantic-ui-react";
 
 const Header = (props) => {
+
+  const style = {
+    subheader: {
+      color: "white"
+    },
+    header: {
+      color: "white",
+      padding: "5%",
+      backgroundColor: "#353b40"
+    }
+  }
+
   return (
     <div className="container">
-      <div className="jumbotron text-center compare-page-header">
-        <h1>Compare</h1>
+      <PageHeader
+        as="h1"
+        icon
+        textAlign="center"
+        style={style.header}
+      >
+        <Icon name="users"/>
+        Compare
         <hr/>
-        <h4>Please input valid Battletags below</h4>
-        <h5>Both players must have played at least one competitve game</h5>
-        <Search {...props}/>
-      </div>
+        <PageHeader.Subheader style={style.subheader}>
+          Please input valid Battletags for comparison
+        </PageHeader.Subheader>
+        <PageHeader.Subheader style={style.subheader}>
+          Both players must have played at least one competitive game
+        </PageHeader.Subheader>
+      </PageHeader>
+      <Search {...props}/>
     </div>
   )
 };

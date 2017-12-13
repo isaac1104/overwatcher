@@ -1,6 +1,7 @@
 .stream-data-container {
   display: flex;
   align-items: center;
+  background-color: #424447;
 }
 
 .stream-thumbnail {

@@ -31,14 +31,6 @@ const Header = (props) => {
         <SearchRole filterStream={props.filterStream}/>
       </PageHeader.Subheader>
     </PageHeader>
-    // <div>
-    //   <div className="jumbotron text-center streamer-search-container">
-    //     <h1>Stream</h1>
-    //     <hr/>
-    //     <h3>Check out all the streamers who are playing Overwatch</h3>
-    //     <SearchRole filterStream={props.filterStream}/>
-    //   </div>
-    // </div>
   )
 };
 

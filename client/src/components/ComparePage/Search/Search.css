@@ -1,3 +1,19 @@
 .compare-search {
   margin: 0.75rem 0 1rem 1rem;
 }
+
+.compare-search-container {
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #424447;
+  color: white;
+  margin: -1rem 0 2rem 0;
+}
+
+.compare-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
