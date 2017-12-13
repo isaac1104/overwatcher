@@ -1,16 +1,47 @@
 import React from "react";
-import "./../UserPage/Header/Header.css";
+import { Header as PageHeader, Image } from "semantic-ui-react";
 
 const PlayerNotFound = () => {
+
+  const style = {
+    subheader: {
+      color: "white",
+      marginTop: "2rem"
+    },
+    header: {
+      color: "white",
+      padding: "5%",
+      background: "#343a40"
+    },
+    error: {
+      color: "red",
+      fontSize: "3rem",
+      fontWeight: "bold"
+    },
+    logo: {
+      width: "10rem",
+    }
+  }
+
   return (
     <div className="container">
-      <div className="jumbotron error-header text-center">
-        <h1>Error: Stats/Player Not Found!</h1>
+      <PageHeader
+        as="h1"
+        textAlign="center"
+        style={style.header}
+      >
+        <Image src="/images/misc/reaper.png" style={style.logo}/>
+        <PageHeader.Subheader style={style.error}>
+          Error: Player Not Found!
+        </PageHeader.Subheader>
         <hr/>
-        <h3>Please double check the Battletag and input in "battletag-number" format</h3>
-        <h4>The player you are searching for must have played at least one competitive game</h4>
-        <h5>Ex)sinatraa-11809</h5>
-      </div>
+        <PageHeader.Subheader style={style.subheader}>
+          Please double check the Battletag and search in "battletag-number" format
+        </PageHeader.Subheader>
+        <PageHeader.Subheader style={style.subheader}>
+          The player you are searching for must have played at least one competitive game
+        </PageHeader.Subheader>
+      </PageHeader>
     </div>
   );
 }

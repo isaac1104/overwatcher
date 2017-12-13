@@ -1,6 +1,5 @@
 import React from "react";
 import { Header as PageHeader, Image } from "semantic-ui-react";
-import "./Header.css";
 
 const Header = (props) => {
 
@@ -16,7 +15,8 @@ const Header = (props) => {
     },
     welcome: {
       color: "white",
-      fontSize: "3rem"
+      fontSize: "3rem",
+      fontWeight: "bold"
     },
     logo: {
       width: "10rem"
@@ -28,7 +28,6 @@ const Header = (props) => {
       <PageHeader
         as="h1"
         textAlign="center"
-        className="welcome-header"
         style={style.header}
       >
         <Image src="/images/misc/owlogo.svg" style={style.logo}/>
