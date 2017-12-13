@@ -16,7 +16,7 @@ const PlayerNotFound = () => {
     error: {
       color: "red",
       fontSize: "3rem",
-      fontWeight: "bold"
+      fontWeight: "bolder"
     },
     logo: {
       width: "10rem",

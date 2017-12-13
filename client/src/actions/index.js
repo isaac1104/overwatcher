@@ -36,7 +36,7 @@ export const getStatsData = (battletag) => async (dispatch) => {
   const request = await axios.get(`https://ow-api.com/v1/stats/pc/us/${battletag}/complete`);
   const { data } = request;
   if (data.error || !data.competitiveStats.careerStats) {
-    dispatch({ type: FETCH_STATS_ERROR });
+    dispatch({ type: FETCH_STATS_ERROR, payload: false });
   } else {
     dispatch({ type: FETCH_STATS_DATA, payload: data });
   }
@@ -44,7 +44,8 @@ export const getStatsData = (battletag) => async (dispatch) => {
 
 export const initStatsFetch = () => {
   return {
-    type: FETCH_STATS_INIT
+    type: FETCH_STATS_INIT,
+    payload: true
   }
 }
 

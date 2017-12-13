@@ -11,10 +11,11 @@ function statsDataReducer(state = initialState, action) {
     case FETCH_STATS_INIT:
       return {
         ...state,
-        renderLoading: true
+        renderLoading: action.payload
       };
     case FETCH_STATS_DATA:
       return {
+        ...state,
         result: action.payload,
         renderLoading: false,
         playerFound: true
@@ -22,7 +23,8 @@ function statsDataReducer(state = initialState, action) {
       };
     case FETCH_STATS_ERROR:
       return {
-        renderLoading: false,
+        ...state,
+        renderLoading: action.payload,
         playerFound: false
 
       };
