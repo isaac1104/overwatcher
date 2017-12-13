@@ -6,9 +6,7 @@
 }
 
 .streamer-search-container {
-  background-image: url("/images/misc/ow-background.jpg");
-  background-repeat: no-repeat;
-  padding: 8%;
+  background-color: #353b40;
 }
 
 .role-icons {
