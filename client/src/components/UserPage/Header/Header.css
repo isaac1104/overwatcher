@@ -1,15 +1,3 @@
-.welcome-header {
-  background-image: url("/images/misc/owlogo-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  margin-top: 2rem;
-  height: 45vh;
-  padding: 8%;
-  opacity: 0.8;
-  line-height: 0.5rem;
-}
-
 .error-header {
   background-image: url("/images/misc/reaper.png");
   background-repeat: no-repeat;

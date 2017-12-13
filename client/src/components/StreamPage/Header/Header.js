@@ -23,7 +23,7 @@ const Header = (props) => {
       className="streamer-search-container"
       style={style.header}
     >
-      <Icon name="video play"/>
+      <Icon name="tv"/>
       Stream
       <hr/>
       <PageHeader.Subheader style={style.subheader}>

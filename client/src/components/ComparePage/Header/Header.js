@@ -6,12 +6,13 @@ const Header = (props) => {
 
   const style = {
     subheader: {
-      color: "white"
+      color: "white",
+      marginTop: "1rem"
     },
     header: {
       color: "white",
       padding: "5%",
-      backgroundColor: "#353b40"
+      backgroundColor: "#343a40"
     }
   }
 
