@@ -1,11 +1,14 @@
 import { FETCH_SIGNED_IN_BATTLETAG } from "./../actions/types";
 
-const initialState = {};
+const initialState = {
+  battletag: "",
+  bnetId: ""
+};
 
 function signedInBattleTag(state = initialState, action) {
   switch (action.type) {
     case FETCH_SIGNED_IN_BATTLETAG:
-      return action.payload;
+      return { ...state, ...action.payload };
     default:
       return state;
   }
