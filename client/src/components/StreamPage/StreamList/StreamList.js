@@ -3,9 +3,12 @@ import template from "url-template";
 import "./StreamList.css";
 
 const StreamList = (props) => {
-  let parsedImg = template.parse(props.thumbnail_url).expand({ width: 320, height: 180 });
 
   const currentlyStreaming = () => {
+    const parsedImg = template.parse(props.thumbnail_url).expand({ width: 320, height: 180 });
+    const channelName = props.mergedData.thumbnail_url.split("/")[4].split("user_")[1].split("-")[0];
+    const channelURL = `https://www.twitch.tv/${channelName}`;
+
     if (props.mergedData.overwatch && props.mergedData.overwatch.broadcaster.hero) {
       return (
         <div className="card-header stream-data-container">
@@ -15,10 +18,9 @@ const StreamList = (props) => {
           <div>
             <h1 id="channelName">{channelName}</h1>
             <h3>{props.title}</h3>
-            <h5>Stream Started: {props.started_at}</h5>
-            <h6>Viewer Count: {props.viewer_count}</h6>
+            <h6 id="currentRole">Role: {props.mergedData.overwatch.broadcaster.hero.role}</h6>
             <h6 id="currentHero">Currently playing as: {props.mergedData.overwatch.broadcaster.hero.name}</h6>
-            <h6>Role: {props.mergedData.overwatch.broadcaster.hero.role}</h6>
+            <h6>Viewer Count: {props.viewer_count}</h6>
           </div>
         </div>
       )
@@ -39,8 +41,7 @@ const StreamList = (props) => {
       )
     }
   };
-  const channelName = props.mergedData.thumbnail_url.split("/")[4].split("user_")[1].split("-")[0];
-  const channelURL = `https://www.twitch.tv/${channelName}`;
+  
   return (
     <div className="card">
       {currentlyStreaming()}

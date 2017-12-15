@@ -23,7 +23,7 @@ class StreamContainer extends Component {
         return (
           <StreamList thumbnail_url={data.thumbnail_url} title={data.title} started_at={data.started_at} viewer_count={data.viewer_count} mergedData={data}/>
         )
-      })
+      });
     } else {
       return mergedData.filter((data) => {
         if (data.overwatch && data.overwatch.broadcaster.hero) {
@@ -33,7 +33,7 @@ class StreamContainer extends Component {
         return (
           <StreamList thumbnail_url={stream.thumbnail_url} title={stream.title} started_at={stream.started_at} viewer_count={stream.viewer_count} mergedData={stream}/>
         )
-      })
+      });
     }
   }
 
@@ -43,7 +43,7 @@ class StreamContainer extends Component {
         <Header filterStream={this.props.filterStream}/>
         {this.renderStreams()}
       </div>
-    )
+    );
   }
 }
 
