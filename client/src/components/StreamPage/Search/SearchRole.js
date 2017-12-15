@@ -4,7 +4,7 @@ const SearchHeroes = (props) => {
   return (
     <div className="streamer-hero-search-container text-center">
       <div>
-        <h4>Filter By Role</h4>
+        <h5>Filter By Role</h5>
         <img onClick={() => props.filterStream("Support")} src="/images/role-icons/support-icon.png" alt="support-icon" className="img-responsive role-icons"/>
         <img onClick={() => props.filterStream("Offense")} src="/images/role-icons/offense-icon.png" alt="offense-icon" className="img-responsive role-icons"/>
         <img onClick={() => props.filterStream("Defense")} src="/images/role-icons/defense-icon.png" alt="defense-icon" className="img-responsive role-icons"/>
