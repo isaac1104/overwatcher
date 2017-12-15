@@ -25,7 +25,7 @@ const Header = (props) => {
         style={style.header}
       >
         <Icon name="users"/>
-        Compare
+        COMPARE
         <hr/>
         <PageHeader.Subheader style={style.subheader}>
           Please input valid Battletags for comparison

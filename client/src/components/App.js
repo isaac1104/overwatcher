@@ -5,7 +5,6 @@ import Navbar from "./../containers/Navbar";
 import UserPage from "./../containers/UserPage";
 import StreamPage from "./StreamPage/StreamPage";
 import ComparePage from "./../containers/ComparePage";
-import FavoritePage from "./FavoritePage/FavoritePage";
 import PlayerNotFound from "./PlayerNotFound/PlayerNotFound";
 import DataView from "./../containers/DataView";
 import { connect } from "react-redux";
@@ -37,7 +36,6 @@ class App extends Component {
           <Route exact path="/user/search/:player" component={DataView}/>
           <Route exact path="/user/stream" component={StreamPage}/>
           <Route exact path="/user/compare" component={ComparePage}/>
-          <Route exact path="/user/favorite" component={FavoritePage}/>
         </div>
       </Router>
     );

@@ -24,7 +24,7 @@ const Header = (props) => {
       style={style.header}
     >
       <Icon name="tv"/>
-      Stream
+      STREAM
       <hr/>
       <PageHeader.Subheader style={style.subheader}>
         Check out the streamers who are currently streaming Overwatch

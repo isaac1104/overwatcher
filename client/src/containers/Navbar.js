@@ -53,16 +53,6 @@ class Navbar extends Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a href="/user/favorite">
-                  <Button animated basic inverted color="grey" size="mini">
-                    <Button.Content visible>FAVORITE</Button.Content>
-                    <Button.Content hidden>
-                      <Icon name="star"/>
-                    </Button.Content>
-                  </Button>
-                </a>
-              </li>
-              <li className="nav-item">
                 <a href="/user/stream">
                   <Button animated basic inverted color="grey" size="mini">
                     <Button.Content visible>STREAM</Button.Content>
