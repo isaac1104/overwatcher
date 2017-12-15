@@ -6,6 +6,7 @@ import UserPage from "./../containers/UserPage";
 import StreamPage from "./StreamPage/StreamPage";
 import ComparePage from "./../containers/ComparePage";
 import PlayerNotFound from "./PlayerNotFound/PlayerNotFound";
+import PageNotFound from "./PageNotFound/PageNotFound";
 import DataView from "./../containers/DataView";
 import { connect } from "react-redux";
 import * as actions from "./../actions";
@@ -37,7 +38,7 @@ class App extends Component {
             <Route exact path="/user/search/:player" component={DataView}/>
             <Route exact path="/user/stream" component={StreamPage}/>
             <Route exact path="/user/compare" component={ComparePage}/>
-            <Route component={PlayerNotFound}/>
+            <Route component={PageNotFound}/>
           </Switch>
         </div>
       </Router>
