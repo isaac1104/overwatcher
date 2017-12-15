@@ -1,5 +1,5 @@
 .home-screen {
-  background-color: black;
+  background-color: #343a40;
   height: 100vh;
   color: orange;
   display: flex;
@@ -8,5 +8,5 @@
 }
 
 .home-screen-content {
-  line-height: 10;
+  line-height: 15;
 }

@@ -1,6 +1,5 @@
 import React from "react";
-import { Button } from "semantic-ui-react";
-import "./LoginBtn.css";
+import { Button, Image } from "semantic-ui-react";
 
 const LoginBtn = () => {
   return (
@@ -9,14 +8,16 @@ const LoginBtn = () => {
         animated
         basic
         inverted
-        color="black"
+        color="teal"
         size="large"
       >
         <Button.Content visible>
-          <img
+          <Image
             src="/images/misc/bnet-logo.png"
+            size="tiny"
             alt="bnet-logo"
-          className="img-responsive bnet-logo"/>
+            className="img-responsive bnet-logo"
+          />
         </Button.Content>
         <Button.Content hidden>SIGN-IN</Button.Content>
       </Button>
