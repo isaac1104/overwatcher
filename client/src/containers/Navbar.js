@@ -3,7 +3,7 @@ import { Button, Icon } from "semantic-ui-react";
 import Search from "./../components/Search/Search";
 import { connect } from "react-redux";
 import * as actions from "./../actions";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import "./Navbar.css";
 
 class Navbar extends Component {
@@ -36,41 +36,59 @@ class Navbar extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a className="navbar-brand" href="/user/search"><img src="/images/misc/owlogo.svg" className="logo" alt="logo"/>OVERWATCHER</a>
+          <Link to="/user/search" className="navbar-brand"><img src="/images/misc/owlogo.svg" className="logo" alt="logo"/>OVERWATCHER</Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <a href="/user/search">
-                  <Button animated basic inverted color="grey" size="mini">
+                <Link to="/user/search">
+                  <Button
+                    animated
+                    basic
+                    inverted
+                    color="grey"
+                    size="mini"
+                  >
                     <Button.Content visible>HOME</Button.Content>
                     <Button.Content hidden>
                       <Icon name="home"/>
                     </Button.Content>
                   </Button>
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="/user/stream">
-                  <Button animated basic inverted color="grey" size="mini">
+                <Link to="/user/stream">
+                  <Button
+                    animated
+                    basic
+                    inverted
+                    color="grey"
+                    size="mini"
+                  >
                     <Button.Content visible>STREAM</Button.Content>
                     <Button.Content hidden>
                       <Icon name="video play"/>
                     </Button.Content>
                   </Button>
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="/user/compare">
-                  <Button animated basic inverted color="grey" size="mini">
+                <Link to="/user/compare">
+                  <Button
+                    animated
+                    basic
+                    inverted
+                    color="grey"
+                    size="mini"
+                  >
                     <Button.Content visible>COMPARE</Button.Content>
                     <Button.Content hidden>
                       <Icon name="users"/>
                     </Button.Content>
                   </Button>
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 {this.renderLoadingGif()}
