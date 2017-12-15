@@ -4,7 +4,7 @@ import Home from "./Home/Home";
 import Navbar from "./../containers/Navbar";
 import UserPage from "./../containers/UserPage";
 import StreamPage from "./StreamPage/StreamPage";
-import ComparePage from "./ComparePage/ComparePage";
+import ComparePage from "./../containers/ComparePage";
 import FavoritePage from "./FavoritePage/FavoritePage";
 import PlayerNotFound from "./PlayerNotFound/PlayerNotFound";
 import DataView from "./../containers/DataView";

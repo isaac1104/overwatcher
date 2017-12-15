@@ -1,8 +1,8 @@
-import React, {Component} from "react";
-import Header from "./Header/Header";
-import DataView from "./Data/DataView";
-import NotFound from "./NotFound/NotFound";
-import API from "./../../utils/API";
+import React, { Component } from "react";
+import Header from "./../components/ComparePage/Header/Header";
+import DataView from "./../components/ComparePage/Data/DataView";
+import NotFound from "./../components/ComparePage/NotFound/NotFound";
+import API from "./../utils/API";
 
 class ComparePage extends  Component {
   state = {
