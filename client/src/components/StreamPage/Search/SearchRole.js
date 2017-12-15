@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Icon, Image } from "semantic-ui-react";
+import { Button, Image } from "semantic-ui-react";
 
 const SearchHeroes = (props) => {
   return (

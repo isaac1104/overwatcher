@@ -1,6 +1,5 @@
 import axios from "axios";
-import { FETCH_TWITCH_DATA } from "./types";
-import { FETCH_TWITCH_METADATA } from "./types";
+import { FETCH_TWITCH_DATA, FETCH_TWITCH_METADATA, DESTORY_TWITCH_DATA } from "./types";
 import { FETCH_STATS_DATA, FETCH_STATS_ERROR, FETCH_STATS_INIT } from "./types";
 import { FILTER_STREAM } from "./types";
 import { FETCH_SIGNED_IN_BATTLETAG } from "./types";
@@ -23,6 +22,13 @@ export const getTwitchMetaData = () => async (dispatch) => {
     });
     const { data } = request.data;
     dispatch({ type: FETCH_TWITCH_METADATA, payload: data });
+}
+
+export const destoryTwitchData = () => {
+  return {
+    type: DESTORY_TWITCH_DATA,
+    payload: []
+  }
 }
 
 export const filterStream = (role) => {

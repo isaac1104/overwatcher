@@ -7,6 +7,10 @@ import * as actions from "./../actions";
 
 class StreamContainer extends Component {
 
+  componentWillUnmount() {
+    this.props.destoryTwitchData();
+  }
+
   componentDidMount() {
     this.props.getTwitchData();
     this.props.getTwitchMetaData();
