@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Home/Home";
 import Navbar from "./../containers/Navbar";
 import UserPage from "./../containers/UserPage";
@@ -29,13 +29,16 @@ class App extends Component {
       <Router>
         <div>
           {this.renderNavbar()}
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/login" component={Home}/>
-          <Route exact path="/user/search" component={UserPage}/>
-          <Route exact path="/user/notfound" component={PlayerNotFound}/>
-          <Route exact path="/user/search/:player" component={DataView}/>
-          <Route exact path="/user/stream" component={StreamPage}/>
-          <Route exact path="/user/compare" component={ComparePage}/>
+          <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/login" component={Home}/>
+            <Route exact path="/user/search" component={UserPage}/>
+            <Route exact path="/user/notfound" component={PlayerNotFound}/>
+            <Route exact path="/user/search/:player" component={DataView}/>
+            <Route exact path="/user/stream" component={StreamPage}/>
+            <Route exact path="/user/compare" component={ComparePage}/>
+            <Route component={PlayerNotFound}/>
+          </Switch>
         </div>
       </Router>
     );
