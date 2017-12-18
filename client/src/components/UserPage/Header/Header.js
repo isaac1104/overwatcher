@@ -24,7 +24,7 @@ const Header = (props) => {
   }
 
   return (
-    <div className="container">
+    <div>
       <PageHeader
         as="h1"
         textAlign="center"

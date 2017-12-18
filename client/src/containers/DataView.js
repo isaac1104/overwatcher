@@ -15,16 +15,14 @@ class DataView extends Component {
         <div>
           <AvatarData statsData={this.props.statsData}/>
         </div>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-5">
-              <PlayerStats statsData={this.props.statsData}/>
-              <SubData statsData={this.props.statsData}/>
-              <DetailedData statsData={this.props.statsData}/>
-            </div>
-            <div className="col-md-7">
-              <HeroesData statsData={this.props.statsData}/>
-            </div>
+        <div className="row">
+          <div className="col-md-5">
+            <PlayerStats statsData={this.props.statsData}/>
+            <SubData statsData={this.props.statsData}/>
+            <DetailedData statsData={this.props.statsData}/>
+          </div>
+          <div className="col-md-7">
+            <HeroesData statsData={this.props.statsData}/>
           </div>
         </div>
       </div>

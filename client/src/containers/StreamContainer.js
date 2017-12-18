@@ -39,7 +39,7 @@ class StreamContainer extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div>
         <Header filterStream={this.props.filterStream}/>
         {this.renderStreams()}
       </div>

@@ -22,7 +22,7 @@ const mainHero =  _.map(props.statsData.result.competitiveStats.topHeroes, (valu
   }
 
   return(
-    <div className="container player-stats">
+    <div className="player-stats">
       <div className="card player-intro" style={style}>
         <div className="player-avatar">
           <div>
