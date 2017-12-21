@@ -12,7 +12,7 @@ const Header = (props) => {
     header: {
       color: "white",
       padding: "5%",
-      backgroundColor: "#343a40"
+      backgroundColor: "#333333"
     }
   }
 

@@ -16,7 +16,7 @@ const mainHero =  _.map(props.statsData.result.competitiveStats.topHeroes, (valu
   const style = {
       padding: "10px",
       backgroundImage: `url(/images/heroes-bg/${mainHero.name}.png)`,
-      backgroundSize: "auto 100%",
+      backgroundSize: "100%",
       backgroundRepeat: "no-repeat",
       opacity: "0.8"
   }

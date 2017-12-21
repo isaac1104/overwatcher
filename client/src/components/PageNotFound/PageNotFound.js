@@ -11,7 +11,7 @@ const PageNotFound = () => {
     header: {
       color: "white",
       padding: "5%",
-      background: "#343a40"
+      background: "#333333"
     },
     error: {
       color: "red",

@@ -7,13 +7,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #424447;
+  background-color: #333333;
   color: white;
-  margin: -2.5rem 0 2rem 0;
+  margin: -8rem 0 2rem 0;
 }
 
 .compare-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
 }

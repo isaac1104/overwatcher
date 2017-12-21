@@ -21,7 +21,14 @@ class StreamContainer extends Component {
     if (this.props.filter === "All") {
       return mergedData.map((data) => {
         return (
-          <StreamList thumbnail_url={data.thumbnail_url} title={data.title} started_at={data.started_at} viewer_count={data.viewer_count} mergedData={data}/>
+          <StreamList
+            thumbnail_url={data.thumbnail_url}
+            title={data.title}
+            started_at={data.started_at}
+            viewer_count={data.viewer_count}
+            mergedData={data}
+            key={data.user_id}
+          />
         )
       });
     } else {
@@ -31,7 +38,14 @@ class StreamContainer extends Component {
         }
       }).map((stream) => {
         return (
-          <StreamList thumbnail_url={stream.thumbnail_url} title={stream.title} started_at={stream.started_at} viewer_count={stream.viewer_count} mergedData={stream}/>
+          <StreamList
+            thumbnail_url={stream.thumbnail_url}
+            title={stream.title}
+            started_at={stream.started_at}
+            viewer_count={stream.viewer_count}
+            mergedData={stream}
+            key={stream.user_id}
+          />
         )
       });
     }

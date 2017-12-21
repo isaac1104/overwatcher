@@ -24,7 +24,8 @@ class Search extends Component {
           />
           <Button
             animated
-            basic inverted color="grey"
+            basic
+            inverted
             size="mini"
             type="submit"
             disabled={pristine || submitting}>

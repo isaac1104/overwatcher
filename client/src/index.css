@@ -4,11 +4,11 @@
 }
 
 body {
-  background-color: #cfd1d6;
+  background-color: #333333;
 }
 
 .card {
-  background-color: #353a40;
+  background-color: #00aca4;
   color: white;
 }
 
@@ -22,6 +22,6 @@ hr {
 }
 
 .jumbotron {
-  background-color: #353a40;
+  background-color: #333333;
   color: white;
 }

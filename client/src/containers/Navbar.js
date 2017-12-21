@@ -35,7 +35,7 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark">
           <Link to="/user/search" className="navbar-brand"><img src="/images/misc/owlogo.svg" className="logo" alt="logo"/>OVERWATCHER</Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -48,7 +48,6 @@ class Navbar extends Component {
                     animated
                     basic
                     inverted
-                    color="grey"
                     size="mini"
                   >
                     <Button.Content visible>HOME</Button.Content>
@@ -64,7 +63,6 @@ class Navbar extends Component {
                     animated
                     basic
                     inverted
-                    color="grey"
                     size="mini"
                   >
                     <Button.Content visible>STREAM</Button.Content>
@@ -80,7 +78,6 @@ class Navbar extends Component {
                     animated
                     basic
                     inverted
-                    color="grey"
                     size="mini"
                   >
                     <Button.Content visible>COMPARE</Button.Content>
