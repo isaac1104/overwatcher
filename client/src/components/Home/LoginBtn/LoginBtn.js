@@ -3,7 +3,7 @@ import { Button, Image } from "semantic-ui-react";
 
 const LoginBtn = () => {
   return (
-    <a href="/auth/bnet">
+    <a href="/user/search">
       <Button
         animated
         basic
